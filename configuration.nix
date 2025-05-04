@@ -60,7 +60,7 @@ in
 
     hostname = "nixos";
     timezone = "Europe/Stockholm";
-    locale = "sv_SE.UTF-8";
+    locale = "en_US.UTF-8";
 
     boot.useSystemdBoot = false;
   };
