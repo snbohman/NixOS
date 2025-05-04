@@ -2,7 +2,7 @@
 
 {
   imports = [
-    # ./example.nix - add your modules here
+    ./configs.nix
   ];
 
   # home-manager options go here
@@ -19,14 +19,14 @@
     waybar.enable = false;
 
     editors.vscode.enable = false;
+    editors.default = "neovim";
 
     git.name = "snbohman";
     git.email = "sixten.bohman.08@gmail.com";
 
     shell.pokego.enable = false;
 
-    lockscreen.hyprlock = false;
-    lockscreen.swaylock = true;
+    lockscreen.hyprlock = true;
 
     # terminals.kitty.enable = false;
     # terminals.alacritty.enable = false;
