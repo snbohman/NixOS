@@ -5,7 +5,7 @@
     home.file = {
     	".config/nvim" = {
 	    recursive = true;
-	    source = ./nvim;
+	    source = ./nvim/;
 	};
 
     	".config/hypr/userprefs.conf" = lib.mkForce {
