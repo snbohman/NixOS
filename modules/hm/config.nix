@@ -4,8 +4,23 @@
 {
     home.file = {
     	".config/nvim" = {
-	    recursive = true;
 	    source = ./nvim/;
+	    recursive = true;
+	};
+
+    	".config/nvim/lua" = {
+	    source = ./nvim/lua;
+	    recursive = true;
+	};
+
+    	".config/nvim/lua/plugins" = {
+	    source = ./nvim/lua/plugins;
+	    recursive = true;
+	};
+
+    	".config/nvim/lua/config" = {
+	    source = ./nvim/lua/config;
+	    recursive = true;
 	};
 
     	".config/hypr/userprefs.conf" = lib.mkForce {
