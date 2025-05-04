@@ -6,8 +6,8 @@
 	};
 
     	".config/hypr/userprefs.conf" = {
-	    source = ./hypr/userprefs.conf
+	    source = ./hypr/userprefs.conf;
 	};
-    }
+    };
 
 }
