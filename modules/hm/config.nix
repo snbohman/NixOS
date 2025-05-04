@@ -12,7 +12,7 @@
 	        source = ./hypr/userprefs.conf;
 	    };
 
-        ".config/kitty/kitty.conf" {
+        ".config/kitty/kitty.conf" = {
 	        source = ./kitty/kitty.conf;
             recursive = true;
 	    };
