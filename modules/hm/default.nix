@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./configs.nix
+    ./config.nix
   ];
 
   # home-manager options go here
@@ -35,6 +35,15 @@
 	active = "Gruvbox Retro";
 	themes = [
 	    "Gruvbox Retro"
+	    "Dracula"
+	    "Cosmic-Blue"
+	    "Crimson-Blade"
+	    "Monokai"
+	    "Nordic-Blue"
+	    "One-Dark"
+	    "Tokyo-Night"
+	    "Vantha-Black"
+	    "Windows-11"
     	];
     };
 

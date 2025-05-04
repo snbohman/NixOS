@@ -31,14 +31,12 @@ in
     inputs.hydenix.inputs.nixos-hardware.nixosModules.common-cpu-intel
     inputs.hydenix.inputs.nixos-hardware.nixosModules.common-pc
     inputs.hydenix.inputs.nixos-hardware.nixosModules.common-pc-ssd
+
   ];
 
-
-  ############ NVIDIA SPECIALIZATION #############
   hardware.nvidia.open = false;
   hardware.nvidia.prime.sync.enable = false;
   hardware.nvidia.prime.offload.enable = false;
-  ################################################
 
   home-manager = {
     useGlobalPkgs = true;
@@ -47,8 +45,7 @@ in
       inherit inputs;
     };
 
-    users."snbohman" =
-      { ... }:
+    users."snbohman" = { ... }:
       {
         imports = [
           inputs.hydenix.lib.homeModules
@@ -63,7 +60,7 @@ in
 
     hostname = "nixos";
     timezone = "Europe/Stockholm";
-    locale = "en_US.UTF-8";
+    locale = "sv_SE.UTF-8";
 
     boot.useSystemdBoot = false;
   };
