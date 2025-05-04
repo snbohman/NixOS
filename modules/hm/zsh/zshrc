@@ -1,0 +1,14 @@
+alias v="nvim"
+alias x="exit"
+alias ls="ls -l --color=auto"
+alias cp="cp -r"
+alias md="mkdir"
+
+alias lg="lazygit"
+
+alias py="python3"
+alias activate="source ./venv/bin/activate"
+
+alias ga="git add --all;"
+alias gc="git commit -m"
+alias gp="git push"

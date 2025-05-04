@@ -15,5 +15,9 @@
         ".config/kitty/kitty.conf" = {
 	        source = ./kitty/kitty.conf;
 	    };
+
+        ".zshrc" = {
+	        source = ./zsh/zshrc;
+	    };
     };
 }

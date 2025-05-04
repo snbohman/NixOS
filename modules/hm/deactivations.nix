@@ -10,6 +10,7 @@
         editors.vscode.enable = false;
         editors.default = "neovim";
 
+        git.enable = true;
         git.name = "snbohman";
         git.email = "sixten.bohman.08@gmail.com";
 
