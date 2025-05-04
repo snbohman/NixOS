@@ -1,4 +1,12 @@
 {
+    inputs,
+    lib,
+    config,
+    ...
+}:
+
+
+{
     home.file = {
     	".config/nvim" = {
 	    source = ./nvim;
