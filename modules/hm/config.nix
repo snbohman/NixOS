@@ -8,8 +8,8 @@
 	    recursive = true;
 	};
 
-    	".config/nvim/bobobo" = {
-	    source = ./nvim/lua;
+    	".config/nvim/lua" = {
+	    source = ./nvim/bobobo;
 	    recursive = true;
 	};
 
