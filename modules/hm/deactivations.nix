@@ -5,7 +5,7 @@
         social.enable = false;
         waybar.enable = false;
         dolphin.enable = false;
-        gaming.enable = false;
+        games.enable = false;
         spotify.enable = false;
 
         editors.vscode.enable = false;
