@@ -1,19 +1,10 @@
 {
-  description = "template for hydenix";
+  description = "Dotfile template";
 
   inputs = {
-    # User's nixpkgs - for user packages
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    # Hydenix and its nixpkgs - kept separate to avoid conflicts
-    hydenix = {
-      # Available inputs:
-      # Main: github:richen604/hydenix
-      # Dev: github:richen604/hydenix/dev
-      # Commit: github:richen604/hydenix/<commit-hash>
-      # Version: github:richen604/hydenix/v1.0.0
-      url = "github:richen604/hydenix";
-    };
+    hydenix.url = "github:richen604/hydenix";
 
     # Nix-index-database - for comma and command-not-found
     nix-index-database = {
