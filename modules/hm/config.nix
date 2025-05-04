@@ -9,7 +9,7 @@
 	};
 
     	".config/nvim/lua" = {
-	    source = ./nvim/bobobo;
+	    source = ./nvim/lua;
 	    recursive = true;
 	};
 
