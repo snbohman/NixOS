@@ -5,7 +5,7 @@
 	    recursive = true;
 	};
 
-    	".config/hypr/userprefs.conf" = {
+    	".config/hypr/userprefs.conf" with [ lib.mkForce ] = {
 	    source = ./hypr/userprefs.conf;
 	};
     };
