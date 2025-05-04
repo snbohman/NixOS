@@ -14,7 +14,6 @@
 
         ".config/kitty/kitty.conf" = {
 	        source = ./kitty/kitty.conf;
-            recursive = true;
 	    };
     };
 }
