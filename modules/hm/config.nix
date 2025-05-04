@@ -12,6 +12,10 @@
 	        source = ./hypr/userprefs.conf;
 	    };
 
+        ".config/hypr/keybindings.conf" = lib.mkForce {
+	        source = ./hypr/keybindings.conf;
+	    };
+
         ".config/kitty/kitty.conf" = {
 	        source = ./kitty/kitty.conf;
 	    };
