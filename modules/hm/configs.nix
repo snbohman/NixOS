@@ -2,14 +2,14 @@
 
 
 {
-    hydenix.hm = {
-    	xdg.configFile."hypr/userprefs.conf" = {
+    hydenix.hm.xdg.configFile = {
+    	"hypr/userprefs.conf" = {
     	    source = "~/dotfiles/hypr/userprefs.conf";
     	}
 
-    	xdg.configFile."nvim" = {
+    	"nvim" = {
     	    source = "~/dotfiles/nvim";
-	    krecursive = true;
+	    recursive = true;
     	}
     }
 }
