@@ -9,5 +9,6 @@
         lf
         tree
         lazygit
+        unzip
     ];
 }
