@@ -1,7 +1,7 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
     imports = [ ];
 
-    hydenix.boot.grubTheme = grub-pochita;
+    hydenix.boot.grubTheme = pkgs.hydenix.grub-pochita;
 }
