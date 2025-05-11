@@ -27,6 +27,6 @@
         ".mozilla/firefox/q8pmdenq.default/chrome" = {
             source = ./firefox;
             recursive = true;
-        }
+        };
     };
 }
