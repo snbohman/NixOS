@@ -31,10 +31,4 @@
 
 
     };
-
-    ### Temporary Grub Theme Fix ###
-    system.activationScripts.copyGrubTheme = ''
-        mkdir -p /boot/grub/themes/Retroboot
-        cp -r /boot/theme/share/grub/themes/Retroboot/* /boot/grub/themes/Retroboot/
-    '';
 }
