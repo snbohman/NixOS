@@ -17,15 +17,15 @@
         shell.pokego.enable = false;
 
         theme = {
-	        active = "One-Dark";
+	        active = "Greenify";
 	        themes = [
 	            "Gruvbox Retro"
 	            "Dracula"
 	            "Monokai"
                 "Greenify"
-                "Nordic-Blue"
-                "One-Dark"
-                "Rain-Dark"
+                "Nordic_Blue"
+                "One_Dark"
+                "Rain_Dark"
     	    ];
         };
     };
