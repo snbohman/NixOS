@@ -3,5 +3,5 @@
 {
     imports = [ ];
 
-    hydenix.boot.grubTheme = pkgs.grub-pochita;
+    hydenix.boot.grubTheme = hydenix.grub-pochita;
 }
