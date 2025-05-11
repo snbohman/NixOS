@@ -17,7 +17,7 @@
         shell.pokego.enable = false;
 
         theme = {
-	        active = "Greenify";
+	        active = "Gruvbox Retro";
 	        themes = [
 	            "Gruvbox Retro"
 	            "Dracula"
@@ -28,5 +28,13 @@
                 "Rain_Dark"
     	    ];
         };
+
+
     };
+
+    ### Temporary Grub Theme Fix ###
+    system.activationScripts.copyGrubTheme = ''
+        mkdir -p /boot/grub/themes/Retroboot
+        cp -r /boot/theme/share/grub/themes/Retroboot/* /boot/grub/themes/Retroboot/
+    '';
 }
