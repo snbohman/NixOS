@@ -23,12 +23,10 @@
 	            "Dracula"
 	            "Monokai"
                 "Greenify"
-                "Nordic_Blue"
-                "One_Dark"
-                "Rain_Dark"
+                "Nordic Blue"
+                "One Dark"
+                "Rain Dark"
     	    ];
         };
-
-
     };
 }
