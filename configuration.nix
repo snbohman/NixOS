@@ -77,11 +77,4 @@ in
   };
 
   system.stateVersion = "25.05";
-
-
-  ### Temporary Grub Theme Fix ###
-  system.activationScripts.copyGrubTheme = ''
-    mkdir -p /boot/grub/themes/Retroboot
-    cp -r /boot/theme/share/grub/themes/Retroboot/* /boot/grub/themes/Retroboot/
-  '';
 }
