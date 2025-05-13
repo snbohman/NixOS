@@ -1,5 +1,3 @@
-{ ... }:
-
 {
     imports = [
         ./config.nix
@@ -7,5 +5,26 @@
         ./packages.nix
     ];
 
-    hydenix.hm.enable = true;
+    hydenix.hm = {
+        enable = true;
+
+        editors.default = "neovim";
+
+        git.enable = true;
+        git.name = "snbohman";
+        git.email = "sixten.bohman.08@gmail.com";
+
+        theme = {
+	        active = "Gruvbox Retro";
+	        themes = [
+	            "Gruvbox Retro"
+	            "Dracula"
+	            "Monokai"
+                "Greenify"
+                "Nordic Blue"
+                "One Dark"
+                "Rain Dark"
+    	    ];
+        };
+    }
 }

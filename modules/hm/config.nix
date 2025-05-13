@@ -4,28 +4,28 @@
 {
     home.file = {
     	".config/nvim" = {
-	        source = ./nvim;
+	        source = ./config/nvim;
 	        recursive = true;
 	    };
 
         ".config/hypr/userprefs.conf" = lib.mkForce {
-	        source = ./hypr/userprefs.conf;
+	        source = ./config/hypr/userprefs.conf;
 	    };
 
         ".config/hypr/keybindings.conf" = lib.mkForce {
-	        source = ./hypr/keybindings.conf;
+	        source = ./config/hypr/keybindings.conf;
 	    };
 
         ".config/kitty/kitty.conf" = {
-	        source = ./kitty/kitty.conf;
+	        source = ./config/kitty/kitty.conf;
 	    };
 
         ".zshrc" = {
-	        source = ./zsh/zshrc;
+	        source = ./config/zsh/zshrc;
 	    };
 
         ".mozilla/firefox/q8pmdenq.default/chrome" = {
-            source = ./firefox;
+            source = ./config/firefox;
             recursive = true;
         };
     };
