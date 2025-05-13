@@ -12,3 +12,16 @@ alias activate="source ./venv/bin/activate"
 alias ga="git add --all;"
 alias gc="git commit -m"
 alias gp="git push"
+
+fzcd() {
+  local dir
+  dir=$(find . -maxdepth 1 -type d | fzf --preview 'ls -l {+}' --preview-window 'up:60%' --bind 'esc:abort')
+
+  if [ -n "$dir" ]; then
+    cd "$dir" || {
+      echo "Error: Could not change to directory '$dir'"
+      return 1
+    }
+  fi
+}
+
