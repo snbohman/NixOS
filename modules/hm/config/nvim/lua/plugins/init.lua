@@ -75,6 +75,7 @@ return {
                     "Makefile",
                     ".compile_commands",
                     ".compile_flags"
+                    "config"
                 }
             }
         }

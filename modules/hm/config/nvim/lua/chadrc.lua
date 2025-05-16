@@ -15,10 +15,14 @@ M.base46 = {
 }
 
 M.nvdash = { load_on_startup = false }
-M.ui.tabufline.enabled = false
+M.ui = {
+    tabufline.enabled = false
+}
 
 M.term.sizes.vsp = 0.5
-M.mason.enable = false;
+M.mason = {
+    enable = false
+}
 
 
 

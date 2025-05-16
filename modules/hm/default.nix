@@ -13,6 +13,7 @@
         git.enable = true;
         git.name = "snbohman";
         git.email = "sixten.bohman.08@gmail.com";
+        git.credentialHelper = "manager-core"
 
         theme = {
 	        active = "Gruvbox Retro";
