@@ -7,5 +7,6 @@
         tree
         lazygit
         unzip
+        tmux
     ];
 }
