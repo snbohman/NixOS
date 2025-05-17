@@ -15,9 +15,8 @@
             name = "snbohman";
             email = "sixten.bohman.08@gmail.com";
 
-            extraConfig = {
-                "credential.helper" = "manager-core";
-            };
+            package = pkgs.gitFull;
+            config.credential.helper = "libsecret";
         };
 
 
