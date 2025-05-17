@@ -30,6 +30,14 @@ zstyle ":completion:*" matcher-list "m:{a-z}={A-Za-z}"
 zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
 zstyle ":completion:*" menu no
 
+cd_fzf() {
+  local dir=$(find . -L -type d 2>/dev/null | fzf +m)
+
+  if [[ -n "$dir" ]]; then
+    cd "$dir"
+  fi
+}
+
 #-----------------------------------------#
 #---------------- ALIASES ----------------#
 #-----------------------------------------#
@@ -49,4 +57,5 @@ alias ga="git add --all;"
 alias gc="git commit -m"
 alias gp="git push"
 
-alias fzd="cd $(find . -type d | fzf)"
+zle -N cd_fzf
+bindkey '^g' cd_fzf
