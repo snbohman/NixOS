@@ -16,9 +16,9 @@
             email = "sixten.bohman.08@gmail.com";
 
             extraConfig = {
-                credential.helper = "manager-core";
+                "credential.helper" = "manager-core";
             };
-        }
+        };
 
 
         theme = {
