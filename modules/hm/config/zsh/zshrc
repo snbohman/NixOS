@@ -48,3 +48,5 @@ alias activate="source ./venv/bin/activate"
 alias ga="git add --all;"
 alias gc="git commit -m"
 alias gp="git push"
+
+alias fd="cd $(find . -type d | fzf)"
