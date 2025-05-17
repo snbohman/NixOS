@@ -8,5 +8,6 @@
         lazygit
         unzip
         tmux
+        clangd
     ];
 }

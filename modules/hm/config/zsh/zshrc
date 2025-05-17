@@ -5,7 +5,7 @@ alias cp="cp -r"
 alias md="mkdir"
 
 alias lg="lazygit"
-alias rbg="./scripts/glob.sh"
+alias rbg="./scripts/rebuild.sh"
 
 alias py="python3"
 alias activate="source ./venv/bin/activate"
