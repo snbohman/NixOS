@@ -10,9 +10,16 @@
 
         editors.default = "neovim";
 
-        git.enable = true;
-        git.name = "snbohman";
-        git.email = "sixten.bohman.08@gmail.com";
+        git = {
+            enable = true;
+            name = "snbohman";
+            email = "sixten.bohman.08@gmail.com";
+
+            extraConfig = {
+                credential.helper = "manager-core";
+            };
+        }
+
 
         theme = {
 	        active = "Gruvbox Retro";
