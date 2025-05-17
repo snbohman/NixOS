@@ -1,0 +1,6 @@
+[user]
+  name = snbohman
+  email = sixten.bohman.08@gmail.com
+
+[credential]
+  helper = store

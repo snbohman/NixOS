@@ -9,17 +9,7 @@
 
     hydenix.hm = {
         enable = true;
-
         editors.default = "neovim";
-
-        git = {
-            enable = true;
-            name = "snbohman";
-            email = "sixten.bohman.08@gmail.com";
-
-            credential.helper = "store";
-        };
-
 
         theme = {
 	        active = "Gruvbox Retro";

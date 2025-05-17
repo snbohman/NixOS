@@ -28,5 +28,9 @@
             source = ./config/firefox;
             recursive = true;
         };
+
+        ".gitconfig" = {
+            source = ./config/git/gitconfig;
+        };
     };
 }
