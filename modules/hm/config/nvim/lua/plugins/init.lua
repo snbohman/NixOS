@@ -36,21 +36,12 @@ return {
 
     ------------------ OVERWRITES -------------------
     {
-        "williamboman/mason.nvim",
-        opts = {
-            ensure_installed = {
-                "clangd",
-                "clang-format",
-                "pyright",
-                "lua-language-server",
-                "rust-analyzer",
-            }
-        }
+        "akinsho/bufferline.nvim",
+        enabled = false,
     },
     {
-        "williamboman/mason-lspconfig.nvim",
-        event = "VeryLazy",
-        opts = {}
+        "williamboman/mason.nvim",
+        enabled = false,
     },
     {
         "nvim-telescope/telescope.nvim",
@@ -75,7 +66,7 @@ return {
                     "Makefile",
                     ".compile_commands",
                     ".compile_flags",
-                    "config"
+                    "firefox"
                 }
             }
         }
@@ -123,10 +114,7 @@ return {
 
     {
         "stevearc/oil.nvim",
-        ---@module 'oil'
-        ---@type oil.SetupOpts
         opts = {},
-        -- Optional dependencies
         dependencies = { { "echasnovski/mini.icons", opts = {} } },
         lazy = false,
     }
