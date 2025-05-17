@@ -17,8 +17,7 @@
             name = "snbohman";
             email = "sixten.bohman.08@gmail.com";
 
-            package = pkgs.gitFull;
-            config.credential.helper = "libsecret";
+            credential.helper = "store";
         };
 
 
