@@ -19,6 +19,7 @@ set.tabstop=4
 set.shiftwidth = 4
 set.softtabstop = -1
 set.smarttab = true
+vim.opt.showtabline = 0
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
