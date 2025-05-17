@@ -31,13 +31,12 @@ zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
 zstyle ":completion:*" menu no
 
 cd_fzf() {
-    find . -type d -print0 | fzf --no-sort --print0 ... \
-        | xargs -0 read -r -d $'\x00' selected_dir
-
-    if [[ -n "$selected_dir" ]]; then
-        cd "$selected_dir"
-    fi
+    local dir=$(find . -type d 2>/dev/null | fzf +m)
+    cd "$dir"
 }
+
+zle -N cd_fzf
+bindkey '^g' cd_fzf
 
 #-----------------------------------------#
 #---------------- ALIASES ----------------#
@@ -57,6 +56,3 @@ alias activate="source ./venv/bin/activate"
 alias ga="git add --all;"
 alias gc="git commit -m"
 alias gp="git push"
-
-zle -N cd_fzf
-bindkey '^g' cd_fzf
