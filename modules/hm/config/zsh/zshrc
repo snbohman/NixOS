@@ -31,10 +31,11 @@ zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
 zstyle ":completion:*" menu no
 
 cd_fzf() {
-    local dir=$(find . -type d 2>/dev/null | fzf +m)
+    find . -type d -print0 | fzf --no-sort --print0 ... \
+        | xargs -0 read -r -d $'\x00' selected_dir
 
-    if [[ -n "$dir" ]]; then
-        cd "$dir"
+    if [[ -n "$selected_dir" ]]; then
+        cd "$selected_dir"
     fi
 }
 
