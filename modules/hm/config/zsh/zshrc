@@ -31,11 +31,11 @@ zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
 zstyle ":completion:*" menu no
 
 cd_fzf() {
-  local dir=$(find . -L -type d 2>/dev/null | fzf +m)
+    local dir=$(find . -type d 2>/dev/null | fzf +m)
 
-  if [[ -n "$dir" ]]; then
-    cd "$dir"
-  fi
+    if [[ -n "$dir" ]]; then
+        cd "$dir"
+    fi
 }
 
 #-----------------------------------------#
