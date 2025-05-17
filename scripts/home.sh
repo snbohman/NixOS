@@ -10,6 +10,6 @@ else
   echo "No changes to commit."
 fi
 
-sudo home-manger switch --flake .
+sudo home-manager switch --flake .
 
 cd -
