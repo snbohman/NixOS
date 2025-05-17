@@ -12,5 +12,7 @@
         premake5
         clang-tools
         clang
+
+        vulkan-sdk
     ];
 }
