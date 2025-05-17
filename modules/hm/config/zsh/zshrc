@@ -1,3 +1,17 @@
+#---------------------------------------#
+#---------------- ZINIT ----------------#
+#---------------------------------------#
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+if [ ! -d "$ZINIT_HOME"]; then
+    mkdir -p "$(dirname $ZINIT_HOME)"
+    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
+
+source "${ZINIT_HOME}/zinit.zsh"
+
+#-----------------------------------------#
+#---------------- ALIASES ----------------#
+#-----------------------------------------#
 alias v="nvim"
 alias x="exit"
 alias ls="ls -l --color=auto"
@@ -13,16 +27,3 @@ alias activate="source ./venv/bin/activate"
 alias ga="git add --all;"
 alias gc="git commit -m"
 alias gp="git push"
-
-fzcd() {
-  local dir
-  dir=$(find . -maxdepth 1 -type d | fzf --preview 'ls -l {+}' --preview-window 'up:60%' --bind 'esc:abort')
-
-  if [ -n "$dir" ]; then
-    cd "$dir" || {
-      echo "Error: Could not change to directory '$dir'"
-      return 1
-    }
-  fi
-}
-
