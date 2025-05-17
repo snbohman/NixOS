@@ -36,10 +36,6 @@ return {
 
     ------------------ OVERWRITES -------------------
     {
-        "akinsho/bufferline.nvim",
-        enabled = false,
-    },
-    {
         "williamboman/mason.nvim",
         enabled = false,
     },
