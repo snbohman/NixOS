@@ -3,4 +3,4 @@
   email = sixten.bohman.08@gmail.com
 
 [credential]
-  helper = !git-credential-manager-core
+  helper = store

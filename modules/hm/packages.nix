@@ -8,6 +8,5 @@
         lazygit
         unzip
         tmux
-        git-credential-manager
     ];
 }
