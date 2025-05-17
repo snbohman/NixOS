@@ -32,7 +32,11 @@ zstyle ":completion:*" menu no
 
 cd_fzf() {
     local dir=$(find . -type d 2>/dev/null | fzf +m)
-    cd "$dir"
+
+    if [[ -n "$dir" ]]; then
+        cd "$dir"
+        zle accept-line
+    fi
 }
 
 zle -N cd_fzf
