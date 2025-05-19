@@ -63,6 +63,7 @@ return {
                     ".compile_commands",
                     ".compile_flags",
                     "firefox"
+                    "plugins/tpm"
                 }
             }
         }
