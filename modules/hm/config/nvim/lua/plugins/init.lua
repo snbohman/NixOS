@@ -62,7 +62,7 @@ return {
                     "Makefile",
                     ".compile_commands",
                     ".compile_flags",
-                    "firefox"
+                    "firefox",
                     "plugins/tpm"
                 }
             }
