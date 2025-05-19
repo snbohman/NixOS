@@ -37,7 +37,7 @@
     programs.tmux = {
         enable = true;
         plugins = with pkgs.tmuxPlugins; [
-            tpm,
+            tpm
             sensible
         ];
         extraConfig = builtins.readFile ./tmux/tmux.conf;
