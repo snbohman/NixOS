@@ -37,6 +37,6 @@
     programs.tmux = {
         enable = true;
         plugins = [ ];
-        extraConfig = builtins.readFile ./tmux/tmux.conf;
+        extraConfig = builtins.readFile ./config/tmux/tmux.conf;
     };
 }
