@@ -7,12 +7,12 @@
         tree
         lazygit
         unzip
+
         tmux
+        tpm
 
         premake5
         clang-tools
         clang
-
-        vulkan-sdk
     ];
 }

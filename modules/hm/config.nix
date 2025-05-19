@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 
 
 {
@@ -20,6 +20,10 @@
 	        source = ./config/kitty/kitty.conf;
 	    };
 
+        ".config/tmux/tmux.conf" = {
+            source = ./config/tmux/tmux.conf
+        };
+
         ".zshrc" = {
 	        source = ./config/zsh/zshrc;
 	    };
@@ -32,5 +36,14 @@
         ".gitconfig" = {
             source = ./config/git/gitconfig;
         };
+    };
+
+    programs.tmux = {
+        enable = true;
+        plugins = with pkgs.tmuxPlugins; [
+            tpm,
+            sensible
+        ];
+        extraConfig = builtins.readFile ./tmux/tmux.conf;
     };
 }
