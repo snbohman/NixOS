@@ -9,7 +9,6 @@
         unzip
 
         tmux
-        tpm
 
         premake5
         clang-tools
