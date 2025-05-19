@@ -20,10 +20,6 @@
 	        source = ./config/kitty/kitty.conf;
 	    };
 
-        ".config/tmux/tmux.conf" = {
-            source = ./config/tmux/tmux.conf
-        };
-
         ".zshrc" = {
 	        source = ./config/zsh/zshrc;
 	    };
