@@ -1,4 +1,4 @@
-{ lib, pkgs, services, ... }:
+{ config, pkgs, ... }:
 
 {
     services.xserver.xkb = {
