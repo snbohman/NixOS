@@ -6,7 +6,7 @@
         extraLayouts."seCustom" = {
             languages = [ "swe" ];
             description = "Swedish (Custom)";
-            symbolsFile = /home/snbohman/.dotfiles/modules/system/xkb/swedishCustom;
+            symbolsFile = ./xkb/swedishCustom;
         };
     };
 }
