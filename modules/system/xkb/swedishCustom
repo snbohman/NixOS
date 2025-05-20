@@ -10,6 +10,8 @@
 
 partial modifier_keys
 xkb_symbols "basic" {
+    name[Group1] = "Swedish (Custom)";
+
     replace key <ESC> { [ Caps_Lock ] };
     replace key <CAPS> { [ Escape ] };
 };
