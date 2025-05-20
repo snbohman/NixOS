@@ -1,5 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, services, ... }:
 
 {
-    imports = [ ];
+    imports = [
+        ./keyboard.nix
+    ];
 }
