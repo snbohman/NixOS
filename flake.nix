@@ -22,13 +22,8 @@
       HOSTNAME = "hydenix";
       USERNAME = "snbohman";
 
-      systemArch = "x86_64-linux";
-
       hydenixConfig = hydenix.inputs.hydenix-nixpkgs.lib.nixosSystem {
-        inherit systemArch;
-        specialArgs = {
-          inherit inputs;
-        };
+        inherit inputs;
         modules = [
           ./configuration.nix
         ];
