@@ -2,7 +2,6 @@
 
 {
     services.xserver.xkb = {
-        layout = "se";
         extraLayouts = {
             "seCustom" = {
                 description = "Swedish (Custom)";
