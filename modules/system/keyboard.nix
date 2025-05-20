@@ -1,7 +1,7 @@
 { config, pkgs, ... }: {
     services.xserver.xkb = {
         layout = "se";
-        xkbOptions = "seCustom:basic";
+        options = "seCustom:basic";
 
         extraLayouts."seCustom" = {
             languages = [ "swe" ];
