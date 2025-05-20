@@ -2,17 +2,16 @@
   description = "Dotfile template";
 
   inputs = {
-    nixpkgs.url = "github.com:nixos/nixpkgs/nixos-unstable";
-
-    hydenix.url = "github.com:richen604/hydenix";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    hydenix.url = "github:richen604/hydenix";
 
     home-manager = {
-      url = "github.com:nix-community/home-manager";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nix-index-database = {
-      url = "github.com:nix-community/nix-index-database";
+      url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -22,6 +21,7 @@
     let
       HOSTNAME = "hydenix";
       USERNAME = "snbohman";
+
       systemArch = "x86_64-linux";
 
       hydenixConfig = hydenix.inputs.hydenix-nixpkgs.lib.nixosSystem {
