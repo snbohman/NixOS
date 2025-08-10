@@ -17,5 +17,7 @@
         xorg.setxkbmap
         xorg.xkbcomp
         xorg.xev
+
+        uv
     ];
 }
