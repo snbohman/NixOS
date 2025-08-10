@@ -19,5 +19,6 @@
         xorg.xev
 
         uv
+        python312
     ];
 }
