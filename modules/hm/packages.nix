@@ -20,8 +20,5 @@
 
         uv
         python312
-        numpy
-        pillow
-        scipy
     ];
 }
