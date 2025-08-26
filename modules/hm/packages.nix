@@ -21,6 +21,6 @@
         uv
         python312
 
-        obsidian
+        obsidian-wayland
     ];
 }
