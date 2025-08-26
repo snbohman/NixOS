@@ -20,5 +20,7 @@
 
         uv
         python312
+
+        obsidian
     ];
 }
