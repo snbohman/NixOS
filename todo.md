@@ -1,4 +1,6 @@
 # TODO
 - Keyboard config
-- Zoxide
 - Tmux
+- Nvim redo
+
+- Simple stuff
