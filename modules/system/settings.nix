@@ -9,6 +9,9 @@
     time.timeZone = "Europe/Stockholm";
     i18n.defaultLocale = "en_US.UTF-8";
 
+    # Shell
+    programs.zsh.enable = true;
+
     # Configure console keymap
     console.keyMap = "sv-latin1";
     users.users.snbohman = {

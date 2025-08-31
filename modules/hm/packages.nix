@@ -2,8 +2,6 @@
 
 
 {
-    programs.zsh.enable = true;
-
     home.packages = with pkgs; [
         lf
         tree
