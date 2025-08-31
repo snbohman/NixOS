@@ -9,7 +9,7 @@
         tree
         lazygit
 
-	nvim
+	neovim
 	alacritty
 	rofi
         unzip
