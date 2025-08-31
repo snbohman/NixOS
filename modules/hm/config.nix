@@ -30,10 +30,6 @@
         };
     };
 
-    programs.zsh = {
-        initExtra = builtins.readFile ./config/zsh/zshrc;
-    };
-
     programs.tmux = {
         enable = true;
         plugins = [ ];
