@@ -9,8 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hydenix.url = "github:richen604/hydenix";
-    # Nix-index-database - for comma and command-not-found
+    hydenix = {
+      url = "github:richen604/hydenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,24 +24,30 @@
     { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
+      # Define pkgs once, right here, using your overlays.
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
+        overlays = [ inputs.hydenix.lib.overlays (final: prev: {
+            userPkgs = import nixpkgs {
+              config.allowUnfree = true;
+            };
+          })
+        ];
       };
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {
-          inherit inputs;
-        };
+        # Pass the unified 'pkgs' into your system configuration.
+        specialArgs = { inherit inputs pkgs; };
         modules = [
           ./configuration.nix
         ];
       };
 
       homeConfigurations."snbohman" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+        inherit pkgs; # Use the exact same 'pkgs' for home-manager.
         extraSpecialArgs = { inherit inputs; };
         modules = [ ./modules/hm ];
       };

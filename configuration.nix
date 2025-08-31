@@ -1,18 +1,8 @@
 {
   inputs,
+  pkgs,
   ...
 }:
-let
-  pkgs = import inputs.hydenix.inputs.hydenix-nixpkgs {
-    inherit (inputs.hydenix.lib) system;
-    config.allowUnfree = true; overlays = [ inputs.hydenix.lib.overlays (final: prev: {
-        userPkgs = import inputs.nixpkgs {
-          config.allowUnfree = true;
-        };
-      })
-    ];
-  };
-in
 {
 
   nixpkgs.pkgs = pkgs;
