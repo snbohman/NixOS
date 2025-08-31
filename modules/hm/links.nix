@@ -1,6 +1,7 @@
 { lib, pkgs, config, ... }:
 
 {
+    aa
     home.file = {
     	".config/nvim" = {
 	        source = ./config/nvim;
