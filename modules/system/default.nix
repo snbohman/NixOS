@@ -3,7 +3,7 @@
 {
     imports = [
         ./settings.nix
-        ./graphical.nix
-        ./home-manager.nix
+        ./graphics.nix
+        ./hm.nix
     ];
 }
