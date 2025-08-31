@@ -1,6 +1,5 @@
 { lib, pkgs, config, ... }:
 
-
 {
     home.file = {
     	".config/nvim" = {
@@ -14,6 +13,10 @@
 
         ".config/hypr/keybindings.conf" = lib.mkForce {
 	        source = ./config/hypr/keybindings.conf;
+	    };
+
+        ".zshrc" = {
+	        source = ./config/zsh/zshrc;
 	    };
 
         ".config/kitty/kitty.conf" = {
