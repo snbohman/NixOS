@@ -40,10 +40,13 @@
       "wheel"
       "networkmanager"
       "video"
+      "audio"
     ];
 
     shell = pkgs.zsh;
   };
+
+  users.mutableUsers = false;
 
   system.stateVersion = "25.05";
 }
