@@ -7,29 +7,7 @@
 
         ./links.nix
         ./deactivations.nix
+        ./home.nix
         ./packages.nix
-    ];
-
-    hydenix.hm = {
-        enable = true;
-        editors.default = "neovim";
-
-        theme = {
-	        active = "Gruvbox Retro";
-	        themes = [
-	            "Gruvbox Retro"
-	            "Dracula"
-	            "Monokai"
-                "Greenify"
-                "Nordic Blue"
-                "One Dark"
-                "Rain Dark"
-    	    ];
-        };
-    };
-
-    home.username = "snbohman";
-    home.homeDirectory = "/home/snbohman";
-    programs.home-manager.enable = true;
-    home.stateVersion = "25.05";
+    ]
 }
