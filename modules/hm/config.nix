@@ -20,10 +20,6 @@
 	        source = ./config/kitty/kitty.conf;
 	    };
 
-        ".zshrc" = {
-	        source = ./config/zsh/zshrc;
-	    };
-
         ".mozilla/firefox/q8pmdenq.default/chrome" = {
             source = ./config/firefox;
             recursive = true;
@@ -32,6 +28,10 @@
         ".gitconfig" = {
             source = ./config/git/gitconfig;
         };
+    };
+
+    programs.zsh = {
+        initExtra = builtins.readFile ./config/zsh/zshrc;
     };
 
     programs.tmux = {
