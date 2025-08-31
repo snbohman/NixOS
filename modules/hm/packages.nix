@@ -8,6 +8,10 @@
         lf
         tree
         lazygit
+
+	nvim
+	alacritty
+	rofi
         unzip
 
         tmux
