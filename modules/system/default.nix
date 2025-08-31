@@ -1,7 +1,9 @@
-{ pkgs, services, ... }:
+{ ... }:
 
 {
     imports = [
-        ./keyboard.nix
+        ./settings.nix
+        ./graphical.nix
+        ./home-manager.nix
     ];
 }
