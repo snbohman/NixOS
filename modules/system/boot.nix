@@ -6,6 +6,7 @@
         # Define the boot device.
         # Ensure "/dev/sda" is the correct disk where you want to install the bootloader.
         # You can check with `lsblk`.
+	efiSupport = true;
         device = "/dev/sda1";
     };
 }
