@@ -2,6 +2,7 @@
 
 
 {
+    aa
     home.packages = with pkgs; [
         lf
         tree
