@@ -9,5 +9,5 @@
         ./deactivations.nix
         ./home.nix
         ./packages.nix
-    ]
+    ];
 }
