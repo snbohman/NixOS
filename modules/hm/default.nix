@@ -5,7 +5,7 @@
         inputs.hydenix.lib.homeModules
         inputs.nix-index-database.hmModules.nix-index
 
-        ./config.nix
+        ./links.nix
         ./deactivations.nix
         ./packages.nix
     ];
