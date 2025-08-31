@@ -24,23 +24,6 @@
   hardware.nvidia.prime.sync.enable = false;
   hardware.nvidia.prime.offload.enable = false;
 
-  # home-manager = {
-  #   useGlobalPkgs = true;
-  #   useUserPackages = true;
-  #   extraSpecialArgs = {
-  #     inherit inputs;
-  #   };
-  #
-  #   users."snbohman" = { ... }:
-  #     {
-  #       imports = [
-  #         inputs.hydenix.lib.homeModules
-  #         inputs.nix-index-database.hmModules.nix-index
-  #         ./modules/hm
-  #       ];
-  #     };
-  # };
-
   hydenix = {
     enable = true;
 
