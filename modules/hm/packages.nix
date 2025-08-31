@@ -8,7 +8,6 @@
         lazygit
         unzip
 
-        zsh
         tmux
 
         premake5
@@ -20,4 +19,6 @@
 
         obsidian
     ];
+
+    programs.zsh.enable = true;
 }
