@@ -2,7 +2,7 @@
     description = "Snbohman's dotfiles";
 
     inputs = {
-        nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+        nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
 
         home-manager = {
             url = "github:nix-community/home-manager";
