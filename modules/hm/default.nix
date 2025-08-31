@@ -6,7 +6,7 @@
         inputs.nix-index-database.homeModules.nix-index
 
         ./links.nix
-        ./deactivations.nix
+        ./hydenix.nix
         ./home.nix
         ./packages.nix
     ];
