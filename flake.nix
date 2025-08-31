@@ -11,7 +11,6 @@
 
     hydenix = {
       url = "github:richen604/hydenix";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nix-index-database = {
