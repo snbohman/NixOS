@@ -1,4 +1,4 @@
-# Snbohmans dotfiles
+# Snbohmans nixos dotfiles
 Nixos dotfiles based on richen604s
 [Hydenix](https://github.com/richen604/hydenix) template.
 
