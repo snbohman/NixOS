@@ -19,6 +19,10 @@
 	        source = ./config/zsh/zshrc;
 	    };
 
+        ".zshenv" = lib.mkForce {
+            text = "";
+	    };
+
         ".config/kitty/kitty.conf" = {
 	        source = ./config/kitty/kitty.conf;
 	    };
