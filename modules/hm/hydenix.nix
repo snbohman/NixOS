@@ -24,5 +24,6 @@
         spotify.enable = false;
         editors.vscode.enable = false;
         shell.pokego.enable = false;
+        shell.enable = false;
     };
 }
