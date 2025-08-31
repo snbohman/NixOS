@@ -8,15 +8,12 @@
         lazygit
         unzip
 
+        zsh
         tmux
 
         premake5
         clang-tools
         clang
-
-        xorg.setxkbmap
-        xorg.xkbcomp
-        xorg.xev
 
         uv
         python312
