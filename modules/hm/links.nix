@@ -15,7 +15,7 @@
 	        source = ./config/hypr/keybindings.conf;
 	    };
 
-        ".zshrc" = {
+        ".zshrc" = lib.mkForce {
 	        source = ./config/zsh/zshrc;
 	    };
 
