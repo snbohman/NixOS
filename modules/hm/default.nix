@@ -1,7 +1,10 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
     imports = [
+        inputs.hydenix.lib.homeModules
+        inputs.nix-index-database.hmModules.nix-index
+
         ./config.nix
         ./deactivations.nix
         ./packages.nix
@@ -24,4 +27,9 @@
     	    ];
         };
     };
+
+    home.username = "snbohman";
+    home.homeDirectory = "/home/snbohman";
+    programs.home-manager.enable = true;
+    home.stateVersion = "25.05";
 }

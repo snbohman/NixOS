@@ -4,6 +4,11 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     hydenix.url = "github:richen604/hydenix";
     # Nix-index-database - for comma and command-not-found
     nix-index-database = {
@@ -13,11 +18,17 @@
   };
 
   outputs =
-    { ... }@inputs:
+    { self, nixpkgs, home-manager, ... }@inputs:
     let
-      HOSTNAME = "hydenix";
-      hydenixConfig = inputs.hydenix.inputs.hydenix-nixpkgs.lib.nixosSystem {
-        inherit (inputs.hydenix.lib) system;
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+    in
+    {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        inherit system;
         specialArgs = {
           inherit inputs;
         };
@@ -25,20 +36,11 @@
           ./configuration.nix
         ];
       };
-    in
-    {
-      nixosConfigurations.nixos = hydenixConfig;
-      nixosConfigurations.${HOSTNAME} = hydenixConfig;
 
-      homeConfigurations.snbohman = inputs.hydenix.inputs.home-manager.lib.homeManagerConfiguration {
-        inherit (inputs.hydenix.lib) system;
-        modules = [
-          ./modules/hm
-          inputs.nix-index-database.hmModules.nix-index
-        ];
-        extraSpecialArgs = {
-          inherit inputs;
-        };
+      homeConfigurations."snbohman" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = { inherit inputs; };
+        modules = [ ./modules/hm ];
       };
     };
 }

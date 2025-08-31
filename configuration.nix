@@ -18,7 +18,6 @@ in
   nixpkgs.pkgs = pkgs;
 
   imports = [
-    inputs.hydenix.inputs.home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     inputs.hydenix.lib.nixOsModules
     ./modules/system
@@ -35,22 +34,22 @@ in
   hardware.nvidia.prime.sync.enable = false;
   hardware.nvidia.prime.offload.enable = false;
 
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    extraSpecialArgs = {
-      inherit inputs;
-    };
-
-    users."snbohman" = { ... }:
-      {
-        imports = [
-          inputs.hydenix.lib.homeModules
-          inputs.nix-index-database.hmModules.nix-index
-          ./modules/hm
-        ];
-      };
-  };
+  # home-manager = {
+  #   useGlobalPkgs = true;
+  #   useUserPackages = true;
+  #   extraSpecialArgs = {
+  #     inherit inputs;
+  #   };
+  #
+  #   users."snbohman" = { ... }:
+  #     {
+  #       imports = [
+  #         inputs.hydenix.lib.homeModules
+  #         inputs.nix-index-database.hmModules.nix-index
+  #         ./modules/hm
+  #       ];
+  #     };
+  # };
 
   hydenix = {
     enable = true;
