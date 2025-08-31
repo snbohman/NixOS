@@ -7,7 +7,7 @@ if ! git diff --quiet || ! git diff --cached --quiet; then
     git commit -m "$(date +"%Y-%m-%d %H:%M:%S")"
     git push
 else
-    echo "No changes to commit."
+    echo "[Config] - No changes to commit."
 fi
 
 sudo nixos-rebuild switch --flake .
