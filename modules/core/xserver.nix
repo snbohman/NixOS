@@ -4,18 +4,18 @@
     xserver = {
       enable = true;
 
-      extraLayouts.se_custom = {
+      extraLayouts.se = {
         description = "Swedish with custom programming variant";
         languages = [ "sv" ];
-        symbolsFile = ./xkb/se;
+        symbolsFile = ./../xkb/se;
       };
 
       xkb = {
-        layout = "se,se";
-        variant = ",custom";
+        layout = "se";
+        variant = ",custom"; // The first is empty (standard), the second is our "custom" one.
         options = "grp:alt_caps_toggle,lv3:alt_switch";
-  	  };
-  	};
+      };
+    };
 
     displayManager.autoLogin = {
       enable = true;

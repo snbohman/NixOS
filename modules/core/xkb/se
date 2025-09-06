@@ -1,25 +1,11 @@
 default partial alphanumeric_keys
 xkb_symbols "custom" {
     include "se(basic)"
-    name[Group1]= "Swedish (Custom)";
+    name[Group1]= "Swedish [Custom]";
 
     // --- Key Remapping ---
-    // Key to the left of Backspace (+/= on US keyboard)
-    // It will now produce: < > ~
-    key <AE12> { [    less,    greater,      tilde,    questionexclam ] };
-
-    // Key below Backspace (\| on US keyboard)
-    // It will now produce: ' * |
-    key <BKSL> { [ apostrophe,  asterisk,        bar,       dead_acute ] };
-
-    // Key for 'å' becomes [ and {
-    // The original 'å' and 'Å' are moved to AltGr levels.
-    key <AD11> { [ bracketleft, braceleft,       aring,           Aring ] };
-
-    // Key for '¨' becomes ] and }
-    // The original '¨' is moved to the AltGr level.
-    key <AD12> { [ bracketright, braceright, dead_diaeresis, dead_circumflex ] };
-
-    // This makes sure the AltGr (right Alt) key is used for the 3rd level symbols.
-    include "level3(ralt_switch)"
+    key <AE12> { [    less,    greater,      tilde,    questionexclam ] }; // Key left of Backspace
+    key <BKSL> { [ apostrophe,  asterisk,        bar,       dead_acute ] }; // Key below Backspace
+    key <AD11> { [ bracketleft, braceleft,       aring,           Aring ] }; // 'å' key
+    key <AD12> { [ bracketright, braceright, dead_diaeresis, dead_circumflex ] }; // '¨' key
 };
