@@ -6,7 +6,7 @@
     {
       "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
       "logo": {
-        "source": "${../../wallpapers/otherWallpaper/gruvbox/forest_mist.jpeg}",
+        "source": "${../../wallpapers/otherWallpaper/gruvbox/forest_mist.jpg}",
         "type": "kitty-direct",
         "width": 33,
         "padding": {
