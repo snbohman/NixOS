@@ -29,8 +29,10 @@ in
       ];
 
       input = {
-        kb_layout = "se";
+        kb_layout = "se,se";
+	kb_variant = ",custom";
         kb_options = "grp:alt_caps_toggle";
+
         numlock_by_default = true;
         repeat_delay = 300;
         follow_mouse = 1;
