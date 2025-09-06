@@ -3,16 +3,9 @@
   services = {
     xserver = {
       enable = true;
-
-      extraLayouts.se = {
-        description = "Swedish (Custom)";
-        languages = [ "sv" ];
-        symbolsFile = ./xkb/se_custom;
-      };
-
       xkb = {
         layout = "se,se_custom";
-        options = "grp:alt_caps_toggle,lv3:alt_switch";
+        options = "grp:alt_caps_toggle";
       };
     };
 
