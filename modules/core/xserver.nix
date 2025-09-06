@@ -3,17 +3,30 @@
   services = {
     xserver = {
       enable = true;
-      xkb.layout = "us,se";
+
+      extraLayouts = {
+        se = {
+          description = "Swedish [code]";
+          languages = [ "sv" ];
+          symbolsFile = xkb/se;
+        };
+      };
+
+      layout = "se,se";
+      variant = ",custom";
+
+      options = "grp:alt_caps_toggle";
     };
 
     displayManager.autoLogin = {
       enable = true;
       user = "${username}";
     };
+
     libinput = {
       enable = true;
     };
   };
-  # To prevent getting stuck at shutdown
+
   systemd.settings.Manager.DefaultTimeoutStopSec = "10s";
 }
