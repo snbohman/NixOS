@@ -8,4 +8,6 @@ xkb_symbols "custom" {
     key <BKSL> { [ apostrophe,  asterisk,        bar,       dead_acute ] }; // Key below Backspace
     key <AD11> { [ bracketleft, braceleft,       aring,           Aring ] }; // 'å' key
     key <AD12> { [ bracketright, braceright, dead_diaeresis, dead_circumflex ] }; // '¨' key
+
+    include "level3(ralt_switch)"
 };

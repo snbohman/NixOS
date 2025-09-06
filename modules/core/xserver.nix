@@ -12,7 +12,7 @@
 
       xkb = {
         layout = "se";
-        variant = ",custom"; // The first is empty (standard), the second is our "custom" one.
+        variant = ",custom";
         options = "grp:alt_caps_toggle,lv3:alt_switch";
       };
     };
