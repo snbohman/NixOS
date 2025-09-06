@@ -59,7 +59,6 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
-	overlays = [ (import ./modules/core/xkb/overlay.nix) ];
       };
       lib = nixpkgs.lib;
     in

@@ -29,10 +29,6 @@ in
       ];
 
       input = {
-        kb_layout = "se,se";
-	kb_variant = ",custom";
-        kb_options = "grp:alt_caps_toggle";
-
         numlock_by_default = true;
         repeat_delay = 300;
         follow_mouse = 1;
@@ -42,6 +38,12 @@ in
         touchpad = {
           natural_scroll = true;
         };
+      };
+
+      device = {
+        name = "by-tech-gaming-keyboard";
+        kb_layout = "se,se_custom";
+        kb_options = "grp:alt_caps_toggle,lv3:alt_switch";
       };
 
       general = {

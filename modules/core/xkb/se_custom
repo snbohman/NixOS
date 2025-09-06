@@ -1,13 +1,64 @@
+// A complete, self-contained Swedish layout with custom programming keys.
 default partial alphanumeric_keys
-xkb_symbols "custom" {
-    include "se(basic)"
-    name[Group1]= "Swedish [Custom]";
+xkb_symbols "basic" {
+    name[Group1]= "Swedish (Custom)";
 
-    // --- Key Remapping ---
-    key <AE12> { [    less,    greater,      tilde,    questionexclam ] }; // Key left of Backspace
-    key <BKSL> { [ apostrophe,  asterisk,        bar,       dead_acute ] }; // Key below Backspace
-    key <AD11> { [ bracketleft, braceleft,       aring,           Aring ] }; // 'å' key
-    key <AD12> { [ bracketright, braceright, dead_diaeresis, dead_circumflex ] }; // '¨' key
+    // Alphanumeric keys (Mostly standard Swedish)
+    key <AE01> { [         1,     exclam,       exclamdown,    onesuperior ] };
+    key <AE02> { [         2,   quotedbl,         atsign,    twosuperior ] };
+    key <AE03> { [         3, numbersign,      sterling,  threesuperior ] };
+    key <AE04> { [         4,   currency,          dollar,     EuroSign ] };
+    key <AE05> { [         5,    percent,       perthousand,     cent ] };
+    key <AE06> { [         6,  ampersand,        notsign                       ] };
+    key <AE07> { [         7,      slash,      braceleft, leftsinglequotemark ] };
+    key <AE08> { [         8,  parenleft,    bracketleft, leftdoublequotemark ] };
+    key <AE09> { [         9, parenright,   bracketright, rightdoublequotemark ] };
+    key <AE10> { [         0,      equal,     braceright, rightsinglequotemark ] };
+    key <AE11> { [      plus,   question,       backslash, questiondown ] };
+    key <AD01> { [         q,          Q                                       ] };
+    key <AD02> { [         w,          W                                       ] };
+    key <AD03> { [         e,          E,           euro,        eogonek ] };
+    key <AD04> { [         r,          R                                       ] };
+    key <AD05> { [         t,          T                                       ] };
+    key <AD06> { [         y,          Y                                       ] };
+    key <AD07> { [         u,          U                                       ] };
+    key <AD08> { [         i,          I                                       ] };
+    key <AD09> { [         o,          O                                       ] };
+    key <AD10> { [         p,          P                                       ] };
+    key <AC01> { [         a,          A                                       ] };
+    key <AC02> { [         s,          S                                       ] };
+    key <AC03> { [         d,          D                                       ] };
+    key <AC04> { [         f,          F                                       ] };
+    key <AC05> { [         g,          G                                       ] };
+    key <AC06> { [         h,          H                                       ] };
+    key <AC07> { [         j,          J                                       ] };
+    key <AC08> { [         k,          K                                       ] };
+    key <AC09> { [         l,          L                                       ] };
+    key <AC10> { [   odiaeresis, Otilde,      Odiaeresis, Oslash       ] };
+    key <AC11> { [   adiaeresis, Aacute,      Adiaeresis, AE           ] };
+    key <AB01> { [         z,          Z                                       ] };
+    key <AB02> { [         x,          X                                       ] };
+    key <AB03> { [         c,          C                                       ] };
+    key <AB04> { [         v,          V                                       ] };
+    key <AB05> { [         b,          B                                       ] };
+    key <AB06> { [         n,          N                                       ] };
+    key <AB07> { [         m,          M,           mu,  masculine ] };
+    key <AB08> { [     comma,  semicolon,      guillemotleft                     ] };
+    key <AB09> { [    period,      colon,     guillemotright                     ] };
+    key <AB10> { [     minus, underscore,      macron,  endash    ] };
+    key <TLDE> { [   section,    onehalf,       paragraph,     degree ] };
 
-    include "level3(ralt_switch)"
+    // --- YOUR CUSTOMIZATIONS ARE HERE ---
+
+    // Key to the left of Backspace (+/= on US keyboard) is now < > ~
+    key <AE12> { [ less, greater, tilde, questionexclam ] };
+
+    // Key below Backspace (\| on US keyboard) is now ' * |
+    key <BKSL> { [ apostrophe, asterisk, bar, dead_acute ] };
+
+    // 'å' key becomes [ and { (å/Å are on Alt levels)
+    key <AD11> { [ bracketleft, braceleft, aring, Aring ] };
+
+    // '¨' key becomes ] and } (¨ is on Alt level)
+    key <AD12> { [ bracketright, braceright, dead_diaeresis, dead_circumflex ] };
 };
