@@ -7,7 +7,7 @@
       extraLayouts.se = {
         description = "Swedish with custom programming variant";
         languages = [ "sv" ];
-        symbolsFile = ./../xkb/se;
+        symbolsFile = ./xkb/se;
       };
 
       xkb = {
