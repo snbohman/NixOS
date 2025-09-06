@@ -1,6 +1,6 @@
 # ========== General ========== #
 theme = 'gruvbox-dark-hard'
-editor = "micro"
+editor = "nvim"
 dir_editor = "nemo"
 
 auto_check_update = false

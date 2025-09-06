@@ -1,20 +1,19 @@
-{ inputs, pkgs, ... }:
-let
-  hyprland-pkgs =
-    inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-in
+{ pkgs, ... }:
 {
-  hardware = {
-    graphics = {
-      enable = true;
-      package = hyprland-pkgs.mesa;
-      extraPackages = with pkgs; [
-        intel-media-driver
-        (vaapiIntel.override { enableHybridCodec = true; })
-        vaapiVdpau
-        libvdpau-va-gl
-      ];
-    };
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
   };
-  hardware.enableRedistributableFirmware = true;
+
+  services.xserver.videoDrivers = ["nvidia"];
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
 }
