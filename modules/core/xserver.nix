@@ -5,14 +5,13 @@
       enable = true;
 
       extraLayouts.se = {
-        description = "Swedish with custom programming variant";
+        description = "Swedish (Custom)";
         languages = [ "sv" ];
-        symbolsFile = ./xkb/se;
+        symbolsFile = ./xkb/se_custom;
       };
 
       xkb = {
-        layout = "se";
-        variant = ",custom";
+        layout = "se,se_custom";
         options = "grp:alt_caps_toggle,lv3:alt_switch";
       };
     };
