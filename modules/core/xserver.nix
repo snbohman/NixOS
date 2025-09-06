@@ -14,8 +14,6 @@
 
       layout = "se,se";
       variant = ",custom";
-
-      options = "grp:alt_caps_toggle";
     };
 
     displayManager.autoLogin = {
