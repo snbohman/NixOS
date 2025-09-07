@@ -43,7 +43,7 @@ in
       device = {
         name = "by-tech-gaming-keyboard";
         kb_layout = "se,se_custom";
-        kb_options = "grp:alt_caps_toggle,lv3:alt_switch";
+        kb_options = "lv3:alt_switch";
       };
 
       general = {
@@ -148,6 +148,9 @@ in
       };
 
       bind = [
+        # Switch keyboard layout
+        "$mainMod, K, exec, hyprctl switchxkblayout by-tech-gaming-keyboard next"
+
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"
 

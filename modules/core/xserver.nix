@@ -12,7 +12,7 @@
 
       xkb = {
         layout = "se,se_custom";
-      	options = "grp:alt_caps_toggle,lv3:alt_switch";
+      	options = "lv3:alt_switch";
       };
     };
 
