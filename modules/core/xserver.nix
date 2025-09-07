@@ -4,15 +4,8 @@
     xserver = {
       enable = true;
 
-      extraLayouts.se_custom = {
-        description = "Swedish Custom";
-        languages   = [ "sv" ];
-        symbolsFile = ./xkb/se_custom;
-      };
-
       xkb = {
-        layout = "se,se_custom";
-      	options = "lv3:alt_switch";
+        layout = "se";
       };
     };
 
