@@ -20,9 +20,9 @@
 
       # Theme
       theme = "gruvbox";
-      background-opacity = 0.66;
+      background-opacity = 0.86;
 
-      cursor-style = "bar";
+      cursor-style = "block";
       cursor-style-blink = false;
       adjust-cursor-thickness = 1;
 

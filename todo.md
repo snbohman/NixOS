@@ -1,3 +1,2 @@
 * custom keyboard layout
-* neovim config
-* firefox?
+* firefox : remove zen
