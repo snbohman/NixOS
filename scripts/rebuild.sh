@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cd ~/.dotfiles
+
 if ! git diff --quiet || ! git diff --cached --quiet; then
     git add --all
     git commit -m "$(date +"%Y-%m-%d %H:%M:%S")"
@@ -8,3 +10,5 @@ else
 fi
 
 sudo nixos-rebuild switch --flake ~/.dotfiles && git push
+
+cd -
