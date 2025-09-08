@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
     services.keyd.enable = true;
-    enviroment.etc."keyd/default.conf".text = ''
+    environment.etc."keyd/default.conf".text = ''
         [ids]
         * 
 
