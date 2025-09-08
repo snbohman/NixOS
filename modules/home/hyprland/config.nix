@@ -27,7 +27,7 @@ in
       ];
 
       input = {
-        kb_layout = "custom_se";
+        kb_layout = "se, custom_se";
         kb_variant = "";
         kb_options = "";
 
