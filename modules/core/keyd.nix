@@ -5,15 +5,14 @@
     keyboards = {
       default = {
         ids = [ "*" ];
-        settings = ''
-            [ids]
-            *
-    
-            meta-k = layer(testing)
-
-            [testing]
-            a = b
-        '';
+        settings = {
+          main = {
+            super-k = "layer(testing)";
+          };
+          testing = {
+            a = "b";
+          };
+        };
       };
     };
   };
