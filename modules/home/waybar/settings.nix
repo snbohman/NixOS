@@ -142,8 +142,8 @@ in
     };
     "hyprland/language" = {
       format = "<span foreground='#FABD2F'> </span> {}";
-      format-fr = "FR";
-      format-en = "US";
+      format-se = "SE";
+      format-custom_se = "CODE";
       on-click = "hyprctl switchxkblayout by-tech-gaming-keyboard next";
     };
     "custom/launcher" = {
