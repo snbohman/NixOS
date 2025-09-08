@@ -8,7 +8,10 @@
     services.xremap = {
         enable = true;
         withHypr = true;
-        devices = [ "/dev/input/by-id/usb-BY_Tech_Gaming_Keyboard-event-kbd" ];
+        extraArgs = [
+            "--device"
+            "/dev/input/by-id/usb-BY_Tech_Gaming_Keyboard-event-kbd"
+        ];
 
         config = {
 
