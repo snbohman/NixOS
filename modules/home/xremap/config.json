@@ -1,0 +1,10 @@
+{
+  "layers": {
+    "test": {
+      "A": "B"
+    }
+  },
+  "bindings": {
+    "Super+K": ["layer", "test"]
+  }
+}

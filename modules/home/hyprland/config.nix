@@ -20,12 +20,11 @@ in
         "swaync &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "swww-daemon &"
+        "xremap &"
 
         "hyprlock"
 
         "${terminal} --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false"
-        "[workspace 2 silent] ${browser}"
-        "[workspace 1 silent] ${terminal}"
       ];
 
       input = {

@@ -15,6 +15,5 @@
     ./user.nix
     ./wayland.nix
     ./virtualization.nix
-    ./keyd.nix
   ];
 }
