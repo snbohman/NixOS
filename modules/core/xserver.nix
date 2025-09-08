@@ -10,7 +10,7 @@
 
             extraLayouts.custom_se = {
                 description = "Swedish - Custom";
-                symbolsFile = ./xkb/custom_se.xkb;
+                symbolsFile = ./xkb/ccustom_se.xkb;
                 languages = [ "swe" ];
             };
         };
