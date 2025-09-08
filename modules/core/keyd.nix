@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
     services.keyd.enable = true;
     environment.etc."keyd/default.conf".text = ''
@@ -7,6 +7,7 @@
 
         [main]
         layout = se
+        super+k = layer(test);
 
         [super+k]
         a = b
