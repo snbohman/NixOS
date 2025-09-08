@@ -12,7 +12,7 @@
                 description = "Swedish - Custom";
                 symbolsFile = ./xkb/custom_se.xkb;
                 languages = [ "swe" ];
-            }
+            };
         };
 
         displayManager.autoLogin = {
