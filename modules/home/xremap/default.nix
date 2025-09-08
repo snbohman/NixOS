@@ -8,7 +8,6 @@
     services.xremap = {
         enable = true;
         withHypr = true;
-        deviceNames = [ "BY Tech Gaming Keyboard" ];
         config = import ./mapping.nix;
     };
 }
