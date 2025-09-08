@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
     services.keyd.enable = true;
-    enviroment.etc."keyd/default.conf".text = ""
+    enviroment.etc."keyd/default.conf".text = ''
         [ids]
         * 
 
@@ -10,5 +10,5 @@
 
         [super+k]
         a = b
-    "";
+    '';
 }
