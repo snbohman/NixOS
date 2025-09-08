@@ -144,7 +144,7 @@ in
       };
 
       bind = [
-        "$mainMod SHIFT, K, hyprctl switchxkblayout by-tech-gaming-keyboard next"
+        "$mainMod SHIFT, K, exec, hyprctl switchxkblayout by-tech-gaming-keyboard next"
         "$mainMod, U, exec, hyprctl dispatch exec '[float; size 800 600; center] ghostty -e sh -c \"./~/.dotfiles/scripts/rebuild.sh; read -p \\\"Press Enter to close...\\\"\"'"
 
         # show keybinds list
