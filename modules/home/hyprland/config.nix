@@ -29,6 +29,8 @@ in
       ];
 
       input = {
+        kb_layout = "se";
+        kb_options = "lv3:alt_switch";
         numlock_by_default = true;
         repeat_delay = 300;
         follow_mouse = 1;
@@ -38,12 +40,6 @@ in
         touchpad = {
           natural_scroll = true;
         };
-      };
-
-      device = {
-        name = "by-tech-gaming-keyboard";
-        kb_layout = "se,se_custom";
-        kb_options = "lv3:alt_switch";
       };
 
       general = {
@@ -149,7 +145,6 @@ in
 
       bind = [
         "$mainMod, U, exec, hyprctl dispatch exec '[float; size 800 600; center] ghostty -e sh -c \"cd ~/.dotfiles; ./scripts/rebuild.sh; read -p \\\"Press Enter to close...\\\"\"'"
-        "$mainMod, K, exec, hyprctl switchxkblayout by-tech-gaming-keyboard next"
 
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"
