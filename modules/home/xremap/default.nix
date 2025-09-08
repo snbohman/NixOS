@@ -2,7 +2,7 @@
 
 {
     imports = [
-        inputs.nix-flake.homeManagerModules.default
+        inputs.xremap-flake.homeManagerModules.default
     ];
 
     programs.xremap = {
