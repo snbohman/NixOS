@@ -36,22 +36,22 @@
     "aquamarine_2": {
       "inputs": {
         "hyprutils": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "hyprutils"
         ],
         "hyprwayland-scanner": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "hyprwayland-scanner"
         ],
         "nixpkgs": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "systems"
         ]
@@ -273,7 +273,7 @@
     "gitignore_2": {
       "inputs": {
         "nixpkgs": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "pre-commit-hooks",
           "nixpkgs"
@@ -405,17 +405,17 @@
     "hyprcursor_2": {
       "inputs": {
         "hyprlang": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "hyprlang"
         ],
         "nixpkgs": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "systems"
         ]
@@ -466,17 +466,17 @@
     "hyprgraphics_2": {
       "inputs": {
         "hyprutils": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "hyprutils"
         ],
         "nixpkgs": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "systems"
         ]
@@ -582,12 +582,12 @@
     "hyprland-protocols_2": {
       "inputs": {
         "nixpkgs": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "systems"
         ]
@@ -641,19 +641,19 @@
     "hyprland-qt-support_2": {
       "inputs": {
         "hyprlang": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "hyprland-qtutils",
           "hyprlang"
         ],
         "nixpkgs": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "hyprland-qtutils",
           "nixpkgs"
         ],
         "systems": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "hyprland-qtutils",
           "systems"
@@ -713,24 +713,24 @@
       "inputs": {
         "hyprland-qt-support": "hyprland-qt-support_2",
         "hyprlang": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "hyprlang"
         ],
         "hyprutils": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "hyprland-qtutils",
           "hyprlang",
           "hyprutils"
         ],
         "nixpkgs": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "systems"
         ]
@@ -810,17 +810,17 @@
     "hyprlang_2": {
       "inputs": {
         "hyprutils": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "hyprutils"
         ],
         "nixpkgs": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "systems"
         ]
@@ -954,12 +954,12 @@
     "hyprutils_3": {
       "inputs": {
         "nixpkgs": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "systems"
         ]
@@ -1056,12 +1056,12 @@
     "hyprwayland-scanner_4": {
       "inputs": {
         "nixpkgs": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "systems"
         ]
@@ -1377,7 +1377,7 @@
         "flake-compat": "flake-compat_3",
         "gitignore": "gitignore_2",
         "nixpkgs": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "nixpkgs"
         ]
@@ -1409,7 +1409,7 @@
         "nix-gaming": "nix-gaming",
         "nixpkgs": "nixpkgs_5",
         "nur": "nur",
-        "xremap-nix": "xremap-nix",
+        "xremap": "xremap",
         "zen-browser": "zen-browser"
       }
     },
@@ -1535,32 +1535,32 @@
     "xdph_2": {
       "inputs": {
         "hyprland-protocols": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "hyprland-protocols"
         ],
         "hyprlang": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "hyprlang"
         ],
         "hyprutils": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "hyprutils"
         ],
         "hyprwayland-scanner": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "hyprwayland-scanner"
         ],
         "nixpkgs": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "xremap-nix",
+          "xremap",
           "hyprland",
           "systems"
         ]
@@ -1580,6 +1580,31 @@
       }
     },
     "xremap": {
+      "inputs": {
+        "crane": "crane",
+        "devshell": "devshell",
+        "flake-parts": "flake-parts_3",
+        "home-manager": "home-manager_2",
+        "hyprland": "hyprland_2",
+        "nixpkgs": "nixpkgs_10",
+        "treefmt-nix": "treefmt-nix",
+        "xremap": "xremap_2"
+      },
+      "locked": {
+        "lastModified": 1756865480,
+        "narHash": "sha256-gLl8GTczNjpyq2PPHEhkn01Bq6xttIfzL4Uh7oFhqo8=",
+        "owner": "xremap",
+        "repo": "nix-flake",
+        "rev": "6b28ae462971c812ee1acdfba9cc01736053c2ca",
+        "type": "github"
+      },
+      "original": {
+        "owner": "xremap",
+        "repo": "nix-flake",
+        "type": "github"
+      }
+    },
+    "xremap_2": {
       "flake": false,
       "locked": {
         "lastModified": 1756852775,
@@ -1593,31 +1618,6 @@
         "owner": "k0kubun",
         "ref": "v0.10.16",
         "repo": "xremap",
-        "type": "github"
-      }
-    },
-    "xremap-nix": {
-      "inputs": {
-        "crane": "crane",
-        "devshell": "devshell",
-        "flake-parts": "flake-parts_3",
-        "home-manager": "home-manager_2",
-        "hyprland": "hyprland_2",
-        "nixpkgs": "nixpkgs_10",
-        "treefmt-nix": "treefmt-nix",
-        "xremap": "xremap"
-      },
-      "locked": {
-        "lastModified": 1756865480,
-        "narHash": "sha256-gLl8GTczNjpyq2PPHEhkn01Bq6xttIfzL4Uh7oFhqo8=",
-        "owner": "xremap",
-        "repo": "nix-flake",
-        "rev": "6b28ae462971c812ee1acdfba9cc01736053c2ca",
-        "type": "github"
-      },
-      "original": {
-        "owner": "xremap",
-        "repo": "nix-flake",
         "type": "github"
       }
     },
