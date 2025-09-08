@@ -8,7 +8,6 @@
     services.xremap = {
         enable = true;
         withHypr = true;
-        userName = "snbohman";
 
         config = {
             keymap = [

@@ -1,7 +1,0 @@
-{
-    "keymap": [{
-        "remap": {
-            "CapsLock": "Esc"
-        }
-    }]
-}
