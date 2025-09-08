@@ -20,7 +20,7 @@ in
         "swaync &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "swww-daemon &"
-        "xremap &"
+        "xremap --config ~/.config/xremap/config.json &"
 
         "hyprlock"
 
