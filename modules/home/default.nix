@@ -30,7 +30,7 @@
     ./waybar                          # status bar
     ./waypaper.nix                    # GUI wallpaper picker
     ./xdg-mimes.nix                   # xdg config
-    ./xremap/xremap.nix               # remap keys
+    ./xremap                          # remap keys
     ./zsh                             # shell
   ];
 }
