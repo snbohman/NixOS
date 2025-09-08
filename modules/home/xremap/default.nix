@@ -8,18 +8,17 @@
     services.xremap = {
         enable = true;
         withHypr = true;
-        extraArgs = [
-            "--device"
-            "/dev/input/by-id/usb-BY_Tech_Gaming_Keyboard-event-kbd"
-        ];
+        userName = "snbohman";
 
         config = {
-
-            keymap = [ {
-                remap = {
-                    CapsLock = "Esc";
-                };
-            } ];
+            keymap = [
+                {
+                    name = "testing";
+                    remap = {
+                        CapsLock = "Esc";
+                    };
+                }
+            ];
         };
     };
 }

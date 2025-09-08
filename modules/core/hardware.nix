@@ -2,6 +2,7 @@
 {
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = ["nvidia"];
+  hardware.uinput.enable = true;
 
   hardware.nvidia = {
     modesetting.enable = true;
