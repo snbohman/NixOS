@@ -2,7 +2,7 @@
 
 {
     home.packages = with pkgs; [
-        xremap
+        alacritty
     ];
 
     programs.xremap = {
