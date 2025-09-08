@@ -50,7 +50,7 @@
 
     ghostty.url = "github:ghostty-org/ghostty";
 
-    xremap-nix.url = "github:xremap/xremap-nix";
+    xremap-nix.url = "github:xremap/nix-flake";
   };
   outputs =
     { nixpkgs, self, ... }@inputs:
