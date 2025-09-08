@@ -1,19 +1,14 @@
 { pkgs, ... }:
 {
-  services.keyd = {
-    enable = true;
-    keyboards = {
-      default = {
-        ids = [ "*" ];
-        settings = {
-          main = {
-            super-k = "layer(testing)";
-          };
-          testing = {
-            a = "b";
-          };
-        };
-      };
-    };
-  };
+    services.keyd.enable = true;
+    enviroment.etc."keyd/default.conf".text = ""
+        [ids]
+        * 
+
+        [main]
+        layout = se
+
+        [super+k]
+        a = b
+    "";
 }
