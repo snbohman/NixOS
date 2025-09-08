@@ -48,8 +48,6 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
     ghostty.url = "github:ghostty-org/ghostty";
-
-    xremap.url = "github:xremap/nix-flake";
   };
   outputs =
     { nixpkgs, self, ... }@inputs:
@@ -59,7 +57,6 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
-        overlays = [ inputs.xremap.overlays.default ];
       };
       lib = nixpkgs.lib;
     in
