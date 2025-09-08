@@ -21,12 +21,10 @@
             keymap = [ {
                 name = "Custom Symbols Key";
                 remap = {
-                    KEY_BACKSLASH = {
-                        press = ["less"];                   # normal press -> <
-                        "Shift-press" = ["greater"];        # Shift + press -> >
-                        "RAlt-press" = ["asciitilde"];      # Right Alt + press -> ~
-                        "Shift-RAlt-press" = ["bar"];       # Shift + Right Alt + press -> |
-                    };
+                    KEY_BACKSLASH = "less";
+                    "Shift-KEY_BACKSLASH" = "greater";
+                    "RAlt-KEY_BACKSLASH" = "asciitilde";
+                    "Shift-RAlt-KEY_BACKSLASH" = "bar";
                 };
             } ];
         };
