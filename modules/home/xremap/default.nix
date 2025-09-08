@@ -5,7 +5,7 @@
         inputs.xremap.homeManagerModules.default
     ];
 
-    programs.xremap = {
+    services.xremap = {
         enable = true;
         config = builtins.fromJSON (builtins.readFile ./config.json);
     };
