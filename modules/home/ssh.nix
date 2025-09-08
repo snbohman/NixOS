@@ -2,16 +2,16 @@
 {
   programs.ssh = {
     enable = true;
-
-    addKeysToAgent = "1h";
-
-    controlMaster = "auto";
-    controlPath = "~/.ssh/control-%r@%h:%p";
-    controlPersist = "10m";
+    enableDefaultConfig = false;
 
     matchBlocks = {
-      github = {
-        host = "github.com";
+      "*" = {
+        addKeysToAgent = "1h";
+        controlMaster = "auto";
+        controlPath = "~/.ssh/control-%r@%h:%p";
+        controlPersist = "10m";
+      };
+      "github.com" = {
         hostname = "ssh.github.com";
         user = "git";
         port = 443;
