@@ -144,7 +144,7 @@ in
       };
 
       bind = [
-        "$mainMod, U, exec, hyprctl dispatch exec '[float; size 800 600; center] ghostty -e sh -c \"cd ~/.dotfiles; ./scripts/rebuild.sh; read -p \\\"Press Enter to close...\\\"\"'"
+        "$mainMod, U, exec, hyprctl dispatch exec '[float; size 800 600; center] ghostty -e sh -c \"./~/.dotfiles/scripts/rebuild.sh; read -p \\\"Press Enter to close...\\\"\"'"
 
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"
