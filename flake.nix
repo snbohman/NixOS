@@ -49,7 +49,7 @@
 
     ghostty.url = "github:ghostty-org/ghostty";
 
-    xremap-flake.url = "github:xremap/xremap-flake";
+    xremap-nix.url = "github:xremap/xremap-nix";
   };
 
   outputs =
@@ -60,7 +60,7 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
-        overlays = [ inputs.xremap-flake.overlays.default ];
+        overlays = [ inputs.xremap-nix.overlays.default ];
       };
       lib = nixpkgs.lib;
     in
