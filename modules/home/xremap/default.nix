@@ -8,6 +8,6 @@
     services.xremap = {
         enable = true;
         withHypr = true;
-        configFile = import ./mapping.nix;
+        config = import ./mapping.nix;
     };
 }
