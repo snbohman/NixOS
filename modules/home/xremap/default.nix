@@ -11,6 +11,6 @@
     };
 
     home.file.".config/xremap/config.json" = {
-        source = ./config.json
+        source = ./config.json;
     };
 }
