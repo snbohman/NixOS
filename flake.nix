@@ -1,5 +1,5 @@
 {
-  description = "FrostPhoenix's nixos configuration";
+  description = "Snbohman's nixos config";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -42,7 +42,6 @@
     };
 
     nur.url = "github:nix-community/NUR";
-    nix-gaming.url = "github:fufexan/nix-gaming";
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
@@ -50,7 +49,7 @@
 
     ghostty.url = "github:ghostty-org/ghostty";
 
-    xremap.url = "github:xremap/nix-flake";
+    xremap-flake.url = "github:xremap/nix-flake";
   };
   outputs =
     { nixpkgs, self, ... }@inputs:
@@ -60,7 +59,7 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
-        overlays = [ inputs.xremap.overlays.default ];
+        overlays = [ inputs.xremap-flake.overlays.default ];
       };
       lib = nixpkgs.lib;
     in
