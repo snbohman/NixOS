@@ -6,12 +6,13 @@
 
             xkb = {
                 layout = "se";
-            };
 
-            extraLayouts.custom_se = {
-                description = "Swedish - Custom";
-                symbolsFile = ./xkb/ccustom_se.xkb;
-                languages = [ "swe" ];
+                extraLayouts.custom_se = {
+                    description = "Swedish - Custom";
+                    symbolsFile = ./xkb/custom_se.xkb;
+                    languages = [ "swe" ];
+                };
+
             };
         };
 
