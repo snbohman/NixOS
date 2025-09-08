@@ -9,6 +9,10 @@
         enable = true;
         withHypr = true;
         config = {
+            devices = [ {
+                input = "usb-BY_Tech_Gaming_Keyboard-event-kbd";
+            } ]
+
             keymap = [ {
                 remap = {
                     CapsLock = "Esc";
