@@ -27,8 +27,10 @@ in
       ];
 
       input = {
-        kb_layout = "se";
-        kb_options = "lv3:alt_switch";
+        kb_layout = "custom_se";
+        kb_variant = "";
+        kb_options = "";
+
         numlock_by_default = true;
         repeat_delay = 300;
         follow_mouse = 1;

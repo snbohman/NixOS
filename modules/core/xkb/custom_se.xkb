@@ -1,0 +1,39 @@
+default partial xkb_symbols "custom" {
+
+// Start by including the basic Swedish layout. We will modify it.
+include "se(basic)"
+
+// Set the name that will appear in layout selection menus.
+name[Group1] = "Swedish (Custom for Programming)";
+
+// --- Custom Key Overrides ---
+
+// 1. Reclaim Bracket Keys (US Style)
+// Key to the right of 'P'. US: [ { | Swedish: Å
+key <AD11> {
+    type = "FOUR_LEVEL", // Explicitly define type for clarity
+    symbols[Group1] = [  bracketleft,   braceleft,   aring,   Aring   ]
+};
+// Key to the right of that. US: ] } | Swedish: ¨ (dead key)
+key <AD12> {
+    type = "TWO_LEVEL",
+    symbols[Group1] = [ bracketright,  braceright ]
+};
+
+// 2. Consolidate < > ~
+// Key to the left of Backspace. US: = + | Swedish: + ?
+// We are completely overriding this key for our programming symbols.
+key <AE12> {
+    type = "THREE_LEVEL",
+    symbols[Group1] = [        less,     greater,     tilde ]
+};
+
+// 3. Improve Pipe '|' access
+// Key above Enter on ANSI keyboards. US: \ | | Swedish: ' *
+// We keep the standard Swedish ' and * but add the pipe '|' on AltGr.
+key <BKSL> {
+    type = "THREE_LEVEL",
+    symbols[Group1] = [   apostrophe,    asterisk,       bar ]
+};
+
+};
