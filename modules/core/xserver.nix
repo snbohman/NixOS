@@ -8,7 +8,8 @@
                 layout = "se";
 
                 extraLayouts.custom_se = {
-                    description = "Swedish - Custom";
+                    name = "Se - Custom";
+                    description = "Se - Custom";
                     symbolsFile = ./xkb/custom_se.xkb;
                     languages = [ "swe" ];
                 };
