@@ -21,10 +21,10 @@
             keymap = [ {
                 name = "Custom Symbols Key";
                 remap = {
-                    KEY_BACKSLASH = ["Shift", "Comma"];
-                    "Shift-KEY_BACKSLASH" = ["Shift", "Period"];
-                    "RAlt-KEY_BACKSLASH" = ["Shift", "Grave"];
-                    "Shift-RAlt-KEY_BACKSLASH" = ["Shift", "Backslash"];
+                    KEY_BACKSLASH = ["Shift" "Comma"];
+                    "Shift-KEY_BACKSLASH" = ["Shift" "Period"];
+                    "RAlt-KEY_BACKSLASH" = ["Shift" "Grave"];
+                    "Shift-RAlt-KEY_BACKSLASH" = ["Shift" "Backslash"];
                 };
             } ];
         };
