@@ -2,7 +2,7 @@
 
 {
     imports = [
-        inputs.xremap-flake.homeManagerModules.default
+        inputs.xremap.homeManagerModules.default
     ];
 
     programs.xremap = {
