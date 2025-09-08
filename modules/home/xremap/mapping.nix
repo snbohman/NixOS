@@ -8,23 +8,23 @@
       };
     }
   ];
-  keymap = [
-    {
-      name = "Custom Symbols Key";
-      remap = {
-        KEY_BACKSLASH = {
-          with_layout = { layout = "us"; press = [ "Shift" "Comma" ]; };
-        };
-        "Shift-KEY_BACKSLASH" = {
-          with_layout = { layout = "us"; press = [ "Shift" "Period" ]; };
-        };
-        "RAlt-KEY_BACKSLASH" = {
-          with_layout = { layout = "us"; press = [ "Shift" "Grave" ]; };
-        };
-        "Shift-RAlt-KEY_BACKSLASH" = {
-          with_layout = { layout = "us"; press = [ "Shift" "Backslash" ]; };
-        };
-      };
-    }
-  ];
+  # keymap = [
+  #   {
+  #     name = "Custom Symbols Key";
+  #     remap = {
+  #       KEY_BACKSLASH = {
+  #         with_layout = { layout = "us"; press = [ "Shift" "Comma" ]; };
+  #       };
+  #       "Shift-KEY_BACKSLASH" = {
+  #         with_layout = { layout = "us"; press = [ "Shift" "Period" ]; };
+  #       };
+  #       "RAlt-KEY_BACKSLASH" = {
+  #         with_layout = { layout = "us"; press = [ "Shift" "Grave" ]; };
+  #       };
+  #       "Shift-RAlt-KEY_BACKSLASH" = {
+  #         with_layout = { layout = "us"; press = [ "Shift" "Backslash" ]; };
+  #       };
+  #     };
+  #   }
+  # ];
 }
