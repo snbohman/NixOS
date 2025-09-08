@@ -1,10 +1,7 @@
 {
-  "layers": {
-    "test": {
-      "A": "B"
-    }
-  },
-  "bindings": {
-    "Super+K": ["layer", "test"]
-  }
+    "keymap": [{
+        "remap": {
+            "CapsLock": "Esc"
+        }
+    }]
 }

@@ -42,13 +42,14 @@
     };
 
     nur.url = "github:nix-community/NUR";
-    nix-gaming.url = "github:fufexan/nix-gaming";
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
     ghostty.url = "github:ghostty-org/ghostty";
+
+    xremap-flake.url = "github:xremap/xremap-flake";
   };
 
   outputs =
@@ -59,6 +60,7 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
+        overlays = [ inputs.xremap-flake.overlays.default ];
       };
       lib = nixpkgs.lib;
     in
