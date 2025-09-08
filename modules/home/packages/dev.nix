@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     ## C / C++
     gcc
+    clang
     gdb
     gef
     cmake
