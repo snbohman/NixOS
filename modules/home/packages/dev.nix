@@ -6,6 +6,7 @@
     cmake
     gnumake
     premake5
+    bear
     llvmPackages_20.clang-tools
 
     ## Python
