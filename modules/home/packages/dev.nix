@@ -2,13 +2,9 @@
 {
   home.packages = with pkgs; [
     ## C / C++
-    gcc
     clang
-    gdb
-    gef
     cmake
     gnumake
-    valgrind
     premake5
     llvmPackages_20.clang-tools
 
