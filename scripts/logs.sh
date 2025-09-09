@@ -5,8 +5,8 @@ echo "[[INFO]] Staging all modified files."
 git add .
 
 if git diff --staged --quiet; then
-  echo "[[WARNING]] No staged changes detected. Terminating script."
-  exit 0
+  echo "[[WARNING]] No staged changes detected"
+  read -p "Continue? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 fi
 
 COMMIT_MSG="$(date +"%Y-%m-%d %H:%M:%S")"
