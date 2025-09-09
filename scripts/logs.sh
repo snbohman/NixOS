@@ -15,7 +15,7 @@ git commit -m "$COMMIT_MSG"
 
 echo "[[INFO]] Initiating NixOS system rebuild."
 if sudo nixos-rebuild switch --flake ~/.dotfiles; then
-  echo "[[SUCCESS]] System rebuild completed successfully."
+  echo "[[INFO]] System rebuild completed successfully."
   echo "[[INFO]] Pushing changes to the remote repository."
   git push
   echo "[[INFO]] Workflow completed."
