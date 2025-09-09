@@ -31,7 +31,6 @@
         systems.follows = "hyprland/systems";
       };
     };
-
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs = {
@@ -42,11 +41,7 @@
     };
 
     nur.url = "github:nix-community/NUR";
-
     nix-flatpak.url = "github:gmodena/nix-flatpak";
-
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
-
     ghostty.url = "github:ghostty-org/ghostty";
   };
   outputs =
