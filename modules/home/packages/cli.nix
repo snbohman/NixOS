@@ -9,7 +9,6 @@
     man-pages                         # extra man pages
     ncdu                              # disk space
     ripgrep                           # grep replacement
-    tldr			      # simplified man
     
     ## Monitoring / fetch
     htop
