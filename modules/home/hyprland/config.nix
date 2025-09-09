@@ -1,6 +1,6 @@
 { ... }:
 let
-  browser = "zen-beta";
+  browser = "firefox";
   terminal = "ghostty";
 in
 {
@@ -319,7 +319,7 @@ in
         "opacity 1.0 override 1.0 override, title:^(.*mpv.*)$"
         "opacity 1.0 override 1.0 override, class:(Aseprite)"
         "opacity 1.0 override 1.0 override, class:(Unity)"
-        "opacity 1.0 override 1.0 override, class:(zen)"
+        "opacity 1.0 override 1.0 override, class:(firefox)"
         "opacity 1.0 override 1.0 override, class:(evince)"
         "workspace 1, class:^(${browser})$"
         "workspace 3, class:^(evince)$"

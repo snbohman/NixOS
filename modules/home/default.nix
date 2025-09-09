@@ -2,7 +2,7 @@
 {
   imports = [
     ./bat.nix                         # better cat command
-    ./browser.nix                     # firefox based browser
+    ./browser                         # firefox browser
     ./btop.nix                        # resouces monitor 
     ./cava.nix                        # audio visualizer
     ./discord.nix                     # discord
@@ -16,8 +16,8 @@
     ./nemo.nix                        # file manager
     ./nix-search/nix-search.nix       # TUI to search nixpkgs
     ./nvim                            # neovim editor
-    ./obsidian.nix
-    ./p10k/p10k.nix
+    ./obsidian.nix                    # note manager
+    ./p10k/p10k.nix                   # terminal style
     ./packages                        # other packages
     ./rofi.nix                        # launcher
     ./scripts/scripts.nix             # personal scripts
