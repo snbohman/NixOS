@@ -4,9 +4,8 @@
         firefox
     ];
 
-
-    # home.file."mozilla/firefox/.." = {
-    #     source = ./config;
-    #     recursive = true;
-    # };
+    home.file.".mozilla/firefox/zmgc4d68.default/chrome" = {
+        source = ./chrome;
+        recursive = true;
+    };
 }
