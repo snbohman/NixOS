@@ -12,21 +12,8 @@
       open = "xdg-open";
       space = "ncdu";
 
-      l = "eza --icons  -a --group-directories-first -1"; # EZA_ICON_SPACING=2
-      ls = "eza --icons  -a --group-directories-first -1"; # EZA_ICON_SPACING=2
-      ll = "eza --icons  -a --group-directories-first -1 --no-user --long";
-      tree = "eza --icons --tree --group-directories-first";
-
       # Nixos
       cdnix = "cd ~/NixOS && nvim ~/NixOS";
-      ns = "nom-shell --run zsh";
-      nd = "nom develop --command zsh";
-      nb = "nom build";
-      nc = "nh clean all --keep 5";
-      nft = "nh os test";
-      nfs = "nh os switch";
-      nfu = "nh os switch --update";
-      # nix-search = "nh search";
 
       # python
       piv = "python -m venv .venv";
