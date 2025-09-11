@@ -2,15 +2,6 @@
 {
   home.packages = with pkgs; [
     ## Better core utils
-    duf                               # disk information
-    eza                               # ls replacement
-    fd                                # find replacement
-    hexyl                             # hex viewer
-    man-pages                         # extra man pages
-    ncdu                              # disk space
-    ripgrep                           # grep replacement
-    
-    ## Monitoring / fetch
     htop
 
     ## Multimedia
@@ -19,9 +10,7 @@
 
     ## Utilities
     ffmpeg
-    file                              # Show file information
-    jq                                # JSON processor
-    killall
+    jq
     openssl
     unzip
     wget

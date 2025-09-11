@@ -4,17 +4,13 @@
     shellAliases = {
       # Utils
       cd = "z";
-      # tt = "gtrash put";
-      cat = "bat";
       code = "codium";
       diff = "delta --diff-so-fancy --side-by-side";
-      less = "bat";
       f = "superfile";
       py = "python";
       pdf = "tdf";
       open = "xdg-open";
       space = "ncdu";
-      man = "BAT_THEME='default' batman";
 
       l = "eza --icons  -a --group-directories-first -1"; # EZA_ICON_SPACING=2
       ls = "eza --icons  -a --group-directories-first -1"; # EZA_ICON_SPACING=2

@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+cd ~/.dotfiles
+
 echo "[[INFO]] Staging all modified files."
 git add .
 
@@ -26,3 +28,5 @@ else
   echo "[[WARNING]] The previous commit has been reverted. File modifications are still staged."
   exit 1
 fi
+
+cd -
