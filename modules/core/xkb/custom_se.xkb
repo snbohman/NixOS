@@ -4,7 +4,7 @@ default partial xkb_symbols "custom" {
 include "se(basic)"
 
 // Set the name that will appear in layout selection menus.
-name[Group1] = "Swedish (Custom for Programming)";
+name[Group1] = "Swedish - Coding";
 
 // --- Custom Key Overrides ---
 

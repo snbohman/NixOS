@@ -27,7 +27,7 @@ in
       ];
 
       input = {
-        kb_layout = "se, custom_se, us";
+        kb_layout = "se, custom_se";
         kb_variant = "";
         kb_options = "";
         numlock_by_default = true;
@@ -144,7 +144,7 @@ in
 
       bind = [
         "$mainMod SHIFT, K, exec, hyprctl switchxkblayout by-tech-gaming-keyboard next"
-        "$mainMod SHIFT, U, exec, hyprctl dispatch exec '[float; size 800 900; center] ghostty -e sh -c \"~/.dotfiles/scripts/logs.sh; read -p \\\"Press Enter to close...\\\"\"'"
+        "$mainMod SHIFT, U, exec, hyprctl dispatch exec '[float; size 800 900; center] ghostty -e sh -c \"cd ~/.dotfiles; ./~/.dotfiles/scripts/logs.sh; read -p \\\"Press Enter to close...\\\"\"'"
 
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"
