@@ -45,8 +45,8 @@
 
   xdg.configFile."git/config-work".text = ''
     [user]
-        name = Work Name
-        email = work.email@company.com
+        name = sixten-mag
+        email = sixten.bohman@maginterative.se
     [core]
         sshCommand = "ssh -i ~/.ssh/id_github_work"
   '';
