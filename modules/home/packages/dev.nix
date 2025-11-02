@@ -11,7 +11,7 @@
 
     ## Python
     python311
-    python311Packages.ipython
+    uv
 
     ## Nixos
     nixd
