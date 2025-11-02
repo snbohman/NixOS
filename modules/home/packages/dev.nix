@@ -10,8 +10,8 @@
     llvmPackages_20.clang-tools
 
     ## Python
-    python3
-    python312Packages.ipython
+    python311
+    python311Packages.ipython
 
     ## Nixos
     nixd
