@@ -20,10 +20,10 @@
           "https://github.com/"
         ];
         "git@github.com:snbohman/".insteadOf = "sn:";
-        "git@github.com:MagInteractive-AB/".insteadOf = "mag:";
+        "git@github.com-work:MagInteractive-AB/".insteadOf = "mag:";
       };
 
-      # includeIf."gitdit"
+      includeIf."gitdir:~/work/".path = "~/.config/git/config-work";
     };
 
     delta = {
@@ -41,6 +41,14 @@
 
   xdg.configFile."git/.gitignore".text = ''
     .vscode
+  '';
+
+  xdg.configFile."git/config-work".text = ''
+    [user]
+        name = Work Name
+        email = work.email@company.com
+    [core]
+        sshCommand = "ssh -i ~/.ssh/id_github_work"
   '';
 
   programs.zsh.shellAliases = {
