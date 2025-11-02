@@ -12,14 +12,18 @@
       diff.colorMoved = "default";
       pull.ff = "only";
       color.ui = true;
+      core.excludesFile = "/home/${username}/.config/git/.gitignore";
+
       url = {
         "git@github.com:".insteadOf = [
           "gh:"
           "https://github.com/"
         ];
         "git@github.com:snbohman/".insteadOf = "sn:";
+        "git@github.com:MagInteractive-AB/".insteadOf = "mag:";
       };
-      core.excludesFile = "/home/${username}/.config/git/.gitignore";
+
+      # includeIf."gitdit"
     };
 
     delta = {

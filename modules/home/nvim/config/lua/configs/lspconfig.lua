@@ -21,3 +21,7 @@ lspconfig.clangd.setup {
         buf_map("n", "<leader>rn", vim.lsp.buf.rename)
   end,
 }
+
+lspconfig.nixd.setup({
+    settings.nixd.formatting.command = { "nixfmt" },
+})
