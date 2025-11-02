@@ -23,5 +23,7 @@ lspconfig.clangd.setup {
 }
 
 lspconfig.nixd.setup({
-    settings.nixd.formatting.command = { "nixfmt" },
+    settings.nixd.formatting = {
+        command = { "nixfmt" }
+    }
 })
