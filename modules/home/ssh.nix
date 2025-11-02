@@ -24,6 +24,7 @@
         port = 443;
         identityFile = "~/.ssh/id_github_work";
         identitiesOnly = true;
+        controlMaster = "no";
       };
     };
   };
