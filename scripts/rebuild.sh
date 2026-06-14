@@ -9,6 +9,6 @@ else
     echo "[Config] - No changes to commit."
 fi
 
-sudo nixos-rebuild switch --flake ~/.dotfiles && git push --quiet -u origin main
+sudo nixos-rebuild switch --flake ~/.dotfiles#primary && git push --quiet -u origin main
 
 cd -
