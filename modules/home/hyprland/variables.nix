@@ -10,15 +10,15 @@
     GDK_BACKEND = "wayland";
     ANKI_WAYLAND = 1;
     DIRENV_LOG_FORMAT = "";
-    WLR_DRM_NO_ATOMIC = 1;
+    # WLR_DRM_NO_ATOMIC = 1;
     QT_AUTO_SCREEN_SCALE_FACTOR = 1;
     QT_WAYLAND_DISABLE_WINDOWDECORATION = 1;
     QT_QPA_PLATFORM = "xcb";
     QT_QPA_PLATFORMTHEME = "qt5ct";
     QT_STYLE_OVERRIDE = "kvantum";
     MOZ_ENABLE_WAYLAND = 1;
-    WLR_BACKEND = "vulkan";
-    WLR_RENDERER = "vulkan";
+    # WLR_BACKEND = "vulkan";
+    W# LR_RENDERER = "vulkan";
     XDG_CURRENT_DESKTOP = "Hyprland";
     XDG_SESSION_TYPE = "wayland";
     XDG_SESSION_DESKTOP = "Hyprland";
@@ -28,5 +28,10 @@
     GRIMBLAST_HIDE_CURSOR = 0;
 
     XKB_DEFAULT_LAYOUT = "se,se_custom";
+
+    LIBVA_DRIVER_NAME = "nvidia";
+    GBM_BACKEND = "nvidia-drm";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+
   };
 }
