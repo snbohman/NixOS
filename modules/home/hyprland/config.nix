@@ -32,10 +32,10 @@ in
         kb_options = "";
         numlock_by_default = true;
         repeat_delay = 300;
-        follow_mouse = 1;
+        follow_mouse = 0;
         float_switch_override_focus = 0;
         mouse_refocus = 0;
-        sensitivity = 0;
+        sensitivity = 0.1;
         touchpad = {
           natural_scroll = true;
         };
@@ -44,8 +44,8 @@ in
       general = {
         "$mainMod" = "SUPER";
         layout = "dwindle";
-        gaps_in = 6;
-        gaps_out = 12;
+        gaps_in = 3;
+        gaps_out = 6;
         border_size = 2;
         "col.active_border" = "rgb(98971A) rgb(CC241D) 45deg";
         "col.inactive_border" = "0x00000000";
