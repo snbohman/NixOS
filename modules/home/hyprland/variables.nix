@@ -18,7 +18,7 @@
     QT_STYLE_OVERRIDE = "kvantum";
     MOZ_ENABLE_WAYLAND = 1;
     # WLR_BACKEND = "vulkan";
-    W# LR_RENDERER = "vulkan";
+    # LR_RENDERER = "vulkan";
     XDG_CURRENT_DESKTOP = "Hyprland";
     XDG_SESSION_TYPE = "wayland";
     XDG_SESSION_DESKTOP = "Hyprland";
