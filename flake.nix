@@ -57,27 +57,19 @@
     in
     {
       nixosConfigurations = {
-        desktop = nixpkgs.lib.nixosSystem {
+        primary = nixpkgs.lib.nixosSystem {
           inherit system;
-          modules = [ ./hosts/desktop ];
+          modules = [ ./hosts/primary ];
           specialArgs = {
-            host = "desktop";
+            host = "primary";
             inherit self inputs username;
           };
         };
-        laptop = nixpkgs.lib.nixosSystem {
+        secondary = nixpkgs.lib.nixosSystem {
           inherit system;
-          modules = [ ./hosts/laptop ];
+          modules = [ ./hosts/secondary ];
           specialArgs = {
-            host = "laptop";
-            inherit self inputs username;
-          };
-        };
-        vm = nixpkgs.lib.nixosSystem {
-          inherit system;
-          modules = [ ./hosts/vm ];
-          specialArgs = {
-            host = "vm";
+            host = "secondary";
             inherit self inputs username;
           };
         };
