@@ -44,7 +44,7 @@ in
       general = {
         "$mainMod" = "SUPER";
         layout = "dwindle";
-        gaps_in = 100;
+        gaps_in = 6;
         gaps_out = 12;
         border_size = 2;
         "col.active_border" = "rgb(98971A) rgb(CC241D) 45deg";
