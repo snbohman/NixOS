@@ -35,8 +35,8 @@ in
         follow_mouse = 0;
         float_switch_override_focus = 0;
         mouse_refocus = 0;
-        sensitivity = -0.999;
-        force_no_accel = true;
+        sensitivity = -1;
+        force_no_accel = false;
         touchpad = {
           natural_scroll = true;
         };
