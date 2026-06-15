@@ -11,6 +11,7 @@
     ## Utilities
     ffmpeg
     jq
+    fd
     openssl
     unzip
     wget
