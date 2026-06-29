@@ -21,6 +21,7 @@
       x = "exit";
       md = "mkdir";
       lg = "lazygit";
+      ls = "ls -la";
     };
   };
 }
