@@ -111,7 +111,13 @@ return {
 
     {
         "stevearc/oil.nvim",
-        opts = {},
+        opts = {
+            columns = {
+                "icon",
+                "size",
+                "mtime"
+            }
+        },
         dependencies = { { "echasnovski/mini.icons", opts = {} } },
         lazy = false,
     }
