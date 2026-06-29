@@ -14,14 +14,8 @@ M.base46 = {
 	},
 }
 
-M.nvdash = { load_on_startup = false }
-
-M.ui = {
-    tabufline = {
-        enabled = false
-    }
-}
-
+M.nvdash.enabled = false
+M.ui.tabufline.enabled = false
 M.nvterm.terminals.type_opts.vertical.split_ratio=0.5
 
 return M
