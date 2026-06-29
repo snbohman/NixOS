@@ -144,7 +144,12 @@
         zle -N zle-line-finish
       fi
 
-      bindkey '^G' fzf-file-widget
+      fzf_widget() {
+        BUFFER="fzf"
+        zle accept-line
+      }
+      zle -N fzf_widget
+      bindkey '^G' fzf_widget
     '';
   };
 
