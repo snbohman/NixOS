@@ -40,6 +40,9 @@ map("n", "<leader>pp", ":CreatePair<CR>", { silent = true, desc = "create corr c
 map("n", "<C-u>", "<C-i>", { noremap = true, silent = true })
 map("n", "<C-i>", "", { noremap = true, silent = true })
 
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
+
 -- Terminal Movements
 map("t", "<C-h>", "<C-\\><C-n><C-w>h")
 map("t", "<C-l>", "<C-\\><C-n><C-w>l")

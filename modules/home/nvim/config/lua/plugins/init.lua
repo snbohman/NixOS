@@ -118,6 +118,11 @@ return {
                 "mtime",
                 "permissions"
             }
+            win_options = {
+                winbar = function()
+                    return vim.fn.fnamemodify(require("oil").get_current_dir(), ":p")
+                end,
+            }
         },
         dependencies = { { "echasnovski/mini.icons", opts = {} } },
         lazy = false,
