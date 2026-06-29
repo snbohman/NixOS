@@ -32,8 +32,7 @@ map("n", "<leader>ce", ":vsplit | edit ~/.config/nvim/lua/mappings.lua<CR>", { s
 map("n", "T", ":lua vim.diagnostic.goto_next()<CR>", { silent = true, desc = "goto next error" })
 map("n", "<C-f>", "V/\\%V", { silent = true, desc = "search line" })
 
-map("n", "<leader>n", ":Oil<CR> .", { silent = true, desc = "oil" })
-map("n", "<C-n>", "", { silent = true, desc = "doing nonthing for tree" })
+map("n", "<C-n>", ":Oil<CR> .", { silent = true, desc = "oil" })
 
 map("n", "<leader>pp", ":CreatePair<CR>", { silent = true, desc = "create corr c++ file(s)" })
 map("n", "<C-u>", "<C-i>", { noremap = true, silent = true })

@@ -27,7 +27,7 @@
   programs.zsh = {
     enable = true;
 
-    initExtra = ''
+    initContent = ''
       # Ctrl-G: recursive directory search + cd
       fzf-dir-widget() {
         local dir
