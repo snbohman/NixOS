@@ -145,7 +145,7 @@ in
 
       bind = [
         "$mainMod SHIFT, K, exec, hyprctl switchxkblayout by-tech-gaming-keyboard next"
-        "$mainMod SHIFT, U, exec, hyprctl dispatch exec \"[float; size 800 900; center]\" ghostty -- bash \"~/.dotfiles/scripts/wrapper.sh\""
+        "$mainMod SHIFT, U, exec, ghostty --title='NixOS Rebuild' --class='nixos-rebuild' -e bash -c '/home/snbohman/.dotfiles/scripts/logs.sh; echo \"\"; echo \"Press any key to close...\"; read -n1'"
 
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"
@@ -296,6 +296,10 @@ in
 
       # windowrule
       windowrule = [
+        "float, class:nixos-rebuild"
+        "size 800 500, class:nixos-rebuild"
+        "center, class:nixos-rebuild"
+
         "float,class:^(Viewnior)$"
         "float,class:^(imv)$"
         "float,class:^(mpv)$"
