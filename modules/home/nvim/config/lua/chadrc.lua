@@ -17,13 +17,22 @@ M.base46 = {
 M.nvdash = { load_on_startup = false }
 M.ui = {
     tabufline = { enabled = false },
-
     term = {
         horizontal = {
             split_ratio=0.5
+            opts = function()
+                return {
+                  winfixwidth = false,
+                }
+            end,
         },
         vertical = {
             split_ratio=0.5
+            opts = function()
+                return {
+                  winfixwidth = false,
+                }
+            end
         },
     }
 } 
