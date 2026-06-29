@@ -144,12 +144,14 @@
         zle -N zle-line-finish
       fi
 
-      fzf_widget() {
-        BUFFER="fzf"
+      cdf_widget() {
+        zle push-line
+        BUFFER="cdf"
         zle accept-line
       }
-      zle -N fzf_widget
-      bindkey '^G' fzf_widget
+
+      zle -N cdf_widget
+      bindkey '^G' cdf_widget
     '';
   };
 
