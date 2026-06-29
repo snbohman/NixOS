@@ -22,8 +22,6 @@ M.ui = {
     }
 }
 
-M.nvterm = {
-    M.terminals.type_opts.vertical.split_ratio=0.5
-}
+M.nvterm.terminals.type_opts.vertical.split_ratio=0.5
 
 return M
