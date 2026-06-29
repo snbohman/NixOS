@@ -296,9 +296,9 @@ in
 
       # windowrule
       windowrule = [
-        "float, class:nixos-rebuild"
-        "size 800 500, class:nixos-rebuild"
-        "center, class:nixos-rebuild"
+        "float, class:^(nixos-rebuild)$"
+        "size 800 500, ^(class:nixos-rebuild)$"
+        "center, ^(class:nixos-rebuild)$"
 
         "float,class:^(Viewnior)$"
         "float,class:^(imv)$"
