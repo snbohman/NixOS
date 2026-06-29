@@ -1,2 +1,7 @@
 * ssh git keys
-* sensitvity
+* simplify!
+    * nvim
+    * nix
+
+* workflow for updating
+* zoom app
