@@ -177,7 +177,6 @@ in
         "$mainMod, N, exec, swaync-client -t -sw"
         "CTRL SHIFT, Escape, exec, hyprctl dispatch exec '[workspace 9] missioncenter'"
         "$mainMod, equal, exec, woomer"
-        # "$mainMod SHIFT, W, exec, vm-start"
 
         # screenshot
         ",Print, exec, screenshot --copy"
