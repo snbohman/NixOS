@@ -19,7 +19,7 @@ M.ui = {
     tabufline = { enabled = false },
     term = {
         horizontal = {
-            split_ratio=0.5
+            split_ratio=0.5,
             opts = function()
                 return {
                   winfixwidth = false,
@@ -27,7 +27,7 @@ M.ui = {
             end,
         },
         vertical = {
-            split_ratio=0.5
+            split_ratio=0.5,
             opts = function()
                 return {
                   winfixwidth = false,
