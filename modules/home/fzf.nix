@@ -55,12 +55,27 @@
         BUFFER="$file"
         CURSOR=''${#BUFFER}
       }
+      fzf-nvim-widget() {
+        local dir
+        dir=$(fd \
+          --type d \
+          --hidden \
+          --strip-cwd-prefix \
+          --exclude .git |
+          fzf) || return
+
+        cd "$dir" || return
+        nvim .
+        zle reset-prompt
+      }
 
       zle -N fzf-dir-widget
       zle -N fzf-file-widget
+      zle -N fzf-nvim-widget
 
       bindkey '^G' fzf-dir-widget
       bindkey '^H' fzf-file-widget
+      bindkey '^N' fzf-nvim-widget
     '';
   };
 }
