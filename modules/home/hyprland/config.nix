@@ -145,7 +145,7 @@ in
 
       bind = [
         "$mainMod SHIFT, K, exec, hyprctl switchxkblayout by-tech-gaming-keyboard next"
-        "$mainMod SHIFT, U, exec, ghostty --class=popup -- zsh ~/.dotfiles/scripts/rebuild_popup.sh"
+        "$mainMod SHIFT, U, exec, hyprctl dispatch exec '[float; size 800 900; center] ghostty --class=popup -- bash ~/.dotfiles/scripts/rebuild_popup.sh"
 
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"
