@@ -115,7 +115,8 @@ return {
             columns = {
                 "icon",
                 "size",
-                "mtime"
+                "mtime",
+                "permissions"
             }
         },
         dependencies = { { "echasnovski/mini.icons", opts = {} } },
