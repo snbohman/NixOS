@@ -14,14 +14,14 @@
       color.ui = true;
       core.excludesFile = "/home/${username}/.config/git/.gitignore";
 
-      #url = {
-      #  "git@github.com:".insteadOf = [
-      #    "gh:"
-      #    "https://github.com/"
-      #  ];
-      #  "git@github.com:snbohman/".insteadOf = "sn:";
-      #  "git@github.com-work:MagInteractive-AB/".insteadOf = "mag:";
-      #};
+      url = {
+       "git@github.com:".insteadOf = [
+         "gh:"
+         "https://github.com/"
+       ];
+       "git@github.com:snbohman/".insteadOf = "sn:";
+       "git@github.com-work:MagInteractive-AB/".insteadOf = "mag:";
+      };
 
       includeIf."gitdir:~/work/".path = "~/.config/git/config-work";
     };

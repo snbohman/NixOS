@@ -143,6 +143,8 @@
         zle -N zle-line-init
         zle -N zle-line-finish
       fi
+
+      bindkey '^G' fzf-file-widget
     '';
   };
 
