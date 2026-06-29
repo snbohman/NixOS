@@ -179,9 +179,9 @@ in
         "$mainMod, equal, exec, woomer"
 
         # screenshot
-        ",Print, exec, screenshot --copy"
-        "$mainMod, Print, exec, screenshot --save"
-        "$mainMod SHIFT, Print, exec, screenshot --swappy"
+        "$mainMod, P, exec, screenshot --copy"
+        "$mainMod SHIFT, P, exec, screenshot --save"
+        "$mainMod ALT, Print, exec, screenshot --swappy"
 
         # switch focus
         "$mainMod, left,  movefocus, l"

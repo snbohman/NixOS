@@ -1,7 +1,5 @@
-* ssh git keys
-* simplify!
-    * nvim
-    * nix
-
 * workflow for updating
+    * seperate home manager
 * zoom app
+* zig
+* image
