@@ -281,9 +281,9 @@ in
 
       # windowrule
       windowrule = [
-        "float, title:'NixOS Rebuild'"
-        "size 800 500, title:'NixOS Rebuild'"
-        "center, title:'NixOS Rebuild'"
+        "float, title:^(NixOS Rebuild)$"
+        "size 800 500, title:^(NixOS Rebuild)$"
+        "center, title:^(NixOS Rebuild)$"
 
         "float,class:^(Viewnior)$"
         "float,class:^(imv)$"
