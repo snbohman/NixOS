@@ -31,7 +31,7 @@ vim.keymap.set("n", "Ö", ":cnext<CR>")
 vim.keymap.set("n", "Ä", ":cprev<CR>")
 
 vim.keymap.set("n", "<C-n>", ":Oil<CR>", { silent = true, desc = "oil" })
-vim.keymap.set("n", "<C-m>", function()
+vim.keymap.set("n", "<C-,>", function()
   vim.cmd("new")
   vim.cmd("Oil")
 end, { silent = true, desc = "oil horizontal" })
