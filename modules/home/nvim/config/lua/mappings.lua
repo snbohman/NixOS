@@ -37,17 +37,17 @@ map("n", "<C-m>", function()
   vim.cmd("new")
   vim.cmd("Oil")
 end, { silent = true, desc = "oil horizontal" })
-map("n", "<C-v>", function()
+map("n", "<C-.>", function()
   vim.cmd("vnew")
   vim.cmd("Oil")
 end, { silent = true, desc = "oil vertical" })
 
-map("n", "<leader>pp", ":CreatePair<CR>", { silent = true, desc = "create corr c++ file(s)" })
-map("n", "<C-u>", "<C-i>", { noremap = true, silent = true })
-map("n", "<C-i>", "", { noremap = true, silent = true })
-
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
+
+vim.keymap.set("n", "L", ":copen")
+vim.keymap.set("n", "Ö", ":cnext")
+vim.keymap.set("n", "Ä", ":cprev")
 
 -- Terminal Movements
 map("t", "<C-h>", "<C-\\><C-n><C-w>h")
