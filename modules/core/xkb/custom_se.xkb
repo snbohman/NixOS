@@ -38,7 +38,7 @@ key <BKSL> {
 
 key <AB11> {
     type = "THREE_LEVEL",
-    symbols[Group1] = [ minus, underscore, asciitilde ]
+    symbols[Group1] = [ minus, underscore, tilde ]
 };
 
 };
