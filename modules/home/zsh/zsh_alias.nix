@@ -25,7 +25,7 @@
       vt = "NVIM_APPNAME=nvim-test nvim";
       vimt = "NVIM_APPNAME=nvim-test nvim";
 
-      ":r" = "| nv";
+      "Ö" = "| nv";
     };
   };
 }
