@@ -119,7 +119,7 @@ return {
                 "permissions"
             },
             win_options = {
-                winbar = "%{v:lua.require('oil').get_current_dir()}",
+                winbar = "Working: %{v:lua.require('oil').get_current_dir()}",
             }
         },
         dependencies = { { "echasnovski/mini.icons", opts = {} } },
