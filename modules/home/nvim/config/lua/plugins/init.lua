@@ -114,9 +114,9 @@ return {
         opts = {
             columns = {
                 "icon",
-                "permissions"
+                "permissions",
                 "size",
-                "mtime",
+                "mtime"
             },
             win_options = {
                 winbar = "%{v:lua.require('oil').get_current_dir()}: ",
