@@ -12,6 +12,7 @@
       # edit dotfiles 
       edf = "cd ~/.dotfiles && v ~/.dotfiles";
 
+
       # python
       piv = "python -m venv .venv";
       psv = "source .venv/bin/activate";
@@ -23,6 +24,8 @@
       lg = "lazygit";
       vt = "NVIM_APPNAME=nvim-test nvim";
       vimt = "NVIM_APPNAME=nvim-test nvim";
+
+      ":r" = "| nv";
     };
   };
 }
