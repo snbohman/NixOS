@@ -36,4 +36,9 @@ key <BKSL> {
     symbols[Group1] = [ apostrophe, asterisk, bar ]
 };
 
+key <AB11> {
+    type = "THREE_LEVEL",
+    symbols[Group1] = [ minus, underscore, asciitilde ]
+};
+
 };
