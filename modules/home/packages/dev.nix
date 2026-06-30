@@ -8,6 +8,8 @@
     premake5
     bear
     llvmPackages_20.clang-tools
+    zig
+    zls
 
     ## Python
     python311
