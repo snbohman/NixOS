@@ -17,15 +17,15 @@ key <AD11> {
 // Key to the right of that. US: ] } | Swedish: ¨ (dead key)
 key <AD12> {
     type = "TWO_LEVEL",
-    symbols[Group1] = [ bracketright,  braceright ]
+    symbols[Group1] = [ bracketright, braceright ]
 };
 
 // 2. Consolidate < > ~
 // Key to the left of Backspace. US: = + | Swedish: + ?
 // We are completely overriding this key for our programming symbols.
 key <AE12> {
-    type = "THREE_LEVEL",
-    symbols[Group1] = [        less,     greater,     tilde ]
+    type = "FOUR_LEVEL_SEMIALPHABETIC",
+    symbols[Group1] = [ less, greater, asciitilde, asciitilde ]
 };
 
 // 3. Improve Pipe '|' access
@@ -33,7 +33,7 @@ key <AE12> {
 // We keep the standard Swedish ' and * but add the pipe '|' on AltGr.
 key <BKSL> {
     type = "THREE_LEVEL",
-    symbols[Group1] = [   apostrophe,    asterisk,       bar ]
+    symbols[Group1] = [ apostrophe, asterisk, bar ]
 };
 
 };
