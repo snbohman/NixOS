@@ -32,22 +32,12 @@ map("n", "<leader>ce", ":vsplit | edit ~/.dotfiles/modules/home/nvim/config/lua/
 map("n", "T", ":lua vim.diagnostic.goto_next()<CR>", { silent = true, desc = "goto next error" })
 map("n", "<C-f>", "V/\\%V", { silent = true, desc = "search line" })
 
-map("n", "<C-n>", ":Oil<CR>", { silent = true, desc = "oil" })
-map("n", "<C-m>", function()
-  vim.cmd("new")
-  vim.cmd("Oil")
-end, { silent = true, desc = "oil horizontal" })
-map("n", "<C-.>", function()
-  vim.cmd("vnew")
-  vim.cmd("Oil")
-end, { silent = true, desc = "oil vertical" })
-
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
-vim.keymap.set("n", "L", ":copen")
-vim.keymap.set("n", "Ö", ":cnext")
-vim.keymap.set("n", "Ä", ":cprev")
+vim.keymap.set("n", "L", ":copen<CR>")
+vim.keymap.set("n", "Ö", ":cnext<CR>")
+vim.keymap.set("n", "Ä", ":cprev<CR>")
 
 -- Terminal Movements
 map("t", "<C-h>", "<C-\\><C-n><C-w>h")
