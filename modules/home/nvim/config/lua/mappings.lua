@@ -41,7 +41,8 @@ vim.keymap.set("n", "<C-.>", function()
 end, { silent = true, desc = "oil vertical" })
 
 vim.keymap.set("n", "<leader>M", function()
-    local width = math.floor(vim.o.columns * 0.3)
+    vim.cmd("make")
+    local width = math.floor(vim.o.columns * 0.5)
     vim.cmd(("vertical botright copen %d"):format(width))
 end, { desc = "quickfix", silent=true })
 
