@@ -104,8 +104,8 @@ return {
         opts = {},
         event = "VeryLazy",
         dependencies = {
-          "nvim-lua/plenary.nvim",
-          "kkharji/sqlite.lua", -- Optional, sqlite support
+            "nvim-lua/plenary.nvim",
+            "kkharji/sqlite.lua", -- Optional, sqlite support
         }
     },
 
@@ -122,7 +122,7 @@ return {
                 winbar = "%{v:lua.require('oil').get_current_dir()}: ",
             },
             view_options = {
-                show_hidden=true
+                show_hidden = true
             }
         },
         dependencies = { { "echasnovski/mini.icons", opts = {} } },

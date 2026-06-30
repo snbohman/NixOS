@@ -8,8 +8,7 @@
     premake5
     bear
     llvmPackages_20.clang-tools
-    zig
-
+    zig_0_16
 
     # language servers
     zls
