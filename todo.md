@@ -1,3 +1,3 @@
 * zoom app
-* zig
-* image
+* image puzzle
+* clean up zsh
