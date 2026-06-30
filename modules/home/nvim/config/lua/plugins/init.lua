@@ -114,12 +114,12 @@ return {
         opts = {
             columns = {
                 "icon",
+                "permissions"
                 "size",
                 "mtime",
-                "permissions"
             },
             win_options = {
-                winbar = "Working: %{v:lua.require('oil').get_current_dir()}",
+                winbar = "%{v:lua.require('oil').get_current_dir()}: ",
             }
         },
         dependencies = { { "echasnovski/mini.icons", opts = {} } },
