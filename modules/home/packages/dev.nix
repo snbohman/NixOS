@@ -9,13 +9,16 @@
     bear
     llvmPackages_20.clang-tools
     zig
+
+
+    # language servers
     zls
+    nixd
+    lua-language-server 
+
 
     ## Python
     python311
     uv
-
-    ## Nixos
-    nixd
   ];
 }

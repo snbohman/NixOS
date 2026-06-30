@@ -31,3 +31,6 @@ lspconfig.nixd.setup {
         },
     }
 }
+
+lspconfig.zls.setup { }
+lspconfig.lua_ls.setup { }
