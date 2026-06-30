@@ -33,8 +33,14 @@ map("n", "T", ":lua vim.diagnostic.goto_next()<CR>", { silent = true, desc = "go
 map("n", "<C-f>", "V/\\%V", { silent = true, desc = "search line" })
 
 map("n", "<C-n>", ":Oil<CR>", { silent = true, desc = "oil" })
-map("n", "<C-m>", "<C-W-n> :Oil<CR>", { silent = true, desc = "oil" })
-map("n", "<C-m>", "<C-W-v> :Oil<CR>", { silent = true, desc = "oil" })
+map("n", "<C-m>", function()
+  vim.cmd("new")
+  vim.cmd("Oil")
+end, { silent = true, desc = "oil horizontal" })
+map("n", "<C-v>", function()
+  vim.cmd("vnew")
+  vim.cmd("Oil")
+end, { silent = true, desc = "oil vertical" })
 
 map("n", "<leader>pp", ":CreatePair<CR>", { silent = true, desc = "create corr c++ file(s)" })
 map("n", "<C-u>", "<C-i>", { noremap = true, silent = true })
