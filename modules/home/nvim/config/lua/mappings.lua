@@ -44,6 +44,7 @@ vim.keymap.set("n", "M", function()
     local width = math.floor(vim.o.columns * 0.5)
     vim.cmd(("vertical botright copen %d"):format(width))
 end, { desc = "quickfix", silent=true })
+vim.keymap.set("c", "<C-k>", "<Up><Cr>")
 
 -- Terminal Movements
 vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h")
