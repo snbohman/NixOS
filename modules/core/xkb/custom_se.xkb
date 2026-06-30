@@ -24,8 +24,8 @@ key <AD12> {
 // Key to the left of Backspace. US: = + | Swedish: + ?
 // We are completely overriding this key for our programming symbols.
 key <AE12> {
-    type = "TWO_LEVEL",
-    symbols[Group1] = [ less, greater ]
+    type = "FOUR_LEVEL",
+    symbols[Group1] = [ less, greater, asciitilde, dead_tilde ]
 };
 
 // 3. Improve Pipe '|' access
@@ -34,11 +34,6 @@ key <AE12> {
 key <BKSL> {
     type = "THREE_LEVEL",
     symbols[Group1] = [ apostrophe, asterisk, bar ]
-};
-
-key <AB11> {
-    type = "THREE_LEVEL",
-    symbols[Group1] = [ minus, underscore, tilde ]
 };
 
 };
