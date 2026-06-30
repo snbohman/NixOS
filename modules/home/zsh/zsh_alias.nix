@@ -24,8 +24,10 @@
       lg = "lazygit";
       vt = "NVIM_APPNAME=nvim-test nvim";
       vimt = "NVIM_APPNAME=nvim-test nvim";
+    };
 
-      "Ö" = "| nv";
+    shellGlobalAliases = {
+      R = "| nv";
     };
   };
 }
