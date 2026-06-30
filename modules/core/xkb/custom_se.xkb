@@ -24,8 +24,8 @@ key <AD12> {
 // Key to the left of Backspace. US: = + | Swedish: + ?
 // We are completely overriding this key for our programming symbols.
 key <AE12> {
-    type = "FOUR_LEVEL_SEMIALPHABETIC",
-    symbols[Group1] = [ less, greater, asciitilde, asciitilde ]
+    type = "TWO_LEVEL",
+    symbols[Group1] = [ less, greater ]
 };
 
 // 3. Improve Pipe '|' access
