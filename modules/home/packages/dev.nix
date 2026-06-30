@@ -10,7 +10,7 @@
     inputs.zig-overlay.packages.${pkgs.system}.master
 
     # language servers
-    zls
+    inputs.zls.packages.${pkgs.system}.zls
     nixd
     lua-language-server 
     llvmPackages_20.clang-tools
