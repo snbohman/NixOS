@@ -34,6 +34,7 @@
         systems.follows = "hyprland/systems";
       };
     };
+
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs = {
@@ -44,10 +45,17 @@
     };
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+
+    zig-overlay = {
+        url = "github:mitchellh/zig-overlay";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     ghostty = {
       url = "github:ghostty-org/ghostty";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";

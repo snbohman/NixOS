@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   home.packages = with pkgs; [
     ## C / C++
@@ -7,13 +7,13 @@
     gnumake
     premake5
     bear
-    llvmPackages_20.clang-tools
-    zig_0_16
+    inputs.zig-overlay.packages.${pkgs.system}.master
 
     # language servers
     zls
     nixd
     lua-language-server 
+    llvmPackages_20.clang-tools
 
 
     ## Python
