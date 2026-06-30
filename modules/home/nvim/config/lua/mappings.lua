@@ -27,7 +27,7 @@ map("n", "<leader>E", ":lua vim.lsp.buf.hover() <CR>", { silent = true, desc = "
 
 map("n", "<leader>S", ":DBUIToggle<CR>", { silent = true, desc = "SQL" })
 
-map("n", "<leader>ce", ":vsplit | edit ~/.config/nvim/lua/mappings.lua<CR>", { silent = true, desc = "edit main config" })
+map("n", "<leader>ce", ":vsplit | edit ~/.dotfiles/modules/home/nvim/config/lua/mappings.lua<CR>", { silent = true, desc = "edit config" })
 
 map("n", "T", ":lua vim.diagnostic.goto_next()<CR>", { silent = true, desc = "goto next error" })
 map("n", "<C-f>", "V/\\%V", { silent = true, desc = "search line" })
