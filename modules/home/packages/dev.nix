@@ -19,5 +19,6 @@
     ## Python
     python311
     uv
+    gcc.cc.lib
   ];
 }

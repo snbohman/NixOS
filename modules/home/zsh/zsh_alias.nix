@@ -12,7 +12,6 @@
       # edit dotfiles 
       edf = "cd ~/.dotfiles && v ~/.dotfiles";
 
-
       # python
       piv = "python -m venv .venv";
       psv = "source .venv/bin/activate";
