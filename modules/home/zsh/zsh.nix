@@ -10,6 +10,10 @@
     '';
 
     initContent = ''
+      if [[ -n "$IN_NIX_DEV_SHELL" ]]; then
+        PROMPT="[dev] $PROMPT"
+      fi
+
       cdf_widget() {
         zle push-line
         BUFFER="cdf"
