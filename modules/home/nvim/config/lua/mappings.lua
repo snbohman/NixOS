@@ -47,6 +47,7 @@ end, { desc = "quickfix", silent=true })
 vim.keymap.set("n", "m", ":make<CR>")
 
 vim.keymap.set("n", "<leader>v", ":vert term<CR>a")
+vim.keymap.set("n", "J", "mzJ`z")
 
 -- Terminal Movements
 vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h")
