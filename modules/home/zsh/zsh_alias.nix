@@ -26,7 +26,7 @@
     };
 
     shellGlobalAliases = {
-      R = "| nv";
+      RR = "| nv";
     };
   };
 }
