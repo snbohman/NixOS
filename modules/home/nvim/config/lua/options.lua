@@ -6,7 +6,7 @@ set.guicursor = "a:block"
 set.number = true
 set.relativenumber = true
 set.wrap = false
-sot.scrolloff = 10
+sot.scrolloff = 6
 
 sot.foldenable = true
 set.foldmethod = "indent"
