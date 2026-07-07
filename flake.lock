@@ -102,24 +102,6 @@
         "type": "github"
       }
     },
-    "flake-parts_2": {
-      "inputs": {
-        "nixpkgs-lib": "nixpkgs-lib"
-      },
-      "locked": {
-        "lastModified": 1772408722,
-        "narHash": "sha256-rHuJtdcOjK7rAHpHphUb1iCvgkU3GpfvicLMwwnfMT0=",
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "rev": "f20dc5d9b8027381c474144ecabc9034d6a839a3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "type": "github"
-      }
-    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -681,21 +663,6 @@
         "url": "https://channels.nixos.org/nixos-unstable-small/nixexprs.tar.xz"
       }
     },
-    "nixpkgs-lib": {
-      "locked": {
-        "lastModified": 1772328832,
-        "narHash": "sha256-e+/T/pmEkLP6BHhYjx6GmwP5ivonQQn0bJdH9YrRB+Q=",
-        "owner": "nix-community",
-        "repo": "nixpkgs.lib",
-        "rev": "c185c7a5e5dd8f9add5b2f8ebeff00888b070742",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "nixpkgs.lib",
-        "type": "github"
-      }
-    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1757068644,
@@ -730,61 +697,6 @@
       "original": {
         "owner": "nix-community",
         "repo": "NUR",
-        "type": "github"
-      }
-    },
-    "odin-nightly": {
-      "inputs": {
-        "flake-parts": "flake-parts_2",
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "odin-src": "odin-src",
-        "ols-src": "ols-src"
-      },
-      "locked": {
-        "lastModified": 1783395001,
-        "narHash": "sha256-7+tYmo4rSfOmKcyKXBHrREDEQZ0aIEySEygw5wVBEgw=",
-        "owner": "yappaholic",
-        "repo": "odin-nightly",
-        "rev": "df9a8b1ffa8ea482af60de3c252456df0920960f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "yappaholic",
-        "repo": "odin-nightly",
-        "type": "github"
-      }
-    },
-    "odin-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1783375356,
-        "narHash": "sha256-Dnx3cEFDVoY0g6AvLV4GcMgVv0dhPw4UEakY175YfAk=",
-        "owner": "odin-lang",
-        "repo": "Odin",
-        "rev": "1d0d31cf4c934ca624352dea27fd38c21c44c623",
-        "type": "github"
-      },
-      "original": {
-        "owner": "odin-lang",
-        "repo": "Odin",
-        "type": "github"
-      }
-    },
-    "ols-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1783157669,
-        "narHash": "sha256-TIohf+w9HVz3CN5mmsV8R/6qc82q9GqG6sr9Z4aas40=",
-        "owner": "DanielGavin",
-        "repo": "ols",
-        "rev": "35e191991a00b0afa68136998639f02b5412c5a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "DanielGavin",
-        "repo": "ols",
         "type": "github"
       }
     },
@@ -823,7 +735,6 @@
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs_2",
         "nur": "nur",
-        "odin-nightly": "odin-nightly",
         "zig-overlay": "zig-overlay",
         "zls": "zls"
       }
