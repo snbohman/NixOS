@@ -16,6 +16,7 @@ in {
     # odin
     pkgsLatest.odin
     pkgsLatest.ols
+    pkgsLatest.raylib
 
     # zig
     inputs.zig-overlay.packages.${pkgs.system}.master
