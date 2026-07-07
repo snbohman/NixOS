@@ -6,6 +6,15 @@ let
   };
 in {
   home.packages = with pkgs; [
+    ## X11
+    pkgs.xorg.libX11
+    pkgs.xorg.libXrandr
+    pkgs.xorg.libXi
+    pkgs.xorg.libXcursor
+    pkgs.xorg.libXinerama
+    pkgs.xorg.libXext
+    pkgs.libGL 
+
     ## C / C++
     clang
     cmake
