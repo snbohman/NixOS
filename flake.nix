@@ -46,11 +46,6 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
-    odin-nightly = {
-        url = "github:Yappaholic/odin-nightly";
-        inputs.nixpgks.follows = "nixpkgs";
-    };    
-
     zig-overlay = {
         url = "github:mitchellh/zig-overlay";
         inputs.nixpkgs.follows = "nixpkgs";
@@ -96,7 +91,6 @@
         secondary = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [ ./hosts/secondary ];
-          # modules = [ (nixpkgs.overlays = [inputs.odin-nightly.overlays.default]) ];
           specialArgs = {
             host = "secondary";
             inherit self inputs username;

@@ -1,23 +1,28 @@
 { pkgs, inputs, ... }:
 {
   home.packages = with pkgs; [
-    ## sys-prog
+    ## c
     clang
     cmake
     gnumake
     premake5
     bear
-    inputs.zig-overlay.packages.${pkgs.system}.master
-    odin
 
-    # language servers
+    # zig
+    inputs.zig-overlay.packages.${pkgs.system}.master
     inputs.zls.packages.${pkgs.system}.zls
-    nixd
-    lua-language-server 
-    llvmPackages_20.clang-tools
+
+    # odin
+    odin
+    ols
 
     ## Python
     python311
     uv
+
+    # language servers
+    nixd
+    lua-language-server 
+    llvmPackages_20.clang-tools
   ];
 }
