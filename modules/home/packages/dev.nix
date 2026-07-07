@@ -7,13 +7,13 @@ let
 in {
   home.packages = with pkgs; [
     ## X11
-    pkgs.xorg.libX11
-    pkgs.xorg.libXrandr
-    pkgs.xorg.libXi
-    pkgs.xorg.libXcursor
-    pkgs.xorg.libXinerama
-    pkgs.xorg.libXext
-    pkgs.libGL 
+    pkgsLatest.xorg.libX11
+    pkgsLatest.xorg.libXrandr
+    pkgsLatest.xorg.libXi
+    pkgsLatest.xorg.libXcursor
+    pkgsLatest.xorg.libXinerama
+    pkgsLatest.xorg.libXext
+    pkgsLatest.libGL 
 
     ## C / C++
     clang
