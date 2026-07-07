@@ -17,11 +17,11 @@ default partial xkb_symbols "custom" {
         symbols[Group1] = [ less, greater, asciitilde, dead_tilde ]
     };
 
-    key <AD12> {
+    key <AC12> {
         type = "FOUR_LEVEL",
         symbols[Group1] = [ asciicircum, dollar, adiaeresis, Adiaeresis ]
     };
-
+    
     key <BKSL> {
         type = "THREE_LEVEL",
         symbols[Group1] = [ apostrophe, asterisk, bar ]
