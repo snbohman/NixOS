@@ -1,5 +1,10 @@
 { pkgs, inputs, ... }:
-{
+let
+  pkgsLatest = import inputs.nixpkgs-latest {
+    inherit (pkgs) system;
+    config.allowUnfree = true;
+  };
+in {
   home.packages = with pkgs; [
     ## C / C++
     clang
@@ -7,14 +12,19 @@
     gnumake
     premake5
     bear
+
+    # odin
+    pkgsLatest.odin
+    pkgsLatest.ols
+
+    # zig
     inputs.zig-overlay.packages.${pkgs.system}.master
+    inputs.zls.packages.${pkgs.system}.zls
 
     # language servers
-    inputs.zls.packages.${pkgs.system}.zls
     nixd
     lua-language-server 
     llvmPackages_20.clang-tools
-
 
     ## Python
     python311
