@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 {
   home.packages = with pkgs; [
-    ## C / C++
+    ## sys-prog
     clang
     cmake
     gnumake
@@ -9,7 +9,6 @@
     bear
     inputs.zig-overlay.packages.${pkgs.system}.master
     odin
-    ols
 
     # language servers
     inputs.zls.packages.${pkgs.system}.zls

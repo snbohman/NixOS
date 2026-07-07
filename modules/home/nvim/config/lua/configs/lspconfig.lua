@@ -23,15 +23,14 @@ lspconfig.clangd.setup {
 }
 
 lspconfig.nixd.setup {
-    settings = {
-        nixd = {
-            formatting = {
-                command = { "nixfmt" },
-            },
-        },
-    }
+    -- settings = {
+    --     nixd = {
+    --         formatting = {
+    --             command = { "nixfmt" },
+    --         },
+    --     },
+    -- }
 }
 
 lspconfig.zls.setup { }
 lspconfig.lua_ls.setup { }
-lspconfig.ols.setup { }
