@@ -33,7 +33,7 @@ key <AE12> {
 // We keep the standard Swedish ' and * but add the pipe '|' on AltGr.
 key <BKSL> {
     type = "THREE_LEVEL",
-    symbols[Group1] = [ apostrophe, asterisk, bar ]
+    symbols[Group1] = [ apostrophe, asterisk, bar, caret ]
 };
 
 };
