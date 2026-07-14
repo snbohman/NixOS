@@ -1,56 +1,101 @@
-require "nvchad.mappings"
+local map = vim.keymap.set
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-vim.keymap.set('n', '<C-->', '<C-w>-')
-vim.keymap.set('n', '<C-+>', '<C-w>+')
-vim.keymap.set('n', '<C-<>', '<C-w><')
-vim.keymap.set('n', '<C->>', '<C-w>>')
+map("n", "<C-->", "<C-w>-")
+map("n", "<C-+>", "<C-w>+")
+map("n", "<C-<>", "<C-w><")
+map("n", "<C->>", "<C-w>>")
 
-vim.keymap.set('n', "<leader>o", ":wqa<CR>", {silent=true})
-vim.keymap.set('n', "<leader><leader>", ":so<CR>", {silent=true})
-vim.keymap.set('n', "<leader>dd", ":lua vim.diagnostic.enable(false)<CR>", { silent=true, desc="disable diagnostics"})
-vim.keymap.set('n', "<leader>de", ":lua vim.diagnostic.enable()<CR>", { silent=true, desc="enable diagnostics" })
-vim.keymap.set('n', "<leader>y", ":redo<CR>", {silent=true})
-vim.keymap.set('n', "<leader>xd", ":vert term xxd<CR>", {silent=true})
-vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+map("n", "<C-h>", "<C-w>h")
+map("n", "<C-j>", "<C-w>j")
+map("n", "<C-k>", "<C-w>k")
+map("n", "<C-l>", "<C-w>l")
+map("n", "<C-t>", "<C-w>T")
 
-vim.keymap.set("n", "<leader>B", ":hi Normal guibg=NONE ctermbg=NONE<CR>", { silent = true, desc = "remove bg color" })
-vim.keymap.set("n", "<leader>S", ":DBUIToggle<CR>", { silent = true, desc = "SQL" })
+map("t", "<Esc>", "<C-\\><C-n>")
+map("t", "<C-h>", "<C-\\><C-n><C-w>h")
+map("t", "<C-l>", "<C-\\><C-n><C-w>l")
+map("t", "<C-j>", "<C-\\><C-n><C-w>j")
+map("t", "<C-k>", "<C-\\><C-n><C-w>k")
+map("t", "<C-t>", "<C-\\><C-n><C-w>Ta")
 
-vim.keymap.set("n", "<leader>ce", ":vsplit | edit ~/.dotfiles/modules/home/nvim/config/lua/mappings.lua<CR>", { silent = true, desc = "edit config" })
+map("v", "<", "<gv")
+map("v", ">", ">gv")
+map("n", "J", "mzJ`z")
 
-vim.keymap.set("n", "T", ":lua vim.diagnostic.goto_next()<CR>", { silent = true, desc = "goto next error" })
-vim.keymap.set("n", "<leader>e", ":lua vim.diagnostic.open_float()<CR>", { silent = true, desc = "popup diagnostic" })
-vim.keymap.set("n", "<leader>E", ":lua vim.lsp.buf.hover() <CR>", { silent = true, desc = "popup description" })
+map("n", "<C-w>l", "<C-W>v<C-w>l")
+map("n", "<C-w>j", "<C-W>s<C-w>j")
 
-vim.keymap.set("v", "<", "<gv")
-vim.keymap.set("v", ">", ">gv")
+map("n", "<leader>o", ":wqa<CR>", { silent = true })
+map("n", "<leader><leader>", ":so<CR>", { silent = true })
+map("n", "<leader>s", "vg_o", { silent = true })
+map("n", "-", "$", { silent = true })
+map("v", "-", "$", { silent = true })
+map("n", "<C-c>", "ggyG<C-o>", { silent = true })
+map("n", ";", "/")
+map("n", ",", "?")
 
-vim.keymap.set("n", "L", ":copen<CR>")
-vim.keymap.set("n", "Ö", ":cnext<CR>")
-vim.keymap.set("n", "Ä", ":cprev<CR>")
+local function surround_visual()
+  local char = vim.fn.getcharstr()
+  local pairs_map = { ['('] = ')', ['['] = ']', ['{'] = '}' }
+  local right = pairs_map[char] or char
+  vim.cmd('normal! c' .. char .. vim.fn.getreg('"') .. right .. vim.api.nvim_replace_termcodes('<Esc>', true, false, true))
+end
 
-vim.keymap.set("n", "<C-n>", ":Oil<CR>", { silent = true, desc = "oil" })
-vim.keymap.set("n", "<C-ö>", function()
-  vim.cmd("new")
-  vim.cmd("Oil")
-end, { silent = true, desc = "oil horizontal" })
-vim.keymap.set("n", "<C-ä>", function()
-  vim.cmd("vnew")
-  vim.cmd("Oil")
-end, { silent = true, desc = "oil vertical" })
+vim.keymap.set('x', 's', surround_visual, { desc = 'Surround selection with typed char' })
 
-vim.keymap.set("n", "M", function()
-    local width = math.floor(vim.o.columns * 0.5)
-    vim.cmd(("vertical botright copen %d"):format(width))
-end, { desc = "quickfix", silent=true })
-vim.keymap.set("n", "m", ":make<CR>")
+map("n", "<leader>xd", ":%!xxd<CR>", { silent = true })
+map("n", "<C-f>", "V/\\%V", { silent = true, desc = "search line" })
+map("n", "<Esc>", ":noh<CR>", { silent = true })
+map("n", "<leader>v", ":botright vert term<CR>a", { silent = true })
+map("n", "<leader>h", ":botright hori term<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>v", ":vert term<CR>a")
-vim.keymap.set("n", "J", "mzJ`z")
+map("n", "<leader>dd", ":lua vim.diagnostic.enable(not vim.diagnostic.is_enabled())<CR>", { silent = true })
+map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
+map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+map("n", "<leader>e", ":lua vim.diagnostic.open_float()<CR>", { silent = true, desc = "popup diagnostic" })
+map("n", "<leader>E", ":lua vim.lsp.buf.hover() <CR>", { silent = true, desc = "popup description" })
+map("n", "T", ":lua vim.diagnostic.goto_next()<CR>", { silent = true, desc = "goto next error" })
+map("n", "<leader>L", vim.diagnostic.setloclist)
+map("n", "<leader>fm", ":lua vim.lsp.buf.format()<CR>", { silent = true })
 
--- Terminal Movements
-vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h")
-vim.keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l")
-vim.keymap.set("t", "<C-j>", "<C-\\><C-n><C-w>j")
-vim.keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k")
+map("n", "Ö", ":cprev<CR>", { silent = true })
+map("n", "Ä", ":cnext<CR>", { silent = true })
+map("n", "M", function()
+	vim.cmd("botright vert copen")
+	vim.cmd("vertical resize " .. math.floor(vim.o.columns / 2))
+end, { silent = true })
+map("n", "m", ":make<CR>", { silent = true })
+
+map("n", "<leader>rv", function()
+	local cmd = ":vert resize " .. vim.o.columns
+	vim.fn.feedkeys(cmd, "n")
+end, { silent = true })
+map("n", "<leader>rh", function()
+	local cmd = ":hori resize " .. vim.o.rows
+	vim.fn.feedkeys(cmd, "n")
+end, { silent = true })
+
+map("n", "<leader>S", ":DBUIToggle<CR>", { silent = true })
+map("n", "<C-n>", ":Oil<CR>", { silent = true })
+
+map("n", "<leader>ce", ":vsplit | edit ~/.config/nvim/lua/mappings.lua<CR>", { silent = true })
+
+vim.api.nvim_create_user_command("GrepHere", function(opts)
+	local dir = vim.fn.expand("%:p:h")
+	vim.cmd("grep -rn " .. vim.fn.shellescape(opts.args) .. " " .. vim.fn.shellescape(dir))
+end, { nargs = 1 })
+
+vim.api.nvim_create_user_command("GrepH", function(opts)
+	local dir = vim.fn.expand("%:p:h")
+	vim.cmd("grep -rn " .. vim.fn.shellescape(opts.args) .. " " .. vim.fn.shellescape(dir))
+end, { nargs = 1 })
+
+vim.api.nvim_create_user_command("CdHere", function()
+  vim.cmd("cd " .. vim.fn.fnameescape(vim.fn.expand("%:p:h")))
+end, {})
+
+vim.api.nvim_create_user_command("CdH", function()
+  vim.cmd("cd " .. vim.fn.fnameescape(vim.fn.expand("%:p:h")))
+end, {})
