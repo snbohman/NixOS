@@ -1,3 +1,6 @@
+# DEPRECATED
+**Use minimal branch for latest updates**
+
 # Snbohman's NixOS
 Built ontop  of [Frost Phoenix's dotfiles](https://github.com/Frost-Phoenix/nixos-config).
 
