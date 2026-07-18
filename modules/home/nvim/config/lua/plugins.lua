@@ -10,23 +10,29 @@ vim.pack.add({
 	{ src = "https://github.com/gelguy/wilder.nvim" },
 	{ src = "https://github.com/numtostr/comment.nvim" },
 	{ src = "https://github.com/nvim-mini/mini.pairs" },
-    { src = "https://github.com/saghen/blink.cmp", version="v1" }
+    { src = "https://github.com/saghen/blink.cmp", version="v1" },
+    { src = "https://github.com/brenton-leighton/multiple-cursors.nvim" }
 })
 
+require("multiple-cursors").setup()
 require("comment").setup()
 require("mini.pairs").setup()
 require("mason").setup()
 require("mason-lspconfig").setup()
 require("oil").setup({
 	columns = {
-		"icon",
 		"permissions",
 		"size",
 		"mtime",
+		"icon",
 	},
 	view_options = {
 		show_hidden = true,
+        natural_order = false
 	},
+    float = {
+        padding = 2
+    }
 })
 
 require("wild")

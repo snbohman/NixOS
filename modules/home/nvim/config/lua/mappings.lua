@@ -13,6 +13,11 @@ map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
 map("n", "<C-t>", "<C-w>T")
 
+map("n", "<S-Down>", "<cmd>MultipleCursorsAddDown<CR>", { silent = true, noremap=true })
+map("n", "<S-Up>", "<cmd>MultipleCursorsAddUp<CR>", { silent = true, noremap=true })
+map("i", "<S-Down>", "<Esc>:MultipleCursorsAddDown<CR>a", { silent = true })
+map("i", "<S-Up>", "<Esc>:MultipleCursorsAddUp<CR>a", { silent = true })
+
 map("t", "<Esc>", "<C-\\><C-n>")
 map("t", "<C-h>", "<C-\\><C-n><C-w>h")
 map("t", "<C-l>", "<C-\\><C-n><C-w>l")
@@ -37,13 +42,15 @@ map("n", ";", "/")
 map("n", ",", "?")
 
 local function surround_visual()
-  local char = vim.fn.getcharstr()
-  local pairs_map = { ['('] = ')', ['['] = ']', ['{'] = '}' }
-  local right = pairs_map[char] or char
-  vim.cmd('normal! c' .. char .. vim.fn.getreg('"') .. right .. vim.api.nvim_replace_termcodes('<Esc>', true, false, true))
+	local char = vim.fn.getcharstr()
+	local pairs_map = { ["("] = ")", ["["] = "]", ["{"] = "}" }
+	local right = pairs_map[char] or char
+	vim.cmd(
+		"normal! c" .. char .. vim.fn.getreg('"') .. right .. vim.api.nvim_replace_termcodes("<Esc>", true, false, true)
+	)
 end
 
-vim.keymap.set('x', 's', surround_visual, { desc = 'Surround selection with typed char' })
+vim.keymap.set("x", "s", surround_visual, { desc = "Surround selection with typed char" })
 
 map("n", "<leader>xd", ":%!xxd<CR>", { silent = true })
 map("n", "<C-f>", "V/\\%V", { silent = true, desc = "search line" })
@@ -93,9 +100,19 @@ vim.api.nvim_create_user_command("GrepH", function(opts)
 end, { nargs = 1 })
 
 vim.api.nvim_create_user_command("CdHere", function()
-  vim.cmd("cd " .. vim.fn.fnameescape(vim.fn.expand("%:p:h")))
+	vim.cmd("cd " .. vim.fn.fnameescape(vim.fn.expand("%:p:h")))
 end, {})
 
 vim.api.nvim_create_user_command("CdH", function()
-  vim.cmd("cd " .. vim.fn.fnameescape(vim.fn.expand("%:p:h")))
+	vim.cmd("cd " .. vim.fn.fnameescape(vim.fn.expand("%:p:h")))
 end, {})
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "oil://*",
+  callback = function()
+    local dir = require("oil").get_current_dir()
+    if dir then
+      vim.cmd("lcd " .. vim.fn.fnameescape(dir))
+    end
+  end,
+})
