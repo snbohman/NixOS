@@ -10,5 +10,7 @@
     dconf-editor
     gnome-disk-utility
     mission-center # GUI resources monitor
+
+    obs-studio
   ];
 }
