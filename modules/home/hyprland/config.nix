@@ -45,9 +45,9 @@ in
       general = {
         "$mainMod" = "SUPER";
         layout = "dwindle";
-        gaps_in = 3;
-        gaps_out = 6;
-        border_size = 2;
+        gaps_in = 1;
+        gaps_out = 1;
+        border_size = 1;
         "col.active_border" = "rgb(98971A) rgb(CC241D) 45deg";
         "col.inactive_border" = "0x00000000";
         # border_part_of_window = false;
@@ -99,7 +99,7 @@ in
         };
 
         shadow = {
-          enabled = true;
+          enabled = false;
 
           ignore_window = true;
           offset = "0 2";
@@ -118,6 +118,12 @@ in
           "easeOutCubic, 0.33, 1, 0.68, 1"
           "fade_curve, 0, 0.55, 0.45, 1"
         ];
+        #bezier = [
+        #  "fluent_decel, 0, 0.2, 0.4, 1"
+        #  "easeOutCirc, 0, 0.55, 0.45, 1"
+        #  "easeOutCubic, 0.33, 1, 0.68, 1"
+        #  "fade_curve, 0, 0.55, 0.45, 1"
+        #];
 
         animation = [
           # name, enable, speed, curve, style

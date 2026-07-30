@@ -9,7 +9,7 @@
         "Maple Mono"
         "DejaVu Sans"
       ];
-      font-size = "${if (host == "laptop") then "16" else "17"}";
+      font-size = 24;
       font-feature = [
         "calt"
         "ss03"
