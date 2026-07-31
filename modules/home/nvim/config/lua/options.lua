@@ -38,7 +38,5 @@ vim.diagnostic.config({
 	severity_sort = true,
 })
 
-vim.g.python3_host_prog = "/run/current-system/sw/bin/python3"
-
 require("statuscolumn")
 require("simpl")
