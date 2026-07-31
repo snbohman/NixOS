@@ -32,5 +32,7 @@ in {
     uv
 
     zsteg
+
+    evsieve
   ];
 }

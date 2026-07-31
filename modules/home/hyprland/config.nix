@@ -31,11 +31,12 @@ in
         kb_variant = "";
         kb_options = "";
         numlock_by_default = true;
-        repeat_delay = 230;
+        repeat_delay = 150;
         follow_mouse = 0;
         float_switch_override_focus = 0;
         mouse_refocus = 0;
         sensitivity = -1;
+        accel_profile = "flat";
         force_no_accel = false;
         touchpad = {
           natural_scroll = true;
