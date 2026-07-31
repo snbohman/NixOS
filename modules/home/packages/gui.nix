@@ -12,5 +12,7 @@
     mission-center # GUI resources monitor
 
     obs-studio
+
+    prismlauncher
   ];
 }
