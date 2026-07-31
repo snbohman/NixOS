@@ -15,7 +15,7 @@ vim.pack.add({
 require("multiple-cursors").setup()
 -- require("comment").setup()
 require("mini.pairs").setup()
-require("lspconfig").setup()
+-- require("lspconfig").setup()
 require("oil").setup({
 	columns = {
 		"permissions",
