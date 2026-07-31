@@ -14,5 +14,6 @@
     obs-studio
 
     prismlauncher
+    waywall
   ];
 }
