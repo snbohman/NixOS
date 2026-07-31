@@ -4,12 +4,13 @@ let
     inherit (pkgs) system;
     config.allowUnfree = true;
   };
+  neovimWithPython = pkgsLatest.neovim.override {
+    extraPython3Packages = ps: [ ps.pynvim ];
+  };
 in {
-  home.packages = with pkgs; [
-  	pkgsLatest.neovim
-    pkgsLatest.python3Packages.pynvim
+  home.packages = [
+    neovimWithPython
   ];
-
   home.file.".config/nvim" = {
     source = ./config;
     recursive = true;
