@@ -7,6 +7,7 @@ let
 in {
   home.packages = with pkgs; [
   	pkgsLatest.neovim
+    pkgsLatest.python3Packages.pynvim
   ];
 
   home.file.".config/nvim" = {
