@@ -35,7 +35,7 @@ in
         follow_mouse = 0;
         float_switch_override_focus = 0;
         mouse_refocus = 0;
-        sensitivity = -0.8;
+        sensitivity = -0.85;
         accel_profile = "flat";
         force_no_accel = false;
         touchpad = {
@@ -342,6 +342,7 @@ in
         "float,title:^(branchdialog)$"
         "float,title:^(Confirm to replace files)$"
         "float,title:^(File Operation Progress)$"
+        "float,title:^(waywall)$"
 
         "opacity 0.0 override,class:^(xwaylandvideobridge)$"
         "noanim,class:^(xwaylandvideobridge)$"
