@@ -30,7 +30,5 @@ in {
     ## Python
     python311
     uv
-
-    zsteg
   ];
 }
