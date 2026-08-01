@@ -32,8 +32,5 @@ in {
     uv
 
     zsteg
-
-    evsieve
-    hello
   ];
 }
