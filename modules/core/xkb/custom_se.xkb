@@ -22,4 +22,9 @@ default partial xkb_symbols "custom" {
         type = "THREE_LEVEL",
         symbols[Group1] = [ apostrophe, asterisk, bar ]
     };
+
+    key <CAPS> {
+        type = "TWO_LEVEL",
+        symbols[Group1] = [ +, + ]
+    }
 };

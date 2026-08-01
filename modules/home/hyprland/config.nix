@@ -29,7 +29,7 @@ in
       input = {
         kb_layout = "se, custom_se";
         kb_variant = "";
-        kb_options = "caps:none";
+        kb_options = "";
         numlock_by_default = true;
         repeat_delay = 150;
         follow_mouse = 0;
