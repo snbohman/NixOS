@@ -22,7 +22,7 @@
         "$mainMod, f12, exec, swayosd-client --output-volume -2"
       ];
       bindr = [
-        "CAPS,Caps_Lock,exec,swayosd-client --caps-lock"
+        # "CAPS,Caps_Lock,exec,swayosd-client --caps-lock"
         ",Scroll_Lock,exec,swayosd-client --scroll-lock"
         ",Num_Lock,exec,swayosd-client --num-lock"
       ];
