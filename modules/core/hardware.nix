@@ -9,8 +9,8 @@
     powerManagement.enable = false;
     powerManagement.finegrained = false;
 
-    # Try changing this to false first
-    open = false;
+    # Try changing this to false -- CHANGED TO TRUE TO MINIMIZE
+    open = true;
 
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.latest;
