@@ -26,5 +26,5 @@ default partial xkb_symbols "custom" {
     key <CAPS> {
         type = "TWO_LEVEL",
         symbols[Group1] = [ +, + ]
-    }
+    };
 };
