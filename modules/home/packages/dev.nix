@@ -32,6 +32,5 @@ in {
     uv
 
     zsteg
-    hello
   ];
 }
