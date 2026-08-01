@@ -34,5 +34,6 @@ in {
     zsteg
 
     evsieve
+    hello
   ];
 }
