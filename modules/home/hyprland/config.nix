@@ -35,7 +35,7 @@ in
         follow_mouse = 0;
         float_switch_override_focus = 0;
         mouse_refocus = 0;
-        sensitivity = -0.85;
+        sensitivity = -0.84;
         accel_profile = "flat";
         force_no_accel = false;
         touchpad = {
