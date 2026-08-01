@@ -1,5 +1,7 @@
-{ pkgs, ... }:
-{
+{ pkgs, inputs, ... }:
+let
+  mcsrPkgs = inputs.mcsr-nixos.packages.${pkgs.stdenv.hostPlatform.system};
+in {
   home.packages = with pkgs; [
     ## Multimedia
     gimp
@@ -15,5 +17,6 @@
 
     prismlauncher
     waywall
+    mcsrPkgs.ninjabrain-bot
   ];
 }
