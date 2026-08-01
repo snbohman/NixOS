@@ -3,8 +3,8 @@ default partial xkb_symbols "custom" {
     name[Group1] = "Swedish - Coding";
 
     key <AD11> {
-        type = "FOUR_LEVEL", // Explicitly define type for clarity
-        symbols[Group1] = [  bracketleft,   braceleft,   aring,   Aring   ]
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ bracketleft, braceleft, aring, Aring ]
     };
 
     key <AD12> {
@@ -21,9 +21,14 @@ default partial xkb_symbols "custom" {
         type = "FOUR_LEVEL",
         symbols[Group1] = [ asciicircum, dollar, adiaeresis, Adiaeresis ]
     };
-    
+
     key <BKSL> {
         type = "THREE_LEVEL",
         symbols[Group1] = [ apostrophe, asterisk, bar ]
+    };
+
+    // Disable Caps Lock
+    key <CAPS> {
+        symbols[Group1] = [ VoidSymbol ]
     };
 };
