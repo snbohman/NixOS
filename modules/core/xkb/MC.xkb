@@ -1,5 +1,6 @@
-partial modifier_keys
-xkb_symbols "MC" {
+default partial xkb_symbols "MC" {
+    include "se(basic)"
+    name[Group1] = "MC";
     key <TAB> {
         type = "TWO_LEVEL",
         symbols[Group1] = [ F3, 2 ]
