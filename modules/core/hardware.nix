@@ -5,7 +5,7 @@
   hardware.uinput.enable = true;
   hardware.bluetooth = {
     enable = true;
-    powerOnBoot=True;
+    powerOnBoot = true;
   };
 
   hardware.nvidia = {
