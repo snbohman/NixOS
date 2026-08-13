@@ -3,6 +3,10 @@
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.uinput.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot=True;
+  };
 
   hardware.nvidia = {
     modesetting.enable = true;
