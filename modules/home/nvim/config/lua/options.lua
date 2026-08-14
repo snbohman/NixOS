@@ -1,7 +1,7 @@
-vim.cmd.colorscheme("gruvbox")
-
 local set = vim.opt
 local sot = vim.o
+
+vim.cmd.colorscheme("gruvbox")
 set.guicursor = "a:block"
 set.number = true
 set.relativenumber = true

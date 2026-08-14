@@ -20,6 +20,13 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
+vim.lsp.config("bqls", {
+    settings = {
+        project_id = "mag-bi-dm-dev",
+        location = "US",
+    }
+})
+
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
 		vim.lsp.completion.enable(true, args.data.client_id, args.buf)

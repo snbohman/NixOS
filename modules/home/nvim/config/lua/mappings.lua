@@ -13,8 +13,8 @@ map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
 map("n", "<C-t>", "<C-w>T")
 
-map("n", "<S-Down>", "<cmd>MultipleCursorsAddDown<CR>", { silent = true, noremap=true })
-map("n", "<S-Up>", "<cmd>MultipleCursorsAddUp<CR>", { silent = true, noremap=true })
+map("n", "<S-Down>", "<cmd>MultipleCursorsAddDown<CR>", { silent = true, noremap = true })
+map("n", "<S-Up>", "<cmd>MultipleCursorsAddUp<CR>", { silent = true, noremap = true })
 map("i", "<S-Down>", "<Esc>:MultipleCursorsAddDown<CR>a", { silent = true })
 map("i", "<S-Up>", "<Esc>:MultipleCursorsAddUp<CR>a", { silent = true })
 
@@ -37,17 +37,17 @@ map("n", "<leader><leader>", ":so<CR>", { silent = true })
 map("n", "<leader>s", "vg_o", { silent = true })
 map("n", "-", "$", { silent = true })
 map("v", "-", "$", { silent = true })
-map("n", "<C-c>", "ggyG<C-o>", { silent = true })
-map("n", ",", "/")
-map("n", ";", "?")
+map("n", "<C-c>", ":%y\"<CR>", { silent = true })
+map("n", ";", "/")
+map("n", ",", "?")
 
 local function surround_visual()
-	local char = vim.fn.getcharstr()
-	local pairs_map = { ["("] = ")", ["["] = "]", ["{"] = "}" }
-	local right = pairs_map[char] or char
-	vim.cmd(
-		"normal! c" .. char .. vim.fn.getreg('"') .. right .. vim.api.nvim_replace_termcodes("<Esc>", true, false, true)
-	)
+    local char = vim.fn.getcharstr()
+    local pairs_map = { ["("] = ")", ["["] = "]", ["{"] = "}" }
+    local right = pairs_map[char] or char
+    vim.cmd(
+        "normal! c" .. char .. vim.fn.getreg('"') .. right .. vim.api.nvim_replace_termcodes("<Esc>", true, false, true)
+    )
 end
 
 vim.keymap.set("x", "s", surround_visual, { desc = "Surround selection with typed char" })
@@ -70,18 +70,18 @@ map("n", "<leader>fm", ":lua vim.lsp.buf.format()<CR>", { silent = true })
 map("n", "Ö", ":cprev<CR>", { silent = true })
 map("n", "Ä", ":cnext<CR>", { silent = true })
 map("n", "M", function()
-	vim.cmd("botright vert copen")
-	vim.cmd("vertical resize " .. math.floor(vim.o.columns / 2))
+    vim.cmd("botright vert copen")
+    vim.cmd("vertical resize " .. math.floor(vim.o.columns / 2))
 end, { silent = true })
 map("n", "m", ":make<CR>", { silent = true })
 
 map("n", "<leader>rv", function()
-	local cmd = ":vert resize " .. vim.o.columns
-	vim.fn.feedkeys(cmd, "n")
+    local cmd = ":vert resize " .. vim.o.columns
+    vim.fn.feedkeys(cmd, "n")
 end, { silent = true })
 map("n", "<leader>rh", function()
-	local cmd = ":hori resize " .. vim.o.rows
-	vim.fn.feedkeys(cmd, "n")
+    local cmd = ":hori resize " .. vim.o.rows
+    vim.fn.feedkeys(cmd, "n")
 end, { silent = true })
 
 map("n", "<leader>S", ":DBUIToggle<CR>", { silent = true })
@@ -90,29 +90,57 @@ map("n", "<C-n>", ":Oil<CR>", { silent = true })
 map("n", "<leader>ce", ":vsplit | edit ~/.config/nvim/lua/mappings.lua<CR>", { silent = true })
 
 vim.api.nvim_create_user_command("GrepHere", function(opts)
-	local dir = vim.fn.expand("%:p:h")
-	vim.cmd("grep -rn " .. vim.fn.shellescape(opts.args) .. " " .. vim.fn.shellescape(dir))
+    local dir = vim.fn.expand("%:p:h")
+    vim.cmd("grep -rn " .. vim.fn.shellescape(opts.args) .. " " .. vim.fn.shellescape(dir))
 end, { nargs = 1 })
 
 vim.api.nvim_create_user_command("GrepH", function(opts)
-	local dir = vim.fn.expand("%:p:h")
-	vim.cmd("grep -rn " .. vim.fn.shellescape(opts.args) .. " " .. vim.fn.shellescape(dir))
+    local dir = vim.fn.expand("%:p:h")
+    vim.cmd("grep -rn " .. vim.fn.shellescape(opts.args) .. " " .. vim.fn.shellescape(dir))
 end, { nargs = 1 })
 
 vim.api.nvim_create_user_command("CdHere", function()
-	vim.cmd("cd " .. vim.fn.fnameescape(vim.fn.expand("%:p:h")))
+    vim.cmd("cd " .. vim.fn.fnameescape(vim.fn.expand("%:p:h")))
 end, {})
 
 vim.api.nvim_create_user_command("CdH", function()
-	vim.cmd("cd " .. vim.fn.fnameescape(vim.fn.expand("%:p:h")))
+    vim.cmd("cd " .. vim.fn.fnameescape(vim.fn.expand("%:p:h")))
 end, {})
 
 vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = "oil://*",
-  callback = function()
-    local dir = require("oil").get_current_dir()
-    if dir then
-      vim.cmd("lcd " .. vim.fn.fnameescape(dir))
-    end
-  end,
+    pattern = "oil://*",
+    callback = function()
+        local dir = require("oil").get_current_dir()
+        if dir then
+            vim.cmd("lcd " .. vim.fn.fnameescape(dir))
+        end
+    end,
 })
+
+map("n", "<leader>r", ":MagmaEvaluateOperator<CR>", { silent = true })
+map("n", "<leader>rr", ":MagmaEvaluateLine<CR>", { silent = true })
+map("x", "<leader>r", ":<C-u>MagmaEvaluateVisual<CR>", { silent = true })
+map("n", "<leader>rc", ":MagmaReevaluateCell<CR>", { silent = true })
+map("n", "<leader>rd", ":MagmaDelete<CR>", { silent = true })
+map("n", "<leader>ro", ":MagmaShowOutput<CR>", { silent = true })
+
+vim.keymap.set("n", "°", function()
+  vim.ui.input({ prompt = "$ " }, function(cmd)
+    if not cmd or cmd == "" then
+      return
+    end
+
+    vim.cmd("botright new")
+
+    vim.api.nvim_win_set_height(
+      0,
+      math.floor(vim.o.lines * 0.15)
+    )
+
+    vim.fn.termopen(cmd)
+
+    vim.cmd("startinsert")
+  end)
+end)
+
+vim.keymap.set("n", "<leader>bq", require("bqls_viewer").run, { desc = "Run BigQuery query" })
