@@ -7,6 +7,7 @@
     ## Multimedia
     imv
     mpv
+    mupdf
 
     ## Utilities
     ffmpeg
