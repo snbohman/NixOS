@@ -1,6 +1,10 @@
 { pkgs, inputs, ... }:
 let
   mcsrPkgs = inputs.mcsr-nixos.packages.${pkgs.stdenv.hostPlatform.system};
+  pkgsLatest = import inputs.nixpkgs-latest {
+    inherit (pkgs) system;
+    config.allowUnfree = true;
+  };
 in {
   home.packages = with pkgs; [
     ## Multimedia
@@ -15,8 +19,8 @@ in {
 
     obs-studio
 
-    prismlauncher
-    waywall
+    pkgsLatest.prismlauncher
+    pkgsLatest.waywall
     mcsrPkgs.ninjabrain-bot
   ];
 }
