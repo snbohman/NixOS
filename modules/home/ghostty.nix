@@ -20,7 +20,7 @@
 
       # Theme
       theme = "gruvbox";
-      background-opacity = 0.86;
+      background-opacity = 1;
 
       cursor-style = "block";
       cursor-style-blink = false;
