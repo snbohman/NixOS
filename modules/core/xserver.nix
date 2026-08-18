@@ -12,12 +12,6 @@
                     symbolsFile = ./xkb/custom_se.xkb;
                     languages = [ "swe" ];
                 };
-
-                extraLayouts.MC = {
-                    description = "MC";
-                    symbolsFile = ./xkb/MC.xkb;
-                    languages = [ "swe" ];
-                };
             };
         };
 

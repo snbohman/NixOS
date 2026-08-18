@@ -27,7 +27,7 @@ in
       ];
 
       input = {
-        kb_layout = "se, custom_se, MC";
+        kb_layout = "se, custom_se";
         kb_variant = "";
         kb_options = "";
         numlock_by_default = false;
@@ -83,12 +83,12 @@ in
 
       decoration = {
         rounding = 0;
-        # active_opacity = 0.90;
-        # inactive_opacity = 0.90;
-        # fullscreen_opacity = 1.0;
+        active_opacity = 1.0;
+        inactive_opacity = 1.0;
+        fullscreen_opacity = 1.0;
 
         blur = {
-          enabled = true;
+          enabled = false;
           size = 3;
           passes = 2;
           brightness = 1;
