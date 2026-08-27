@@ -1,3 +1,3 @@
 #!/usr/bin/env bash 
-bash ~/.dotfiles/scripts/logs.sh
+bash ~/.config/nixos/scripts/logs.sh
 read -p "Press Enter to close..."

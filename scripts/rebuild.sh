@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd ~/.dotfiles
+cd ~/.config/nixos
 
 if ! git diff --quiet || ! git diff --cached --quiet; then
     git add --all
@@ -9,6 +9,6 @@ else
     echo "[Config] - No changes to commit."
 fi
 
-sudo nixos-rebuild switch --flake ~/.dotfiles#primary && git push --quiet -u origin main
+sudo nixos-rebuild switch --flake ~/.config/nixos#primary && git push --quiet -u origin main
 
 cd -

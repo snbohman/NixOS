@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-cd ~/.dotfiles
+cd ~/.config/nixos
 
 echo "[[INFO]] Staging all modified files."
 git add .
@@ -16,7 +16,7 @@ echo "[[INFO]] Creating local commit: \"$COMMIT_MSG\""
 git commit -m "$COMMIT_MSG"
 
 echo "[[INFO]] Initiating NixOS system rebuild."
-if sudo nixos-rebuild switch --flake ~/.dotfiles#primary; then
+if sudo nixos-rebuild switch --flake ~/.config/nixos#primary; then
   echo "[[INFO]] System rebuild completed successfully."
   echo "[[INFO]] Pushing changes to the remote repository."
   git push

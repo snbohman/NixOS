@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-wallpaper_path="$HOME/.dotfiles/wallpapers"
-wallpapers_folder="$HOME/.dotfiles/wallpapers/others"
+wallpaper_path="$HOME/.config/nixos/wallpapers"
+wallpapers_folder="$HOME/.config/nixos/wallpapers/others"
 
 current_wallpaper=$(readlink "$wallpaper_path/wallpaper" 2> /dev/null)
 current_wallpaper_name="$(basename "$current_wallpaper")"

@@ -146,7 +146,7 @@ in
 
       bind = [
         "$mainMod SHIFT, K, exec, hyprctl switchxkblayout by-tech-gaming-keyboard next"
-        "$mainMod SHIFT, U, exec, ghostty --title='NixOS Rebuild' --class='nixos-rebuild' -e bash -c '/home/snbohman/.dotfiles/scripts/logs.sh; echo \"\"; echo \"Press any key to close...\"; read -n1'"
+        "$mainMod SHIFT, U, exec, ghostty --title='NixOS Rebuild' --class='nixos-rebuild' -e bash -c '/home/snbohman/.config/nixos/scripts/logs.sh; echo \"\"; echo \"Press any key to close...\"; read -n1'"
 
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"

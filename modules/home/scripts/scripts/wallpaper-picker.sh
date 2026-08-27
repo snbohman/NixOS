@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-wallpaper_path=$HOME/.dotfiles/wallpapers
-wallpapers_folder=$HOME/.dotfiles/wallpapers/others
+wallpaper_path=$HOME/.config/nixos/wallpapers
+wallpapers_folder=$HOME/.config/nixos/wallpapers/others
 wallpaper_name="$(ls $wallpapers_folder | rofi -dmenu || pkill rofi)"
 
 if [[ -f $wallpapers_folder/$wallpaper_name ]]; then

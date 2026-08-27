@@ -9,8 +9,8 @@
       py = "python";
       open = "xdg-open";
 
-      # edit dotfiles 
-      edf = "cd ~/.dotfiles && v ~/.dotfiles";
+      # edit.config/nixos 
+      edf = "cd ~/.config/nixos && v ~/.config/nixos";
 
       # python
       piv = "python -m venv .venv";
