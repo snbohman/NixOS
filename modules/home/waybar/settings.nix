@@ -15,7 +15,7 @@ let
     magenta = "#B16286";
     cyan = "#689D6A";
     orange = "#D65D0E";
-    opacity = "1";
+    opacity = "0.0";
     indicator_height = "2px";
   };
 in
