@@ -2,8 +2,7 @@
 {
   imports = [
     ./waybar.nix
-    # ./settings.nix
-    # ./style.nix
-    ./san7o.nix
+    ./settings.nix
+    ./style.nix
   ];
 }

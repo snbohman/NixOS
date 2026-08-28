@@ -22,5 +22,7 @@ in {
     pkgsLatest.prismlauncher
     pkgsLatest.waywall
     mcsrPkgs.ninjabrain-bot
+
+    spotify
   ];
 }

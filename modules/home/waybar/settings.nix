@@ -29,17 +29,13 @@ in
     margin-right = 0;
     modules-left = [
       "hyprland/workspaces"
-      "tray"
     ];
     modules-center = [ "clock" ];
     modules-right = [
       "cpu"
       "memory"
       "disk"
-      "pulseaudio"
-      "battery"
       "hyprland/language"
-      "custom/notification"
     ];
     clock = {
       calendar = {
@@ -74,8 +70,6 @@ in
         "1" = [ ];
         "2" = [ ];
         "3" = [ ];
-        "4" = [ ];
-        "5" = [ ];
       };
     };
     cpu = {
@@ -95,65 +89,11 @@ in
       interval = 60;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
     };
-    tray = {
-      icon-size = 20;
-      spacing = 8;
-    };
-    pulseaudio = {
-      format = "{icon} {volume}%";
-      format-muted = "<span foreground='${blue}'> </span> {volume}%";
-      format-icons = {
-        default = [ "<span foreground='${blue}'> </span>" ];
-      };
-      scroll-step = 2;
-      on-click = "pamixer -t";
-      on-click-right = "pavucontrol";
-    };
-    battery = {
-      format = "<span foreground='${yellow}'>{icon}</span> {capacity}%";
-      format-icons = [
-        " "
-        " "
-        " "
-        " "
-        " "
-      ];
-      format-charging = "<span foreground='${yellow}'> </span>{capacity}%";
-      format-full = "<span foreground='${yellow}'> </span>{capacity}%";
-      format-warning = "<span foreground='${yellow}'> </span>{capacity}%";
-      interval = 5;
-      states = {
-        warning = 20;
-      };
-      format-time = "{H}h{M}m";
-      tooltip = true;
-      tooltip-format = "{time}";
-    };
     "hyprland/language" = {
       format = "<span foreground='#FABD2F'> </span> {}";
       format-se = "Swedish";
       format-custom_se = "Custom";
       on-click = "hyprctl switchxkblayout by-tech-gaming-keyboard next";
-    };
-    "custom/notification" = {
-      tooltip = false;
-      format = "{icon} ";
-      format-icons = {
-        notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
-        none = "  <span foreground='${red}'></span>";
-        dnd-notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
-        dnd-none = "  <span foreground='${red}'></span>";
-        inhibited-notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
-        inhibited-none = "  <span foreground='${red}'></span>";
-        dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
-        dnd-inhibited-none = "  <span foreground='${red}'></span>";
-      };
-      return-type = "json";
-      exec-if = "which swaync-client";
-      exec = "swaync-client -swb";
-      on-click = "swaync-client -t -sw";
-      on-click-right = "swaync-client -d -sw";
-      escape = true;
     };
   };
 
@@ -175,14 +115,7 @@ in
     #cpu,
     #memory,
     #disk,
-    #pulseaudio,
-    #battery,
     #language,
-    #custom-notification,
-    #tray {
-      background: transparent;
-      padding: 0 8px;
-    }
 
     #workspaces button {
       background: transparent;
