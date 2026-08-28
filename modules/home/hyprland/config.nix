@@ -281,8 +281,7 @@ in
 
       # layerrule
       layerrule = [
-        "blur, match:namespace waybar"
-        "ignore_alpha 0.2, match:namespace waybar"
+        "blur, ignore_alpha 0.2, match:namespace waybar"
       ];
 
       # windowrule
