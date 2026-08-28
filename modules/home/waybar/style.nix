@@ -32,12 +32,9 @@ in
       opacity: ${opacity};
       font-size: ${font_size};
     }
-
     window#waybar {
-      background: #282828;
-      border-top: 1px solid ${border_color};
+      background: transparent;
     }
-
     tooltip {
       background: ${background_1};
       border: 1px solid ${border_color};
@@ -46,7 +43,12 @@ in
       margin: 5px;
       color: ${text_color};
     }
-
+    .modules-left,
+    .modules-center,
+    .modules-right {
+      border-bottom: ${indicator_height} solid ${border_color};
+      padding-bottom: 2px;
+    }
     #workspaces {
       padding-left: 15px;
     }
@@ -62,11 +64,9 @@ in
     #workspaces button.active {
       color: ${orange_bright};
     }
-
     #clock {
       color: ${text_color};
     }
-
     #tray {
       margin-left: 10px;
       color: ${text_color};
@@ -79,30 +79,19 @@ in
     #tray menuitem {
       padding: 1px;
     }
-
-    #pulseaudio, #network, #cpu, #memory, #disk, #battery, #language, #custom-notification {
+    #pulseaudio, #cpu, #memory, #disk, #battery, #language, #custom-notification {
       padding-left: 5px;
       padding-right: 5px;
       margin-right: 10px;
       color: ${text_color};
     }
-
     #pulseaudio, #language {
       margin-left: 15px;
     }
-
     #custom-notification {
       margin-left: 15px;
       padding-right: 2px;
       margin-right: 5px;
-    }
-
-    #custom-launcher {
-      font-size: 20px;
-      color: ${text_color};
-      font-weight: bold;
-      margin-left: 15px;
-      padding-right: 10px;
     }
   '';
 }
