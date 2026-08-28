@@ -88,7 +88,7 @@ in
         fullscreen_opacity = 1.0;
 
         blur = {
-          enabled = false;
+          enabled = true;
           size = 3;
           passes = 2;
           brightness = 1;
@@ -277,6 +277,11 @@ in
       bindm = [
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"
+      ];
+
+      # layerrule
+      layerrule = [
+        "layerrule = blur on, ignore_alpha 0.2, match:namespace waybar"
       ];
 
       # windowrule
