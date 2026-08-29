@@ -75,7 +75,7 @@ in
       };
     };
     cpu = {
-      format = "<span foreground='${blue}'>[ </span> <span foreground='${green}'> </span>{usage}% ";
+      format = "<span foreground='${blue}'>[ </span><span foreground='${green}'> </span>{usage}% ";
       format-alt = "<span foreground='${green}'> </span>{avg_frequency} GHz ";
       interval = 2;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
@@ -92,7 +92,7 @@ in
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
     } ;
     "hyprland/language" = {
-      format = "<span foreground='${red}'> </span>{} <span foreground='${blue}'> ]</span>";
+      format = "<span foreground='${red}'> </span>{}<span foreground='${blue}'> ]</span>";
       format-custom_se = "Custom";
       on-click = "hyprctl switchxkblayout by-tech-gaming-keyboard next";
     };
