@@ -93,8 +93,8 @@ in
     } ;
     "hyprland/language" = {
       format = "<span foreground='${red}'> </span>{}";
-      format-se = "Swedish  ";
-      format-custom_se = "Custom ";
+      format-se = "Standard";
+      format-custom_se = "Tailored";
       on-click = "hyprctl switchxkblayout by-tech-gaming-keyboard next";
     };
   };
