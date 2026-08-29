@@ -74,19 +74,19 @@ in
       };
     };
     cpu = {
-      format = " :{usage}%";
-      format-alt = ":{avg_frequency} GHz";
+      format = "  {usage}%";
+      format-alt = " {avg_frequency} GHz";
       interval = 2;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
     };
     memory = {
-      format = "󰟜:{}%";
-      format-alt = "󰟜:{used} GiB";
+      format = "󰟜 {}%";
+      format-alt = "󰟜 {used} GiB";
       interval = 2;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
     };
     disk = {
-      format = "󰋊:{percentage_used}%";
+      format = "󰋊 {percentage_used}%";
       interval = 60;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
     };
