@@ -43,10 +43,10 @@ in
           today = "<span color='#98971A'><b>{}</b></span>";
         };
       };
-      format = "  {:%H:%M}";
+      format = "{:%H:%M}";
       tooltip = "true";
       tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-      format-alt = "  {:%d/%m}";
+      format-alt = "{:%d/%m}";
     };
     "hyprland/workspaces" = {
       active-only = false;
@@ -73,24 +73,24 @@ in
       };
     };
     cpu = {
-      format = "<span foreground='${green}'> </span> {usage}%";
-      format-alt = "<span foreground='${green}'> </span> {avg_frequency} GHz";
+      format = "{usage}%";
+      format-alt = "{avg_frequency} GHz";
       interval = 2;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
     };
     memory = {
-      format = "<span foreground='${cyan}'>󰟜 </span>{}%";
-      format-alt = "<span foreground='${cyan}'>󰟜 </span>{used} GiB";
+      format = "{}%";
+      format-alt = "{used} GiB";
       interval = 2;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
     };
     disk = {
-      format = "<span foreground='${orange}'>󰋊 </span>{percentage_used}%";
+      format = "{percentage_used}%";
       interval = 60;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
     };
     "hyprland/language" = {
-      format = "<span foreground='#FABD2F'> </span> {}";
+      format = "{}";
       format-se = "Swedish";
       format-custom_se = "Custom";
       on-click = "hyprctl switchxkblayout by-tech-gaming-keyboard next";
