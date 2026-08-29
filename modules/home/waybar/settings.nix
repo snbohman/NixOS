@@ -23,7 +23,7 @@ in
     position = "top";
     layer = "top";
     height = 20;
-    margin-top = 5;
+    margin-top = 0;
     margin-bottom = 0;
     margin-left = 0;
     margin-right = 0;
@@ -53,6 +53,7 @@ in
       disable-scroll = true;
       format = "{icon}";
       on-click = "activate";
+      sort-by-number=true;
       format-icons = {
         "1" = "I";
         "2" = "II";
@@ -73,19 +74,19 @@ in
       };
     };
     cpu = {
-      format = "{usage}%";
+      format = "[CPU] {usage}%";
       format-alt = "{avg_frequency} GHz";
       interval = 2;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
     };
     memory = {
-      format = "{}%";
+      format = "[RAM] {}%";
       format-alt = "{used} GiB";
       interval = 2;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
     };
     disk = {
-      format = "{percentage_used}%";
+      format = "[DISK] {percentage_used}%";
       interval = 60;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
     };
