@@ -28,7 +28,7 @@ in {
     llvmPackages_20.clang-tools
 
     ## Python
-    python311
+    # python311
     uv
   ];
 }
