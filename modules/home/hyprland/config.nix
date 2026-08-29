@@ -294,6 +294,7 @@ in
         "size 200 450,title:^(Extension: \\(Bitwarden Password Manager\\) - Bitwarden — Mozilla Firefox)$"
         "move 40 55%,title:^(Extension: \\(Bitwarden Password Manager\\) - Bitwarden — Mozilla Firefox)$"
 
+        "pin,class:^(SshAskpass)$"
         "float,class:^(Viewnior)$"
         "float,class:^(imv)$"
         "float,class:^(mpv)$"
@@ -301,8 +302,6 @@ in
         "float,class:^(Audacious)$"
         "pin,class:^(rofi)$"
         "pin,class:^(waypaper)$"
-        # "idleinhibit focus,mpv"
-        # "float,udiskie"
         "float,title:^(Transmission)$"
         "float,title:^(Volume Control)$"
         "float,title:^(Firefox — Sharing Indicator)$"
