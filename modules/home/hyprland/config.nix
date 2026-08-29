@@ -290,6 +290,10 @@ in
         "size 1000 800, title:^(NixOS Rebuild)$"
         "center, title:^(NixOS Rebuild)$"
 
+        "float, title:^(Extension: (Bitwarden Password Manager) - Bitwarden — Mozilla Firefox)$"
+        "size 200 450,title:^(Volume Control)$"
+        "move 40 55%,title:^(Volume Control)$"
+
         "float,class:^(Viewnior)$"
         "float,class:^(imv)$"
         "float,class:^(mpv)$"
