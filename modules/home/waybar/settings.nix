@@ -123,11 +123,14 @@ in
       background: transparent;
       color: ${custom.yellow};
       opacity: 0.5;
+      padding: 0 8px;
+      border-radius: 6px;
     }
     #workspaces button.active {
+      background: alpha(${custom.green}, 0.18);
       color: ${custom.green};
       opacity: 1;
-      border-bottom: ${custom.indicator_height} solid ${custom.green};
+      border-radius: 6px;
     }
     .modules-left,
     .modules-center,
