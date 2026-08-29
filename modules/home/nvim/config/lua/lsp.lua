@@ -25,3 +25,5 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.lsp.completion.enable(true, args.data.client_id, args.buf)
 	end,
 })
+
+vim.lsp.enable({"lua_ls", "pyright", "clangd", "nixd"})

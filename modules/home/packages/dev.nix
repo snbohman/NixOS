@@ -26,9 +26,6 @@ in {
     nixd
     lua-language-server 
     llvmPackages_20.clang-tools
-
-    ## Python
-    # python311
-    uv
+    pyright
   ];
 }
