@@ -92,7 +92,7 @@ in
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
     } ;
     "hyprland/language" = {
-      format = "<span foreground='${red}'> </span>{}";
+      format = "<span foreground='${red}'>  </span>{}";
       format-se = "Swedish ";
       format-custom_se = "Coding ";
       on-click = "hyprctl switchxkblayout by-tech-gaming-keyboard next";
