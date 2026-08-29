@@ -40,3 +40,4 @@ vim.diagnostic.config({
 
 require("statuscolumn")
 require("simpl")
+require("bg")
