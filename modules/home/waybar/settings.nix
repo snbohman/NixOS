@@ -53,7 +53,7 @@ in
       disable-scroll = true;
       format = "{icon}";
       on-click = "activate";
-      sort-by-number=true;
+      sort-by-number = true;
       format-icons = {
         "1" = "I";
         "2" = "II";
@@ -65,7 +65,6 @@ in
         "8" = "VIII";
         "9" = "IX";
         "10" = "X";
-        sort-by-number = true;
       };
       persistent-workspaces = {
         "1" = [ ];
@@ -74,19 +73,19 @@ in
       };
     };
     cpu = {
-      format = "  {usage}%";
-      format-alt = " {avg_frequency} GHz";
+      format = "<span foreground='${green}'>  </span>{usage}%";
+      format-alt = "<span foreground='${green}'> </span>{avg_frequency} GHz";
       interval = 2;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
     };
     memory = {
-      format = "󰟜 {}%";
-      format-alt = "󰟜 {used} GiB";
+      format = "<span foreground='${cyan}'>󰟜 </span>{}%";
+      format-alt = "<span foreground='${cyan}'>󰟜 </span>{used} GiB";
       interval = 2;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
     };
     disk = {
-      format = "󰋊 {percentage_used}%";
+      format = "<span foreground='${orange}'>󰋊 </span>{percentage_used}%";
       interval = 60;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
     };
@@ -97,36 +96,39 @@ in
       on-click = "hyprctl switchxkblayout by-tech-gaming-keyboard next";
     };
   };
-
   programs.waybar.style = ''
     * {
-      font-family: "${custom.font}";
+      font-family: "${custom.font}", "Symbols Nerd Font Mono", "Symbols Nerd Font";
       font-size: ${custom.font_size};
       font-weight: ${custom.font_weight};
       color: ${custom.text_color};
       min-height: 0;
     }
-
     window#waybar {
       background: transparent;
     }
-
     #workspaces,
     #clock,
     #cpu,
     #memory,
     #disk,
-    #language,
-
-    #workspaces button {
+    #language {
       background: transparent;
       color: ${custom.text_color};
     }
-
+    #clock {
+      color: ${custom.blue};
+    }
+    #workspaces button {
+      background: transparent;
+      color: ${custom.yellow};
+      opacity: 0.5;
+    }
     #workspaces button.active {
       color: ${custom.green};
+      opacity: 1;
+      border-bottom: ${custom.indicator_height} solid ${custom.green};
     }
-
     .modules-left,
     .modules-center,
     .modules-right {
