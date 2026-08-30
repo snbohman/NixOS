@@ -23,7 +23,7 @@
       lg = "lazygit";
       vt = "NVIM_APPNAME=nvim-test nvim";
       vimt = "NVIM_APPNAME=nvim-test nvim";
-      ls = "ls -la --color";
+      ls = "ls -la --color --group-directories-first";
     };
 
     shellGlobalAliases = {
