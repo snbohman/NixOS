@@ -31,7 +31,7 @@
         rm -f "$f"
       }
 
-      PROMPT="%F{#D65D0E}%~%f:# "
+      PROMPT="%F{#689D6A}%~%f %# "
     '';
   };
 
