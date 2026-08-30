@@ -9,7 +9,6 @@
       compinit
     '';
 
-
     initContent = ''
       if [[ -n "$IN_NIX_DEV_SHELL" ]]; then
         PROMPT="[dev] $PROMPT"

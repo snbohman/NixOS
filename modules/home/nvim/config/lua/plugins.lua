@@ -31,8 +31,3 @@ require("oil").setup({
         padding = 2
     }
 })
-
-require("wild")
-require("ts")
-require("lsp")
-require("comp")

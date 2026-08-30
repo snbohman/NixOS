@@ -21,8 +21,6 @@
       x = "exit";
       md = "mkdir";
       lg = "lazygit";
-      vt = "NVIM_APPNAME=nvim-test nvim";
-      vimt = "NVIM_APPNAME=nvim-test nvim";
       ls = "ls -la --color --group-directories-first";
     };
 
