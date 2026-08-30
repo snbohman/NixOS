@@ -1,0 +1,47 @@
+{
+  "plugins": {
+    "blink.cmp": {
+      "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
+      "src": "git@github.com:saghen/blink.cmp",
+      "version": "'v1'"
+    },
+    "gruvbox.nvim": {
+      "rev": "154eb5ff5b96d0641307113fa385eaf0d36d9796",
+      "src": "git@github.com:ellisonleao/gruvbox.nvim"
+    },
+    "harpoon": {
+      "rev": "87b1a3506211538f460786c23f98ec63ad9af4e5",
+      "src": "git@github.com:ThePrimeagen/harpoon",
+      "version": "'harpoon2'"
+    },
+    "mini.pairs": {
+      "rev": "b1c5a726921b7a8c9321e9a7a208aa0571de5810",
+      "src": "git@github.com:nvim-mini/mini.pairs"
+    },
+    "multiple-cursors.nvim": {
+      "rev": "eae76d4c5f7ede2d45746dc2affb5e7a139e4aa8",
+      "src": "git@github.com:brenton-leighton/multiple-cursors.nvim"
+    },
+    "nvim-lspconfig": {
+      "rev": "684cb45c2faa24ce463b4fe9aaf011bfe1e0fb26",
+      "src": "git@github.com:neovim/nvim-lspconfig"
+    },
+    "nvim-treesitter": {
+      "rev": "8b98b4470eb326f1c7b50dae79f8c963568e5720",
+      "src": "git@github.com:nvim-treesitter/nvim-treesitter",
+      "version": "'main'"
+    },
+    "oil.nvim": {
+      "rev": "b73018b75affd13fa38e2fc94ef753b465f770d7",
+      "src": "git@github.com:stevearc/oil.nvim"
+    },
+    "plenary.nvim": {
+      "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
+      "src": "git@github.com:nvim-lua/plenary.nvim"
+    },
+    "wilder.nvim": {
+      "rev": "679f348dc90d80ff9ba0e7c470c40a4d038dcecf",
+      "src": "git@github.com:gelguy/wilder.nvim"
+    }
+  }
+}
