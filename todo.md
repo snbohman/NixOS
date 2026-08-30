@@ -1,5 +1,7 @@
-* image puzzle
-* zig
-    * git
+# TODO
 
-* make the R command work on the previous output when nothing is outputed on this output. makes it more versatile
+
+-- streamline nix enviroment
+
+-- streamline incremental changes to config (such as neovim)
+    - mkOutOfStoreSymlink

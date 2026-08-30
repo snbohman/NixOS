@@ -32,10 +32,10 @@ vim.opt.exrc = true
 vim.opt.secure = true
 
 vim.diagnostic.config({
-	underline = false,
-	signs = true,
-	virtual_text = false,
-	severity_sort = true,
+    underline = false,
+    signs = true,
+    virtual_text = false,
+    severity_sort = true,
 })
 
 require("statuscolumn")

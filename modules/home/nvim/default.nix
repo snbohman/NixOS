@@ -14,7 +14,7 @@ in {
     neovimWithPython
     python3WithPynvim
   ];
-  home.file.".config/nvim" = {
+home.file.".config/nvim" = {
     source = ./config;
     recursive = true;
   };
