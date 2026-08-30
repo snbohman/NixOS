@@ -27,7 +27,7 @@ vim.lsp.config("nixd", {
     },
 })
 
-vim.lsp.enable({ "lua_ls", "pyright", "clangd" })
+vim.lsp.enable({ "lua_ls", "pyright", "clangd", "nixd" })
 
 
 vim.api.nvim_create_autocmd("LspAttach", {
