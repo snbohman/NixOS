@@ -9,8 +9,8 @@
       py = "python";
       open = "xdg-open";
 
-      # edit.config/nixos 
-      edf = "cd ~/.config/nixos && v ~/.config/nixos";
+      # edit .config/nixos 
+      edf = "cd ~/.config/nixos && v ~/.config/nixos; cd -";
 
       # python
       piv = "python -m venv .venv";
@@ -23,6 +23,7 @@
       lg = "lazygit";
       vt = "NVIM_APPNAME=nvim-test nvim";
       vimt = "NVIM_APPNAME=nvim-test nvim";
+      ls = "l";
     };
 
     shellGlobalAliases = {
