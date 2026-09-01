@@ -100,6 +100,14 @@
             inherit self inputs username;
           };
         };
+        mac = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ ./hosts/mac ];
+          specialArgs = {
+            host = "mac";
+            inherit self inputs username;
+          };
+        };
       };
     };
 }

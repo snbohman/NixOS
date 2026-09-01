@@ -16,7 +16,7 @@ echo "[[INFO]] Creating local commit: \"$COMMIT_MSG\""
 git commit -m "$COMMIT_MSG"
 
 echo "[[INFO]] Initiating NixOS system rebuild."
-if sudo nixos-rebuild switch --flake ~/.config/nixos#primary; then
+if sudo nixos-rebuild switch --flake ~/.config/nixos#mac; then
   echo "[[INFO]] System rebuild completed successfully."
   echo "[[INFO]] Pushing changes to the remote repository."
   git push

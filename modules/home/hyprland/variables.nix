@@ -28,10 +28,5 @@
     GRIMBLAST_HIDE_CURSOR = 0;
 
     XKB_DEFAULT_LAYOUT = "se,se_custom";
-
-    LIBVA_DRIVER_NAME = "nvidia";
-    GBM_BACKEND = "nvidia-drm";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-
   };
 }
