@@ -28,6 +28,6 @@ in {
     llvmPackages_20.clang-tools
     pyright
 
-    tree-sitter
+    pkgsLatest.tree-sitter
   ];
 }
