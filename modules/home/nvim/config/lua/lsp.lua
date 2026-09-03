@@ -27,8 +27,11 @@ vim.lsp.config("nixd", {
     },
 })
 
-vim.lsp.enable({ "lua_ls", "pyright", "clangd", "nixd" })
+vim.lsp.config("clangd", {
+    cmd = { "clangd", "--query-driver=/nix/store/**" }
+})
 
+vim.lsp.enable({ "lua_ls", "pyright", "clangd", "nixd" })
 
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)

@@ -27,5 +27,7 @@ in {
     lua-language-server 
     llvmPackages_20.clang-tools
     pyright
+
+    tree-sitter
   ];
 }

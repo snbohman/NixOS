@@ -63,7 +63,7 @@ map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silen
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
 map("n", "<leader>e", ":lua vim.diagnostic.open_float()<CR>", { silent = true, desc = "popup diagnostic" })
 map("n", "<leader>E", ":lua vim.lsp.buf.hover() <CR>", { silent = true, desc = "popup description" })
-map("n", "T", ":lua vim.diagnostic.goto_next()<CR>", { silent = true, desc = "goto next error" })
+map("n", "T", ":lua vim.diagnostic.jump({ count = 1, float = true })<CR>", { silent = true, desc = "goto next error" })
 map("n", "<leader>L", vim.diagnostic.setloclist)
 map("n", "<leader>fm", ":lua vim.lsp.buf.format()<CR>", { silent = true })
 
