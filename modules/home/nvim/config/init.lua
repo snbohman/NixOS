@@ -4,7 +4,6 @@ vim.g.python3_host_prog = vim.fn.exepath("python3")
 
 require("plugins")
     require("wild")
-    require("ts")
     require("lsp")
     require("comp")
 
@@ -15,3 +14,4 @@ require("options")
 
 require("mappings")
 require("harp") -- For some reason
+require("ts")
