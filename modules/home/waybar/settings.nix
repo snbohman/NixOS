@@ -75,8 +75,8 @@ in
       };
     };
     cpu = {
-      format = "<span foreground='${blue}'>[ </span><span foreground='${green}'> </span>{usage}% ";
-      format-alt = "<span foreground='${green}'> </span>{avg_frequency} GHz ";
+      format     = "<span foreground='${blue}'>[ </span><span foreground='${green}'> </span>{usage}% ";
+      format-alt = "<span foreground='${blue}'>[ </span><span foreground='${green}'> </span>{avg_frequency} GHz ";
       interval = 2;
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
     };

@@ -55,5 +55,6 @@
     ga = "git add --all;";
     gc = "git commit -m";
     gp = "git push";
+    gs = "git status;";
   };
 }
