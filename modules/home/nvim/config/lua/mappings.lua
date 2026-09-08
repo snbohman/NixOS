@@ -68,6 +68,7 @@ map("n", "<leader>E", ":lua vim.lsp.buf.hover() <CR>", { silent = true, desc = "
 map("n", "T", ":lua vim.diagnostic.jump({ count = 1, float = true })<CR>", { silent = true, desc = "goto next error" })
 map("n", "<leader>L", vim.diagnostic.setloclist)
 map("n", "<leader>fm", ":lua vim.lsp.buf.format()<CR>", { silent = true })
+map("v", "<leader>fm", ":lua vim.lsp.buf.format()<CR>", { silent = true })
 
 map("n", "Ö", ":cprev<CR>", { silent = true })
 map("n", "Ä", ":cnext<CR>", { silent = true })

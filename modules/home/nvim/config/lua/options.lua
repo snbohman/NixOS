@@ -15,10 +15,10 @@ sot.foldlevel = 99
 sot.foldlevelstart = 99
 set.mousemodel = "extend"
 
-set.expandtab = true
 set.tabstop = 4
 set.shiftwidth = 4
-set.softtabstop = -1
+set.softtabstop = 4
+set.expandtab = true
 set.smarttab = true
 vim.opt.showtabline = 0
 
