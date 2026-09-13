@@ -35,7 +35,7 @@ in
         follow_mouse = 0;
         float_switch_override_focus = 0;
         mouse_refocus = 0;
-        sensitivity = -0.845;
+        sensitivity = 0;
         accel_profile = "flat";
         force_no_accel = false;
         touchpad = {
@@ -383,6 +383,7 @@ in
       ];
 
       monitor = [
+        "eDP-1,2560x1600@60,0x0,1"
         "HDMI-A-1,1920x1080@60,0x0,1"
         "DP-1,preferred,1920x0,1"
       ];
