@@ -4,7 +4,7 @@
         firefox
     ];
 
-    home.file.".mozilla/firefox/krwoay8v.default/chrome" = {
+    home.file.".mozilla/firefox/vfpjcrpn.default/chrome" = {
         source = ./chrome;
         recursive = true;
     };
