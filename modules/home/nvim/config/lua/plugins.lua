@@ -8,7 +8,8 @@ vim.pack.add({
 	{ src = "https://github.com/gelguy/wilder.nvim" },
 	{ src = "https://github.com/nvim-mini/mini.pairs" },
     { src = "https://github.com/saghen/blink.cmp", version="v1" },
-    { src = "https://github.com/brenton-leighton/multiple-cursors.nvim" }
+    { src = "https://github.com/brenton-leighton/multiple-cursors.nvim" },
+    { src = "https://github.com/chomosuke/typst-preview.nvim" }
 })
 
 require("gruvbox").setup({

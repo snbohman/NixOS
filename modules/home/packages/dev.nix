@@ -29,5 +29,6 @@ in {
     pyright
 
     pkgsLatest.tree-sitter
+    typst
   ];
 }
