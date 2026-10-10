@@ -44,7 +44,7 @@ in
       };
 
       cursor = {
-        inactive_timout = 3;
+        inactive_timeout = 3;
       };
 
       general = {
