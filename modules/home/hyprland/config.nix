@@ -43,6 +43,10 @@ in
         };
       };
 
+      cursor = {
+        inactive_timout = 3;
+      };
+
       general = {
         "$mainMod" = "SUPER";
         layout = "dwindle";

@@ -31,6 +31,12 @@ vim.lsp.config("clangd", {
     cmd = { "clangd", "--query-driver=/nix/store/**" }
 })
 
+vim.lsp.config("ols", {
+    cmd = { "ols" },
+    filetypes = { "odin" },
+    root_markers = { "ols.json", ".git" }
+})
+
 vim.lsp.enable({ "lua_ls", "pyright", "clangd", "nixd", "ols" })
 
 vim.api.nvim_create_autocmd("LspAttach", {
