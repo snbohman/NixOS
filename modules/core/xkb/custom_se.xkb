@@ -22,4 +22,9 @@ default partial xkb_symbols "custom" {
         type = "THREE_LEVEL",
         symbols[Group1] = [ apostrophe, asterisk, bar ]
     };
+
+    key <AE04> {
+        type = "FOUR_LEVEL",
+        symbols[Group1] = [ 4, asciicircum, dollar, cent ]
+    };
 };
