@@ -8,6 +8,7 @@ let
   neovimWithPython = pkgsLatest.neovim.override {
     withPython3 = true;
     extraPython3Packages = ps: [ ps.pynvim ];
+    wrapRc = false;
     configure.packages.nixPlugins.start = with pkgsLatest.vimPlugins; [
       cpsm
       wilder-nvim
