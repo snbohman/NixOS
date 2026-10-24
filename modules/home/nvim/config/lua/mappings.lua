@@ -55,8 +55,26 @@ vim.keymap.set("x", "s", surround_visual, { desc = "Surround selection with type
 map("n", "<leader>xd", ":%!xxd<CR>", { silent = true })
 map("n", "<C-f>", "V/\\%V", { silent = true, desc = "search line" })
 map("n", "<Esc>", ":noh<CR>", { silent = true })
-map("n", "<leader>v", ":botright vert term<CR>a", { silent = true })
-map("n", "<leader>h", ":botright hori term<CR>", { silent = true })
+
+-- Returns the Oil directory if the current buffer is an Oil buffer, otherwise nil
+local function oil_dir()
+    if vim.bo.filetype == "oil" then
+        return require("oil").get_current_dir()
+    end
+end
+
+local function open_term(split_cmd)
+    local dir = oil_dir()
+    vim.cmd(split_cmd)
+    if dir then
+        vim.cmd("lcd " .. vim.fn.fnameescape(dir))
+    end
+    vim.cmd("terminal")
+    vim.cmd("startinsert")
+end
+
+map("n", "<leader>v", function() open_term("botright vsplit") end, { silent = true })
+map("n", "<leader>h", function() open_term("botright split") end, { silent = true })
 
 map("n", "<leader>dd", function()
     vim.diagnostic.enable(not vim.diagnostic.is_enabled())
@@ -109,13 +127,3 @@ end, {})
 vim.api.nvim_create_user_command("CdH", function()
     vim.cmd("cd " .. vim.fn.fnameescape(vim.fn.expand("%:p:h")))
 end, {})
-
-vim.api.nvim_create_autocmd("BufEnter", {
-    pattern = "oil://*",
-    callback = function()
-        local dir = require("oil").get_current_dir()
-        if dir then
-            vim.cmd("lcd " .. vim.fn.fnameescape(dir))
-        end
-    end,
-})

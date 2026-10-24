@@ -12,9 +12,10 @@ wilder.set_option("pipeline", {
                 "-E", "target", "-E", "dist", "-E", "*.o", "-E", "*.so",
                 "-E", "*.pyc",
             },
-            filter_command = { "fuzzy_filter" },
+            dir_command = { "fd", "-td", "-H", "-E", ".git", "-E", "node_modules" },
+            filters = { "cpsm_filter" },
         }),
-        wilder.cmdline_pipeline()
+        wilder.cmdline_pipeline({ fuzzy = 1 })
     ),
 })
 
