@@ -19,5 +19,6 @@
     wl-clipboard                      # clipboard utils for wayland (wl-copy, wl-paste)
     xdg-utils
     imagemagick
+    vimPlugins.cpsm
   ];
 }
