@@ -18,5 +18,6 @@ in {
     python3WithPynvim
   ];
 
+  home.file.".local/share/cpsm".source = pkgsLatest.vimPlugins.cpsm;
   home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink nvimDir;
 }
