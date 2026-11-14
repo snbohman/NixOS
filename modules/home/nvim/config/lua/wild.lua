@@ -10,7 +10,7 @@ wilder.set_option("pipeline", {
                 "-E", "build", "-E", "bin", "-E", "external",
                 "-E", ".git", "-E", "__pycache__", "-E", "node_modules",
                 "-E", "target", "-E", "dist", "-E", "*.o", "-E", "*.so",
-                "-E", "*.pyc",
+                "-E", "*.pyc", "-E", "*.spv",
             },
             dir_command = { "fd", "-td", "-H", "-E", ".git", "-E", "node_modules" },
             filters = { "cpsm_filter" },
