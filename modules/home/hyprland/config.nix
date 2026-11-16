@@ -5,51 +5,47 @@ let
 
   mcsrBindToggle = pkgs.writeShellScriptBin "mcsr-bind-toggle" ''
     set -euo pipefail
-
+  
     runtimeDir="''${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
     instance="''${HYPRLAND_INSTANCE_SIGNATURE:-default}"
     state="$runtimeDir/mcsr-bindings-disabled-$instance"
-
+  
     disableBindings() {
-      hyprctl --batch \
-        "keyword unbind SUPER, F ; keyword unbind SUPER, Space"
+      local -a bindings=(
+        "SUPER, F"
+        "SUPER, Space"
+        "SUPER, mouse:272"
+        "SUPER, mouse:273"
+        "SUPER, mouse:274"
+      )
+  
+      local binding
+      for binding in "''${bindings[@]}"; do
+        hyprctl keyword unbind "$binding" >/dev/null
+      done
     }
-
+  
     case "''${1:-toggle}" in
       toggle)
         if [[ -e "$state" ]]; then
-          # Gaming mode OFF: restore the declarative config.
-          rm -f -- "$state"
-
-          if hyprctl reload; then
-            hyprctl notify 5 1500 "rgb(98971A)" \
-              "MCSR mode OFF - desktop bindings restored"
-          else
-            # Preserve the disabled state if reload fails.
-            : > "$state"
-            exit 1
-          fi
+          rm -f "$state"
+          hyprctl reload
         else
-          # Gaming mode ON: remove only the two conflicting binds.
-          : > "$state"
+          touch "$state"
           chmod 600 "$state"
-
-          if disableBindings; then
-            hyprctl notify 1 1500 "rgb(CC241D)" \
-              "MCSR mode ON - SUPER+F and SUPER+SPACE disabled"
-          else
-            rm -f -- "$state"
+  
+          if ! disableBindings; then
+            rm -f "$state"
             hyprctl reload || true
             exit 1
           fi
         fi
         ;;
-
+  
       reset)
-        # Any config reload restores the normal bindings.
-        rm -f -- "$state"
+        rm -f "$state"
         ;;
-
+  
       *)
         echo "Usage: mcsr-bind-toggle [toggle|reset]" >&2
         exit 2
@@ -212,7 +208,7 @@ in
 
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"
-        "$mainMod, F12, exec, ${mcsrBindToggle}/bin/mcsr-bind-toggle toggle"
+        "CTRL ALT, F12, exec, ${mcsrBindToggle}/bin/mcsr-bind-toggle toggle"
 
         # keybindings
         "$mainMod, Return, exec, ${terminal} --gtk-single-instance=true"
