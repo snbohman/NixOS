@@ -154,6 +154,7 @@ in
 
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"
+        "$mainMod, F12, exec, toggle-binds.sh"
 
         # keybindings
         "$mainMod, Return, exec, ${terminal} --gtk-single-instance=true"
