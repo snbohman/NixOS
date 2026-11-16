@@ -1,7 +1,61 @@
-{ ... }:
+{ pkgs, ... }:
 let
   browser = "firefox";
   terminal = "ghostty";
+
+  mcsrBindToggle = pkgs.writeShellScriptBin "mcsr-bind-toggle" ''
+    set -euo pipefail
+
+    runtimeDir="''${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+    instance="''${HYPRLAND_INSTANCE_SIGNATURE:-default}"
+    state="$runtimeDir/mcsr-bindings-disabled-$instance"
+
+    disableBindings() {
+      hyprctl --batch \
+        "keyword unbind SUPER, F ; keyword unbind SUPER, Space"
+    }
+
+    case "''${1:-toggle}" in
+      toggle)
+        if [[ -e "$state" ]]; then
+          # Gaming mode OFF: restore the declarative config.
+          rm -f -- "$state"
+
+          if hyprctl reload; then
+            hyprctl notify 5 1500 "rgb(98971A)" \
+              "MCSR mode OFF - desktop bindings restored"
+          else
+            # Preserve the disabled state if reload fails.
+            : > "$state"
+            exit 1
+          fi
+        else
+          # Gaming mode ON: remove only the two conflicting binds.
+          : > "$state"
+          chmod 600 "$state"
+
+          if disableBindings; then
+            hyprctl notify 1 1500 "rgb(CC241D)" \
+              "MCSR mode ON - SUPER+F and SUPER+SPACE disabled"
+          else
+            rm -f -- "$state"
+            hyprctl reload || true
+            exit 1
+          fi
+        fi
+        ;;
+
+      reset)
+        # Any config reload restores the normal bindings.
+        rm -f -- "$state"
+        ;;
+
+      *)
+        echo "Usage: mcsr-bind-toggle [toggle|reset]" >&2
+        exit 2
+        ;;
+    esac
+  '';
 in
 {
   wayland.windowManager.hyprland = {
@@ -24,6 +78,10 @@ in
         "hyprlock"
 
         "${terminal} --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false"
+      ];
+
+      exec = [
+        "${mcsrBindToggle}/bin/mcsr-bind-toggle reset"
       ];
 
       input = {
@@ -154,7 +212,7 @@ in
 
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"
-        "$mainMod, F12, exec, ~/.config/nixos/modules/home/hyprland/scripts/toggle-binds.sh"
+        "$mainMod, F12, exec, ${mcsrBindToggle}/bin/mcsr-bind-toggle toggle"
 
         # keybindings
         "$mainMod, Return, exec, ${terminal} --gtk-single-instance=true"
