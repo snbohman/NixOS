@@ -208,7 +208,7 @@ in
 
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"
-        "CTRL ALT, F12, exec, ${mcsrBindToggle}/bin/mcsr-bind-toggle toggle"
+        "CTRL ALT, F12, exec, ${mcsrBindToggle}/bin/mcsr-bind-toggle"
 
         # keybindings
         "$mainMod, Return, exec, ${terminal} --gtk-single-instance=true"
