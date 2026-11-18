@@ -2,55 +2,35 @@
 let
   browser = "firefox";
   terminal = "ghostty";
-
   mcsrBindToggle = pkgs.writeShellScriptBin "mcsr-bind-toggle" ''
     set -euo pipefail
-  
+
     runtimeDir="''${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
     instance="''${HYPRLAND_INSTANCE_SIGNATURE:-default}"
     state="$runtimeDir/mcsr-bindings-disabled-$instance"
-  
-    disableBindings() {
-      local -a bindings=(
-        "SUPER, F"
-        "SUPER, Space"
-        "SUPER, mouse:272"
-        "SUPER, mouse:273"
-        "SUPER, mouse:274"
-      )
-  
-      local binding
-      for binding in "''${bindings[@]}"; do
-        hyprctl keyword unbind "$binding" >/dev/null
-      done
-    }
   
     case "''${1:-toggle}" in
       toggle)
         if [[ -e "$state" ]]; then
           rm -f "$state"
           hyprctl reload
+          notify-send "MCSR Mode" "Disabled"
         else
+          hyprctl --batch "keyword unbind SUPER, F ; keyword unbind SUPER, Space ; keyword unbind SUPER, mouse:272 ; keyword unbind SUPER, mouse:273"
           touch "$state"
           chmod 600 "$state"
-  
-          if ! disableBindings; then
-            rm -f "$state"
-            hyprctl reload || true
-            exit 1
-          fi
+          notify-send "MCSR Mode" "Enabled"
         fi
         ;;
-  
       reset)
         rm -f "$state"
+        hyprctl reload
         ;;
-  
       *)
         echo "Usage: mcsr-bind-toggle [toggle|reset]" >&2
         exit 2
         ;;
-    esac
+      esac
   '';
 in
 {
@@ -78,7 +58,7 @@ in
 
       exec = [
         "${mcsrBindToggle}/bin/mcsr-bind-toggle reset"
-      ];
+      ]; 
 
       input = {
         kb_layout = "se, custom_se";
@@ -206,9 +186,11 @@ in
         "$mainMod SHIFT, K, exec, hyprctl switchxkblayout by-tech-gaming-keyboard next"
         "$mainMod SHIFT, U, exec, ghostty --title='NixOS Rebuild' --class='nixos-rebuild' -e bash -c '/home/snbohman/.config/nixos/scripts/logs.sh; echo \"\"; echo \"Press any key to close...\"; read -n1'"
 
+        # mcsr
+        "CTRL ALT, 0, exec, ${mcsrBindToggle}/bin/mcsr-bind-toggle"
+
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"
-        "CTRL ALT, F12, exec, ${mcsrBindToggle}/bin/mcsr-bind-toggle"
 
         # keybindings
         "$mainMod, Return, exec, ${terminal} --gtk-single-instance=true"
