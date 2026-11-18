@@ -2,36 +2,36 @@
 let
   browser = "firefox";
   terminal = "ghostty";
-  mcsrBindToggle = pkgs.writeShellScriptBin "mcsr-bind-toggle" ''
-    set -euo pipefail
 
-    runtimeDir="''${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
-    instance="''${HYPRLAND_INSTANCE_SIGNATURE:-default}"
-    state="$runtimeDir/mcsr-bindings-disabled-$instance"
-  
-    case "''${1:-toggle}" in
-      toggle)
-        if [[ -e "$state" ]]; then
-          rm -f "$state"
-          hyprctl reload
-          notify-send "MCSR Mode" "Disabled"
-        else
-          hyprctl --batch "keyword unbind SUPER, F ; keyword unbind SUPER, Space ; keyword unbind SUPER, mouse:272 ; keyword unbind SUPER, mouse:273"
-          touch "$state"
-          chmod 600 "$state"
-          notify-send "MCSR Mode" "Enabled"
-        fi
-        ;;
-      reset)
+mcsrBindToggle = pkgs.writeShellScriptBin "mcsr-bind-toggle" ''
+  set -euo pipefail
+
+  runtimeDir="''${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+  instance="''${HYPRLAND_INSTANCE_SIGNATURE:-default}"
+  state="$runtimeDir/mcsr-bindings-disabled-$instance"
+
+  case "''${1:-toggle}" in
+    toggle)
+      if [[ -e "$state" ]]; then
         rm -f "$state"
         hyprctl reload
-        ;;
-      *)
-        echo "Usage: mcsr-bind-toggle [toggle|reset]" >&2
-        exit 2
-        ;;
-      esac
-  '';
+        notify-send "MCSR Mode" "Disabled" || true
+      else
+        hyprctl --batch "keyword unbind SUPER, F ; keyword unbind SUPER, Space ; keyword unbind SUPER, mouse:272 ; keyword unbind SUPER, mouse:273"
+        touch "$state"
+        chmod 600 "$state"
+        notify-send "MCSR Mode" "Enabled" || true
+      fi
+      ;;
+    reset)
+      rm -f "$state"
+      ;;
+    *)
+      echo "Usage: mcsr-bind-toggle [toggle|reset]" >&2
+      exit 2
+      ;;
+  esac
+'';
 in
 {
   wayland.windowManager.hyprland = {
