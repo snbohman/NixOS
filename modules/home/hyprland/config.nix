@@ -187,7 +187,7 @@ in
         "$mainMod SHIFT, U, exec, ghostty --title='NixOS Rebuild' --class='nixos-rebuild' -e bash -c '/home/snbohman/.config/nixos/scripts/logs.sh; echo \"\"; echo \"Press any key to close...\"; read -n1'"
 
         # mcsr
-        "CTRL ALT, F12, exec, ${mcsrBindToggle}/bin/mcsr-bind-toggle"
+        "CTRL ALT, M, exec, ${mcsrBindToggle}/bin/mcsr-bind-toggle"
 
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"
