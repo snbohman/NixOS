@@ -3,35 +3,111 @@ let
   browser = "firefox";
   terminal = "ghostty";
 
-mcsrBindToggle = pkgs.writeShellScriptBin "mcsr-bind-toggle" ''
-  set -euo pipefail
-
-  runtimeDir="''${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
-  instance="''${HYPRLAND_INSTANCE_SIGNATURE:-default}"
-  state="$runtimeDir/mcsr-bindings-disabled-$instance"
-
-  case "''${1:-toggle}" in
-    toggle)
-      if [[ -e "$state" ]]; then
+  mcsrBindToggle = pkgs.writeShellScriptBin "mcsr-bind-toggle" ''
+    set -euo pipefail
+  
+    runtimeDir="''${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+    instance="''${HYPRLAND_INSTANCE_SIGNATURE:-default}"
+    state="$runtimeDir/mcsr-bindings-disabled-$instance"
+  
+    # All SUPER bindings to disable.
+    # SUPER + 1-0 are deliberately excluded.
+    unbinds=(
+      "SUPER SHIFT, K"
+      "SUPER SHIFT, U"
+      "SUPER, F1"
+      "SUPER, Return"
+      "SUPER SHIFT, Return"
+      "SUPER, B"
+      "SUPER, Q"
+      "SUPER, F"
+      "SUPER SHIFT, F"
+      "SUPER, Space"
+      "SUPER, D"
+      "SUPER SHIFT, D"
+      "SUPER SHIFT, S"
+      "SUPER, Escape"
+      "SUPER SHIFT, Escape"
+      "SUPER, P"
+      "SUPER SHIFT, P"
+      "SUPER ALT, Print"
+      "SUPER, X"
+      "SUPER, T"
+      "SUPER, E"
+      "SUPER SHIFT, B"
+      "SUPER, C"
+      "SUPER, W"
+      "SUPER SHIFT, W"
+      "SUPER, N"
+      "SUPER, equal"
+      "SUPER, left"
+      "SUPER, right"
+      "SUPER, up"
+      "SUPER, down"
+      "SUPER, h"
+      "SUPER, j"
+      "SUPER, k"
+      "SUPER, l"
+      "SUPER SHIFT, left"
+      "SUPER SHIFT, right"
+      "SUPER SHIFT, up"
+      "SUPER SHIFT, down"
+      "SUPER SHIFT, h"
+      "SUPER SHIFT, j"
+      "SUPER SHIFT, k"
+      "SUPER SHIFT, l"
+      "SUPER CTRL, left"
+      "SUPER CTRL, right"
+      "SUPER CTRL, up"
+      "SUPER CTRL, down"
+      "SUPER CTRL, h"
+      "SUPER CTRL, j"
+      "SUPER CTRL, k"
+      "SUPER CTRL, l"
+      "SUPER ALT, left"
+      "SUPER ALT, right"
+      "SUPER ALT, up"
+      "SUPER ALT, down"
+      "SUPER ALT, h"
+      "SUPER ALT, j"
+      "SUPER ALT, k"
+      "SUPER ALT, l"
+      "SUPER, mouse_down"
+      "SUPER, mouse_up"
+      "SUPER, V"
+      "SUPER, mouse:272"
+      "SUPER, mouse:273"
+    )
+  
+    case "''${1:-toggle}" in
+      toggle)
+        if [[ -e "$state" ]]; then
+          rm -f "$state"
+          hyprctl reload
+          notify-send "MCSR Mode" "Disabled" || true
+        else
+          batch=""
+          for binding in "''${unbinds[@]}"; do
+            batch+="keyword unbind $binding ; "
+          done
+  
+          hyprctl --batch "$batch"
+          touch "$state"
+          chmod 600 "$state"
+          notify-send "MCSR Mode" "Enabled" || true
+        fi
+        ;;
+  
+      reset)
         rm -f "$state"
-        hyprctl reload
-        notify-send "MCSR Mode" "Disabled" || true
-      else
-        hyprctl --batch "keyword unbind SUPER, F ; keyword unbind SUPER, Space ; keyword unbind SUPER, mouse:272 ; keyword unbind SUPER, mouse:273"
-        touch "$state"
-        chmod 600 "$state"
-        notify-send "MCSR Mode" "Enabled" || true
-      fi
-      ;;
-    reset)
-      rm -f "$state"
-      ;;
-    *)
-      echo "Usage: mcsr-bind-toggle [toggle|reset]" >&2
-      exit 2
-      ;;
-  esac
-'';
+        ;;
+  
+      *)
+        echo "Usage: mcsr-bind-toggle [toggle|reset]" >&2
+        exit 2
+        ;;
+    esac
+  '';
 in
 {
   wayland.windowManager.hyprland = {
