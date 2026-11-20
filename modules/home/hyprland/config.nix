@@ -77,6 +77,12 @@ let
       "SUPER, V"
       "SUPER, mouse:272"
       "SUPER, mouse:273"
+      "ALT, 1"
+      "ALT, 2"
+      "ALT, 3"
+      "ALT, 4"
+      "ALT, 5"
+      "ALT, 6"
     )
   
     case "''${1:-toggle}" in
