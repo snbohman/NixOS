@@ -16,6 +16,10 @@
 
       ## Color scheme
       jdinhlife.gruvbox
+
+      ms-toolsai.jupyter
+      ms-python.python
+      mkhl.direnv
     ];
   };
 }
