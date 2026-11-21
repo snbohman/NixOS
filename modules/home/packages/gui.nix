@@ -24,6 +24,5 @@ in {
     mcsrPkgs.ninjabrain-bot
 
     spotify
-    vscodium
   ];
 }
